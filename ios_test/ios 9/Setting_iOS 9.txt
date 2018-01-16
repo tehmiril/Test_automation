@@ -1,0 +1,29 @@
+*** Variables ***
+${appPackage}     com.newBundle    #ph.com.smart.rewards
+${iOSVersion}     version=9.3.5
+${deviceName}     Accenture01's iPhone
+${platformName}    iOS
+${appiumServer}    http://localhost:4723/wd/hub
+${appName}        ph.com.smart.rewards.MainActivity
+${admin}          081286425185
+${groupadmin}     08128251051
+${groupmember}    08128251047
+${pin1}           1
+${pin2}           1
+${pin3}           1
+${pin4}           1
+${pin5}           1
+${devicename2}    Samsung Galaxy J3 (2016)
+${complainTitle}    Testaut
+${grName}         abc0712
+${admName}        auto
+${mNumber}        06222211
+${oldGrName}      aut1
+${memberName}     Tiara
+${amount}         1
+${amountPengeluaran}    1000
+${memberTransaction}    97.200
+${UDID1}          3df3f20caab56f55dd21778d564473cf5e4e0dce
+${usePrebuiltWDA}    True
+${automationName}    XCUITest
+${appPackage2}    com.mobil88.ios
