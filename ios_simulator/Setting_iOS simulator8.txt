@@ -6,3 +6,5 @@ ${appLocation_Simulator}    /Users/accenture-mac02/Library/Developer/Xcode/Deriv
 ${automationName_Simulator}    XCUITest
 ${udid_Simulator}    5282E379-A98C-4444-AB49-03198D6CC356
 #${udid_Simulator}    F983AB5E-5519-4946-AB49-08C301FA0519
+${platformName}    iOS
+${appiumServer}    http://localhost:4723/wd/hub
