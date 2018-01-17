@@ -8,3 +8,4 @@ ${automationName_Simulator}    XCUITest
 ${udid_Simulator}    F983AB5E-5519-4946-AB49-08C301FA0519
 ${platformName}    iOS
 ${appiumServer}    http://localhost:4723/wd/hub
+${admName}        auto
