@@ -2,7 +2,7 @@
 Library           AppiumLibrary
 Library           String
 Library           Collections
-Resource          Setting_emulator.txt
+Resource          Setting_emulator_osx.txt
 
 *** Test Cases ***
 basic test
