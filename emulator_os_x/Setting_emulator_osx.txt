@@ -2,7 +2,7 @@
 #${appPackage}    ph.com.smart.rewards
 ${appPackage}     ph.com.smart.idsp
 ${androidVersion}    6.0
-${deviceName}     emulator-5556   #Nexus_6P_v6
+${deviceName}     Nexus_6P_v6   #emulator-5556
 ${platformName}    Android
 ${appiumServer}    http://localhost:4723/wd/hub
 #${appName}       ph.com.smart.rewards.MainActivity
