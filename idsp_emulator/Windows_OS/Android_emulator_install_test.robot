@@ -2,25 +2,19 @@
 Library           AppiumLibrary
 Library           String
 Library           Collections
-Resource          Setting_emulator.txt
+Resource          Setting_emulatorInstall.txt
 
 *** Test Cases ***
-basic test2
+basic test_install
     [Documentation]    Login and logout
-    [Setup]    Open app2
+    [Setup]    Install app
     Login activity    ${username}    ${password}
     Enter first PIN
     Enter second PIN
     Enter third PIN
-    Logout activity
+    [Teardown]    Close Application
 
 *** Keywords ***
-Open app
-    Open Application    ${appiumServer}    platformName=${platformName}    platformVersion=${androidVersion}    deviceName=${deviceName}    appPackage=${appPackage}    appActivity=${appName}
-
-Open app2
-    Open Application    ${appiumServer}    platformName=${platformName}    platformVersion=${androidVersion2}    deviceName=${deviceName2}    appPackage=${appPackage}    appActivity=${appName}
-
 Login activity
     [Arguments]    ${uname}    ${pword}
     [Documentation]    Here we put username and password
@@ -74,3 +68,6 @@ Logout activity
     AppiumLibrary.Wait Until Element Is Visible    //*[@content-desc="OK"]    10    None
     AppiumLibrary.Click Element    //*[@content-desc="OK"]
     AppiumLibrary.Wait Until Element Is Visible    //*[@content-desc="SIGN IN"]    10    None
+
+Install app
+    Open Application    ${appiumServer}    platformName=${platformName}    platformVersion=${androidVersion}    deviceName=${deviceName}    app=${app}
