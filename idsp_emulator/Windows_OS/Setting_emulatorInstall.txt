@@ -1,11 +1,9 @@
 *** Variables ***
-#${appPackage}    ph.com.smart.rewards
 ${appPackage}     ph.com.smart.idsp
 ${androidVersion}    6.0
-${deviceName}     emulator-5556
+${deviceName}     Nexus_6_test_v6
 ${platformName}    Android
 ${appiumServer}    http://localhost:4723/wd/hub
-#${appName}       ph.com.smart.rewards.MainActivity
 ${appName}        ph.com.smart.idsp.MainActivity
 ${admin}          081286425185
 ${groupadmin}     08128251051
@@ -15,7 +13,7 @@ ${pin2}           1
 ${pin3}           1
 ${pin4}           1
 ${pin5}           1
-${devicename2}    emulator-5554    # MobilityACN
+${devicename2}    Nexus_4_API_23    # MobilityACN
 ${complainTitle}    Testaut
 ${grName}         abc0712
 ${admName}        auto
@@ -26,7 +24,7 @@ ${amount}         1
 ${amountPengeluaran}    1000
 ${memberTransaction}    97.200
 ${appiumServer2}    http://localhost:4723/wd/hub
-${androidVersion2}    5.1.1    #4.4.2
+${androidVersion2}    5.1    #4.4.2
 ${udid2}          LGH84565352ad2
 ${udid1}          42007a46d8d0a300
 ${username}       563322LSL1
