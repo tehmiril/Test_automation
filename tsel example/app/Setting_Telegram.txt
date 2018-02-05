@@ -1,0 +1,7 @@
+*** Variables ***
+${appPackage_Tele}    org.telegram.messenger
+${androidVersion_Tele}    5.1.1
+${deviceName_Tele}    Ami Samsung
+${platformName_Tele}    Android
+${appActivity_Tele}    org.telegram.ui.LaunchActivity
+${appiumServer_Tele}    http://localhost:4723/wd/hub

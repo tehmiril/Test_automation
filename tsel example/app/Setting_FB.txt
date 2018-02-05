@@ -1,0 +1,13 @@
+*** Variables ***
+${appPackage}     com.android.calculator2
+${androidVersion}    7.0
+${deviceName}     G5 SE
+${platformName}    Android
+${digit1}         5
+${digit2}         7
+${sign1}          *
+${equals}         =
+${expectedResult}    35
+${displayedResult}    xpath://div[contains(@resource-id,'id/result')]
+${appActivity}    com.android.calculator2.Calculator
+${appiumServer}    http://localhost:4723/wd/hub

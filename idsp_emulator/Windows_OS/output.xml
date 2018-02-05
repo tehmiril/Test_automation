@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180131 11:23:37.481" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\amiril.r.faradini\Documents\Robot\git_projects\idsp_emulator\Windows_OS\Android_emulator_install_test.robot" id="s1" name="Android emulator install test">
+<test id="s1-t1" name="basic test_install">
+<kw type="setup" name="Install app">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${appiumServer}</arg>
+<arg>platformName=${platformName}</arg>
+<arg>platformVersion=${androidVersion}</arg>
+<arg>deviceName=${deviceName}</arg>
+<arg>app=${app}</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:23:55.724" starttime="20180131 11:23:37.672"></status>
+</kw>
+<status status="PASS" endtime="20180131 11:23:55.724" starttime="20180131 11:23:37.671"></status>
+</kw>
+<kw name="Login activity">
+<doc>Here we put username and password</doc>
+<arguments>
+<arg>${username}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@content-desc="SIGN IN"]</arg>
+<arg>20</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:24:05.076" starttime="20180131 11:23:55.739"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.EditText[@index="2"]</arg>
+<arg>${uname}</arg>
+</arguments>
+<msg timestamp="20180131 11:24:05.077" level="INFO">Typing text '563322LSL1' into text field '//android.widget.EditText[@index="2"]'</msg>
+<status status="PASS" endtime="20180131 11:24:10.936" starttime="20180131 11:24:05.076"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.widget.EditText[@index="3"]</arg>
+<arg>${pword}</arg>
+</arguments>
+<msg timestamp="20180131 11:24:10.939" level="INFO">Typing text 'ABCDEF' into text field '//android.widget.EditText[@index="3"]'</msg>
+<status status="PASS" endtime="20180131 11:24:17.422" starttime="20180131 11:24:10.938"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>creds.png</arg>
+</arguments>
+<msg timestamp="20180131 11:24:19.152" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="creds.png"&gt;&lt;img src="creds.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180131 11:24:19.152" starttime="20180131 11:24:17.422"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="SIGN IN"]</arg>
+</arguments>
+<msg timestamp="20180131 11:24:19.152" level="INFO">Clicking element '//*[@content-desc="SIGN IN"]'.</msg>
+<status status="PASS" endtime="20180131 11:24:19.469" starttime="20180131 11:24:19.152"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@content-desc="SUBMIT"]</arg>
+<arg>30</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:24:40.911" starttime="20180131 11:24:19.469"></status>
+</kw>
+<status status="PASS" endtime="20180131 11:24:40.912" starttime="20180131 11:23:55.737"></status>
+</kw>
+<kw name="Enter first PIN">
+<doc>Here we enter MPIN and continue</doc>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.view.View[@index="0"]</arg>
+<arg>A</arg>
+</arguments>
+<msg timestamp="20180131 11:24:40.913" level="INFO">Typing text 'A' into text field '//android.view.View[@index="0"]'</msg>
+<status status="PASS" endtime="20180131 11:24:46.058" starttime="20180131 11:24:40.913"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>32</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:24:46.634" starttime="20180131 11:24:46.058"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.view.View[@index="2"]</arg>
+<arg>B</arg>
+</arguments>
+<msg timestamp="20180131 11:24:46.635" level="INFO">Typing text 'B' into text field '//android.view.View[@index="2"]'</msg>
+<status status="PASS" endtime="20180131 11:24:52.801" starttime="20180131 11:24:46.635"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>32</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:24:53.423" starttime="20180131 11:24:52.801"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.view.View[@index="4"]</arg>
+<arg>C</arg>
+</arguments>
+<msg timestamp="20180131 11:24:53.423" level="INFO">Typing text 'C' into text field '//android.view.View[@index="4"]'</msg>
+<status status="PASS" endtime="20180131 11:24:59.655" starttime="20180131 11:24:53.423"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>32</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:25:00.231" starttime="20180131 11:24:59.656"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.view.View[@index="6"]</arg>
+<arg>D</arg>
+</arguments>
+<msg timestamp="20180131 11:25:00.231" level="INFO">Typing text 'D' into text field '//android.view.View[@index="6"]'</msg>
+<status status="PASS" endtime="20180131 11:25:05.850" starttime="20180131 11:25:00.231"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>32</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:25:05.988" starttime="20180131 11:25:05.850"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.view.View[@index="8"]</arg>
+<arg>E</arg>
+</arguments>
+<msg timestamp="20180131 11:25:05.989" level="INFO">Typing text 'E' into text field '//android.view.View[@index="8"]'</msg>
+<status status="PASS" endtime="20180131 11:25:12.280" starttime="20180131 11:25:05.988"></status>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<doc>Sends a press of keycode to the device.</doc>
+<arguments>
+<arg>32</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:25:12.456" starttime="20180131 11:25:12.281"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>//android.view.View[@index="10"]</arg>
+<arg>F</arg>
+</arguments>
+<msg timestamp="20180131 11:25:12.456" level="INFO">Typing text 'F' into text field '//android.view.View[@index="10"]'</msg>
+<status status="PASS" endtime="20180131 11:25:18.882" starttime="20180131 11:25:12.456"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="SUBMIT"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:18.883" level="INFO">Clicking element '//*[@content-desc="SUBMIT"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:19.604" starttime="20180131 11:25:18.882"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@content-desc="Set Passcode Lock"]</arg>
+<arg>20</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:25:20.777" starttime="20180131 11:25:19.604"></status>
+</kw>
+<status status="PASS" endtime="20180131 11:25:20.777" starttime="20180131 11:24:40.913"></status>
+</kw>
+<kw name="Enter second PIN">
+<doc>Here we check the second 4 digit PIN code to confirm and continue</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180131 11:25:25.780" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180131 11:25:25.780" starttime="20180131 11:25:20.778"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:25.780" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:25.970" starttime="20180131 11:25:25.780"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:25.971" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:26.648" starttime="20180131 11:25:25.971"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:26.648" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:27.318" starttime="20180131 11:25:26.648"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:27.318" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:27.974" starttime="20180131 11:25:27.318"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@content-desc="Confirm Passcode Lock"]</arg>
+<arg>10</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:25:28.528" starttime="20180131 11:25:27.974"></status>
+</kw>
+<status status="PASS" endtime="20180131 11:25:28.529" starttime="20180131 11:25:20.778"></status>
+</kw>
+<kw name="Enter third PIN">
+<doc>Here we check the second 4 digit PIN code to confirm and continue</doc>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:28.530" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:28.722" starttime="20180131 11:25:28.530"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:28.722" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:29.397" starttime="20180131 11:25:28.722"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:29.397" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:30.061" starttime="20180131 11:25:29.397"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="1"]</arg>
+</arguments>
+<msg timestamp="20180131 11:25:30.062" level="INFO">Clicking element '//*[@content-desc="1"]'.</msg>
+<status status="PASS" endtime="20180131 11:25:30.733" starttime="20180131 11:25:30.061"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@content-desc="Home"]</arg>
+<arg>10</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180131 11:25:32.108" starttime="20180131 11:25:30.734"></status>
+</kw>
+<status status="PASS" endtime="20180131 11:25:32.108" starttime="20180131 11:25:28.529"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20180131 11:25:34.739" starttime="20180131 11:25:32.113"></status>
+</kw>
+<doc>Login and logout</doc>
+<status status="PASS" endtime="20180131 11:25:34.740" critical="yes" starttime="20180131 11:23:37.671"></status>
+</test>
+<status status="PASS" endtime="20180131 11:25:34.742" starttime="20180131 11:23:37.485"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Android emulator install test" pass="1">Android emulator install test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
