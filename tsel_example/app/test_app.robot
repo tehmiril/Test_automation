@@ -2,10 +2,18 @@
 Library           AppiumLibrary
 Resource          Setting_LINE.txt
 Resource          Setting_Telegram.txt
+Resource          Setting_FB.txt
 
 *** Test Cases ***
 test_FB
-    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=7.0    deviceName=LGH84565352ad2    appPackage=com.facebook.orca    appActivity=com.facebook.orca.auth.StartScreenActivity
+    Open Application    ${appiumServer_FB}    platformName=${platformName_FB}    platformVersion=${androidVersion_FB}    deviceName=${deviceName_FB}    appPackage=${appPackage_FB}    appActivity=${appActivity_FB}
+    ...    noReset=true
+    Wait Until Element is Visible    //*[@text="MESSAGES"]    10    None
+    Click Element    //*[@text="Telkomsel"]
+    Wait Until Element is Visible    //*[@content-desc="Telkomsel"]    10    None
+    Input Text    class=android.widget.EditText    Hi
+    Click Element    //*[@content-desc="Send"]
+    Wait Until Element is Visible    //*[@text="MESSAGES"]    10    None
 
 test_LINE
     Open Application    ${appiumServer_LINE}    platformName=${platformName_LINE}    platformVersion=${androidVersion_LINE}    deviceName=${deviceName_LINE}    appPackage=${appPackage_LINE}    appActivity=${appActivity_LINE}

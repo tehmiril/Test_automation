@@ -1,13 +1,7 @@
 *** Variables ***
-${appPackage}     com.android.calculator2
-${androidVersion}    7.0
-${deviceName}     G5 SE
-${platformName}    Android
-${digit1}         5
-${digit2}         7
-${sign1}          *
-${equals}         =
-${expectedResult}    35
-${displayedResult}    xpath://div[contains(@resource-id,'id/result')]
-${appActivity}    com.android.calculator2.Calculator
-${appiumServer}    http://localhost:4723/wd/hub
+${appPackage_FB}    com.facebook.orca
+${androidVersion_FB}    5.1.1
+${deviceName_FB}    Ami Samsung
+${platformName_FB}    Android
+${appActivity_FB}    .auth.StartScreenActivity    # com.facebook.messenger.neue.MainActivity
+${appiumServer_FB}    http://localhost:4723/wd/hub
