@@ -1,0 +1,4 @@
+*** Variables ***
+${email_obj}      id:email
+${password_obj}    id:pass
+${login_obj}      id:loginbutton    # //*[@id="u_0_2"]

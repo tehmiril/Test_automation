@@ -8,6 +8,7 @@ Resource          Setting_iOS simulator8.txt
 Basic myLife Simulator
     [Documentation]    test login logout
     [Setup]    Open simulator
+    Log Source
     Byte activity    ${admName}
     [Teardown]    Close Application
 
