@@ -1,0 +1,5 @@
+*** Variables ***
+${webDriver_safari}    safari
+${email}          amiril_beautiful@yahoo.com
+${password}       Welcome01!
+${URL}            https://www.facebook.com/
