@@ -44,7 +44,6 @@ simple_test_safari
 
 test_safari_Messenger
     Open_Web_Messenger    ${webDriver_safari}
-    Wait Until Page Contains    Telkomsel    20s    None
     Sleep    10s
     Press Key    ${inputtext_obj}    ${random_question_1}
     Sleep    5s
@@ -100,6 +99,13 @@ test_chrome_Messenger
 _test_chrome_location
     Get_X_Location    ${webDriver_Chrome}
 
+simple_carousel_chrome
+    Open_Web_Messenger    ${webDriver_Chrome}
+    ${element_XBegin}    ${left_limit}    ${right_limit}    Select_Carousel    Kartu As Combo    Beli sekarang
+    Run Keyword If    ${left_limit} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    2s
+    ...    AND    Click Element    //a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')]
+    ...    ELSE    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${totalcarousel}]
+
 *** Keywords ***
 Login_FB
     [Arguments]    ${webdriver}
@@ -109,6 +115,7 @@ Login_FB
     Input Text    ${email_obj}    ${email}
     Input Password    ${password_obj}    ${password}
     Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    20s    None
 
 Open_Web_Messenger
     [Arguments]    ${webdriver}
@@ -120,36 +127,69 @@ Open_Web_Messenger
     Click Element    ${password_obj}
     Input Password    ${password_obj}    ${password}
     Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    20s    None
+    Sleep    5s
 
 Get_X_Location
     [Arguments]    ${webdriver}
     Open_Web_Messenger    ${webdriver}
-    Wait Until Page Contains    Telkomsel    20s    None
-    Sleep    15s
-    ${headerX_1}    Get Horizontal Position    //div[text()="SimPATI Combo"]
-    ${headerX_2}    Get Horizontal Position    //div[text()="Kartu As Combo"]
-    ${headerX_3}    Get Horizontal Position    //div[text()="Loop Cash"]
+    Sleep    10s
+    ${totalicon}    Get Element Count    //*[@alt="Telkomsel"]
+    ${tsel_icon_locationX1}    Get Horizontal Position    (//*[@alt="Telkomsel"])[1]
+    ${tsel_icon_locationXlast}    Get Horizontal Position    (//*[@alt="Telkomsel"])[${totalicon}]
+    ${headerX_1}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'SimPATI Combo')]
+    ${headerX_2}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Kartu As Combo')]
+    ${headerX_3}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Loop Cash')]
+    ${elementdetail1}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'SimPATI Combo')]
+    ${elementdetail2}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'Kartu As Combo')]
     ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
     ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
     ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
     ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
     ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
     ${total}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
-    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[2]
-    ${headerX_1}    Get Horizontal Position    //div[text()="SimPATI Combo"]
-    ${headerX_2}    Get Horizontal Position    //div[text()="Kartu As Combo"]
-    ${headerX_3}    Get Horizontal Position    //div[text()="Loop Cash"]
+    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${total}]
+    Sleep    2s
+    ${headerX_1}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'SimPATI Combo')]
+    ${headerX_2}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Kartu As Combo')]
+    ${headerX_3}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Loop Cash')]
+    ${elementdetail1}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'SimPATI Combo')]
+    ${elementdetail2}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'Kartu As Combo')]
     ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
     ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
     ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
     ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
     ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
-    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[2]
-    ${headerX_1}    Get Horizontal Position    //div[text()="SimPATI Combo"]
-    ${headerX_2}    Get Horizontal Position    //div[text()="Kartu As Combo"]
-    ${headerX_3}    Get Horizontal Position    //div[text()="Loop Cash"]
+    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${total}]
+    Sleep    2s
+    ${headerX_1}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'SimPATI Combo')]
+    ${headerX_2}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Kartu As Combo')]
+    ${headerX_3}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Loop Cash')]
+    ${elementdetail1}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'SimPATI Combo')]
+    ${elementdetail2}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'Kartu As Combo')]
     ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
     ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
     ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
     ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
     ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
+
+Select_Carousel
+    [Arguments]    ${Carousel_title}    ${Carousel_button}
+    ${totalicon}    Get Element Count    //*[@alt="Telkomsel"]
+    ${tsel_icon_locationX}    Get Horizontal Position    (//*[@alt="Telkomsel"])[${totalicon}]
+    ${totalcarousel}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
+    ${element_XBegin}    Get Horizontal Position    //a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')]
+    #Just a suggested width
+    ${left_limit}    Evaluate    ${tsel_icon_locationX}+35
+    ${right_limit}    Evaluate    ${left_limit}+40
+    [Return]    ${element_XBegin}    ${left_limit}    ${right_limit}
+
+Swipe_until_element
+    [Arguments]    ${findElement}
+    ${totalcarousel}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
+    : FOR    ${licznik}    IN RANGE    0    10
+    \    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${totalcarousel}]
+    \    ${elementXNew}    Select_carousel    ${findElement}
+    \    Run Keyword If    39.0 < ${elementXNew} < 233.0    Run Keywords    Log    "Yeah"
+    \    ...    AND    Exit For Loop
+    \    ${licznik}    Set Variable    ${licznik}+1
