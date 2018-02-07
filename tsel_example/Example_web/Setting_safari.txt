@@ -4,7 +4,7 @@ ${email}          taacnindonesia01@gmail.com
 ${password}       Welcome01!
 ${URL}            https://www.facebook.com/
 ${URLmessengerTSEL}    https://www.facebook.com/messages/t/telkomsel
-${VA_notunderstand_1}    Maaf, Veronika tidak mengerti kata-kata yang Kamu tulis
+${VA_notunderstand_1}    Maaf, Veronika belum mengerti apa yang Kamu tulis karena masih dalam proses belajar.    # Maaf, Veronika tidak mengerti kata-kata yang Kamu tulis
 ${VA_notunderstand_2}    Tolong perjelas yang Kamu maksud ya
 ${VA_notunderstand_3}    Saat ini, Veronika belum mengerti permintaan Kamu
 ${VA_notunderstand_4}    Mungkin teman dari customer service Telkomsel bisa membantu Kamu. Apakah mau disambungkan?

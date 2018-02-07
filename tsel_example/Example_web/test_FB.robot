@@ -71,6 +71,35 @@ test_safari_Messenger
 _test_safari_location
     Get_X_Location    ${webDriver_safari}
 
+test_chrome_Messenger
+    Open_Web_Messenger    ${webDriver_Chrome}
+    Wait Until Page Contains    Telkomsel    20s    None
+    Sleep    10s
+    Press Key    ${inputtext_obj}    ${random_question_1}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s
+    Wait Until Page Contains    ${VA_notunderstand_1}    10s    None
+    Wait Until Page Contains    ${VA_notunderstand_2}    10s    None
+    Sleep    5s
+    Press Key    ${inputtext_obj}    ${random_question_2}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s
+    Wait Until Page Contains    ${VA_notunderstand_3}    10s    None
+    Wait Until Page Contains    ${VA_notunderstand_4}    10s    None
+    Wait Until Page Contains    Ya    10s    None
+    Click Element    Tidak
+    Wait Until Page Contains    ${VA_question_1}    10s    None
+    Press Key    ${inputtext_obj}    ${no_answer}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s
+    #[Teardown]    Close Browser
+
+_test_chrome_location
+    Get_X_Location    ${webDriver_Chrome}
+
 *** Keywords ***
 Login_FB
     [Arguments]    ${webdriver}
@@ -97,11 +126,30 @@ Get_X_Location
     Open_Web_Messenger    ${webdriver}
     Wait Until Page Contains    Telkomsel    20s    None
     Sleep    15s
+    ${headerX_1}    Get Horizontal Position    //div[text()="SimPATI Combo"]
+    ${headerX_2}    Get Horizontal Position    //div[text()="Kartu As Combo"]
+    ${headerX_3}    Get Horizontal Position    //div[text()="Loop Cash"]
     ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
+    ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
     ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
     ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
-    ${total}    Get Element Count    class:_3-8w img sp_4zuV_NA72V3 sx_ec9265
-    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[1]
+    ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
+    ${total}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
+    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[2]
+    ${headerX_1}    Get Horizontal Position    //div[text()="SimPATI Combo"]
+    ${headerX_2}    Get Horizontal Position    //div[text()="Kartu As Combo"]
+    ${headerX_3}    Get Horizontal Position    //div[text()="Loop Cash"]
     ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
+    ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
     ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
     ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
+    ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
+    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[2]
+    ${headerX_1}    Get Horizontal Position    //div[text()="SimPATI Combo"]
+    ${headerX_2}    Get Horizontal Position    //div[text()="Kartu As Combo"]
+    ${headerX_3}    Get Horizontal Position    //div[text()="Loop Cash"]
+    ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
+    ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
+    ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
+    ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
+    ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
