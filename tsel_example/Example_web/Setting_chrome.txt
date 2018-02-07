@@ -1,5 +1,5 @@
 *** Variables ***
 ${webDriver_Chrome}    chrome
-${email}          amiril_beautiful@yahoo.com
+${email}          taacnindonesia01@gmail.com
 ${password}       Welcome01!
 ${URL}            http://www.facebook.com/

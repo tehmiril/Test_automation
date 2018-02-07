@@ -7,7 +7,8 @@ Resource          Setting_safari.txt
 Resource          Object_repo_Safari.txt
 
 *** Test Cases ***
-simple_test
+simple_test_chrome
+    [Documentation]    Discontinued due to pop up that cannot be handled after login to facebook.
     Open Browser    ${URL}    ${webDriver_Chrome}
     Sleep    2s
     Input Text    ${email_obj}    ${email}
@@ -26,16 +27,21 @@ simple_test_ie
     #Close Browser
 
 simple_test_safari
-    Open Browser    ${URL}    ${webDriver_safari}
+    Login_FB    ${webDriver_safari}
+    Wait Until Page Contains    Beranda    5s    None
+    Click Element    ${messengericon_obj}
+    Wait Until Page Contains    Lihat Semua di Messenger    5s    None
+    Click Link    Lihat Semua di Messenger
+    Wait Until Page Contains    Messenger    5s    None
+    Click Element    //*[@data-href="https://www.facebook.com/messages/t/telkomsel"]
+    [Teardown]    Close Browser
+
+*** Keywords ***
+Login_FB
+    [Arguments]    ${webdriver}
+    Open Browser    ${URL}    ${webdriver}
+    Maximize Browser Window
     Sleep    2s
     Input Text    ${email_obj}    ${email}
     Input Password    ${password_obj}    ${password}
     Click Element    ${login_obj}
-    Sleep    5s
-    Wait Until Page Contains    Home    2s    None
-    Click Element    ${messengericon_obj}
-    Wait Until Page Contains
-    #Close Browser
-
-*** Keywords ***
-Login_FB

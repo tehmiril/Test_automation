@@ -1,5 +1,5 @@
 *** Variables ***
 ${webDriver_IE}    ie
-${email}          amiril_beautiful@yahoo.com
+${email}          taacnindonesia01@gmail.com
 ${password}       Welcome01!
 ${URL}            https://www.facebook.com/
