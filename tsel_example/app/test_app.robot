@@ -3,6 +3,8 @@ Library           AppiumLibrary
 Resource          Setting_LINE.txt
 Resource          Setting_Telegram.txt
 Resource          Setting_FB.txt
+Library           String
+Library           Collections
 
 *** Test Cases ***
 test_FB
@@ -29,14 +31,10 @@ test_LINE
     #Input Text    class=android.widget.EditText    Hi
     #Click Element    id=jp.naver.line.android:id/chathistory_send_button_image
     #Click Element    //*[@content-desc="Keyboard menu"]
-    Log Source
-    Sleep    3s
-    @{bound}    Get Element Location    //android.view.View[@text="Bantuan Lainnya"]
-    ${xCoord}    @{bound}[1]
-    Run Keyword if    ${xCoord} < 14    or    ${xCoord} > 206    Swipe_until_element    //android.view.View[@text="Bantuan Lainnya"]
-    #Scroll    //*[@text="MusicMAX"]    //*[@text="Profil Kamu"]
-    #Wait Until Page Contains    Apa yang bisa Veronika bantu hari ini?    10    None
-    [Teardown]    Close Application
+    Sleep    2s
+    ${elementX}    Select_carousel    Bantuan Lainnya
+    Run Keyword If    39.0 < ${elementX} < 233.0    Log    "hey"${elementX}
+    ...    ELSE    Swipe_until_element    Bantuan Lainnya
 
 test_Telegram
     Open Application    ${appiumServer_Tele}    platformName=${platformName_Tele}    platformVersion=${androidVersion_Tele}    deviceName=${deviceName_Tele}    appPackage=${appPackage_Tele}    appActivity=${appActivity_Tele}
@@ -52,9 +50,19 @@ test_Telegram
 *** Keywords ***
 Swipe_until_element
     [Arguments]    ${findElement}
-    : FOR    ${licznik}    IN RANGE    0    5
+    : FOR    ${licznik}    IN RANGE    0    10
     \    Swipe    600    600    100    600
-    \    @{bound}    Get Element Location    //android.view.View[@text="Bantuan Lainnya"]
-    \    ${el}    Run Keyword And Return Status    Element Should Be Visible    //*[@text="Bantuan Lainnya"]
-    \    Run Keyword If    ${el}    Exit For Loop
+    \    ${elementXNew}    Select_carousel    ${findElement}
+    \    Run Keyword If    39.0 < ${elementXNew} < 233.0    Run Keywords    Log    "Yeah"
+    \    ...    AND    Exit For Loop
     \    ${licznik}    Set Variable    ${licznik}+1
+
+Select_carousel
+    [Arguments]    ${findElement}
+    ${bound}    Get Element Location    //android.view.View[@text="${findElement}"]
+    ${boundString}    Convert To String    ${bound}
+    ${elementsXY}    Split String    ${boundString}    ${SPACE}
+    #location format, e.g. ${elementsXY} = [u"{'y':", u'702.0,', u"'x':", u'718.0}']
+    ${elementX}    Get From List    ${elementsXY}    3
+    ${finalelementX}    Strip String    ${elementX}    characters=}
+    [Return]    ${finalelementX}
