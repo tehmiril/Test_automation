@@ -2,9 +2,7 @@
 Library           Selenium2Library
 Resource          Setting_chrome.txt
 Resource          Object_repo_Chrome.txt
-Resource          Setting_ie.txt
-Resource          Setting_safari.txt
-Resource          Object_repo_Safari.txt
+Resource          Test_data_Indo.txt
 
 *** Test Cases ***
 simple_test_chrome
@@ -67,12 +65,8 @@ test_safari_Messenger
     Sleep    10s
     #[Teardown]    Close Browser
 
-_test_safari_location
-    Get_X_Location    ${webDriver_safari}
-
 test_chrome_Messenger
     Open_Web_Messenger    ${webDriver_Chrome}
-    Wait Until Page Contains    Telkomsel    20s    None
     Sleep    10s
     Press Key    ${inputtext_obj}    ${random_question_1}
     Sleep    5s
@@ -96,15 +90,66 @@ test_chrome_Messenger
     Sleep    10s
     #[Teardown]    Close Browser
 
-_test_chrome_location
-    Get_X_Location    ${webDriver_Chrome}
-
 simple_carousel_chrome
     Open_Web_Messenger    ${webDriver_Chrome}
+    #Click Element    //*[@class='_3cne' and contains(.,'SimPATI Combo')]/following-sibling::div//a[contains(.,'Beli sekarang')]
+    #Sleep    2s
     ${element_XBegin}    ${left_limit}    ${right_limit}    Select_Carousel    Kartu As Combo    Beli sekarang
     Run Keyword If    ${left_limit} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    2s
-    ...    AND    Click Element    //a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')]
-    ...    ELSE    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${totalcarousel}]
+    ...    AND    Click Element    //*[@class='_3cne' and contains(.,'Kartu As Combo')]/following-sibling::div//a[contains(.,'Beli sekarang')]
+    ...    AND    Sleep    2s
+    ...    ELSE    Swipe_until_element    Kartu As Combo    Beli sekarang
+
+test_chrome_Messenger_VAnotUnderstand
+    Open_Web_Messenger    ${webDriver_Chrome}
+    Sleep    10s
+    Press Key    ${inputtext_obj}    ${random_question_1}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s
+    Wait Until Page Contains    ${VA_answerKuota1}    10s    None
+    Wait Until Page Contains    ${VA_notunderstand_2}    10s    None
+    Sleep    5s
+    Press Key    ${inputtext_obj}    ${random_question_2}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s
+    Wait Until Page Contains    ${VA_notunderstand_3}    10s    None
+    Wait Until Page Contains    ${VA_notunderstand_4}    10s    None
+    Wait Until Page Contains    Ya    10s    None
+    Click Element    Tidak
+    Wait Until Page Contains    ${VA_question_1}    10s    None
+    Press Key    ${inputtext_obj}    ${no_answer}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s
+    #[Teardown]    Close Browser
+
+test_chrome_Messenger_askPulsaKuota
+    [Documentation]    Here registered user ask for both pulsa and kuota, without top-up.
+    Open_Web_Messenger    ${webDriver_Chrome}
+    Greet_VA_Indo
+    User_input    ${ask_pulsa}
+    Sleep    20s
+    ${result}    Run Keyword and Return    Wait Until Page Contains    ${VA_validateNumber}    15s    None
+    Run Keyword If    ${result}    Click_Yes
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_answerPulsa1}')]
+    Wait Until Page Contains    ${VA_answerPulsa2}    15s    None
+    Wait Until Page Contains    ${yes_answer}    15s    None
+    Wait Until Page Contains    ${no_answer}    15s    None
+    User_input    ${ask_kuota}
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_answerKuota2}')]
+    Wait Until Page Contains    ${VA_answerKuota3}    15s    None
+    Click_No
+    Wait Until Page Contains    ${VA_question_1}    15s    None
+    User_input    ${no_answer}
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_question_2}')]
+    User_input    ${user_rate}
+    Wait Until Page Contains    ${VA_question_3}    15s    None
+    #Validate buttons here!!!!
+    User_input    ${no_answer}
+    Wait Until Page Contains    ${VA_endGreet}    15s    None
+    #[Teardown]    Close Browser
 
 *** Keywords ***
 Login_FB
@@ -128,68 +173,55 @@ Open_Web_Messenger
     Input Password    ${password_obj}    ${password}
     Click Element    ${login_obj}
     Wait Until Page Contains    Telkomsel    20s    None
-    Sleep    5s
-
-Get_X_Location
-    [Arguments]    ${webdriver}
-    Open_Web_Messenger    ${webdriver}
-    Sleep    10s
-    ${totalicon}    Get Element Count    //*[@alt="Telkomsel"]
-    ${tsel_icon_locationX1}    Get Horizontal Position    (//*[@alt="Telkomsel"])[1]
-    ${tsel_icon_locationXlast}    Get Horizontal Position    (//*[@alt="Telkomsel"])[${totalicon}]
-    ${headerX_1}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'SimPATI Combo')]
-    ${headerX_2}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Kartu As Combo')]
-    ${headerX_3}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Loop Cash')]
-    ${elementdetail1}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'SimPATI Combo')]
-    ${elementdetail2}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'Kartu As Combo')]
-    ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
-    ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
-    ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
-    ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
-    ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
-    ${total}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
-    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${total}]
-    Sleep    2s
-    ${headerX_1}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'SimPATI Combo')]
-    ${headerX_2}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Kartu As Combo')]
-    ${headerX_3}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Loop Cash')]
-    ${elementdetail1}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'SimPATI Combo')]
-    ${elementdetail2}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'Kartu As Combo')]
-    ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
-    ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
-    ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
-    ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
-    ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
-    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${total}]
-    Sleep    2s
-    ${headerX_1}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'SimPATI Combo')]
-    ${headerX_2}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Kartu As Combo')]
-    ${headerX_3}    Get Horizontal Position    //*[@class='_3cni' and contains(text(),'Loop Cash')]
-    ${elementdetail1}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'SimPATI Combo')]
-    ${elementdetail2}    Get Horizontal Position    //a[contains(.,'Beli sekarang')]/preceding::*[@class='_3cni' and contains(text(),'Kartu As Combo')]
-    ${locationX_1}    Get Horizontal Position    //a[text()="Info SimPATI Combo"]
-    ${locationX_11}    Get Horizontal Position    //a[text()="Perdana SimPATI"]
-    ${locationX_2}    Get Horizontal Position    //a[text()="Info Kartu As Combo"]
-    ${locationX_3}    Get Horizontal Position    //a[text()="Info Loop Cash"]
-    ${locationX_31}    Get Horizontal Position    //a[text()="Perdana Loop"]
+    Sleep    20s
 
 Select_Carousel
     [Arguments]    ${Carousel_title}    ${Carousel_button}
     ${totalicon}    Get Element Count    //*[@alt="Telkomsel"]
     ${tsel_icon_locationX}    Get Horizontal Position    (//*[@alt="Telkomsel"])[${totalicon}]
-    ${totalcarousel}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
     ${element_XBegin}    Get Horizontal Position    //a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')]
+    #${element_XBegin}    Get Horizontal Position    //*[@class='_3cne' and contains(.,'${Carousel_title}')]/following-sibling::div//a[contains(.,'${Carousel_button}')]
     #Just a suggested width
-    ${left_limit}    Evaluate    ${tsel_icon_locationX}+35
-    ${right_limit}    Evaluate    ${left_limit}+40
-    [Return]    ${element_XBegin}    ${left_limit}    ${right_limit}
+    #${left_limit}    Evaluate    ${tsel_icon_locationX}+35
+    ${right_limit}    Evaluate    ${tsel_icon_locationX}+400
+    [Return]    ${element_XBegin}    ${tsel_icon_locationX}    ${right_limit}
 
 Swipe_until_element
-    [Arguments]    ${findElement}
+    [Arguments]    ${Carousel_title}    ${Carousel_button}
+    Sleep    2s
     ${totalcarousel}    Get Element Count    //*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"]
-    : FOR    ${licznik}    IN RANGE    0    10
+    : FOR    ${looping}    IN RANGE    0    10
     \    Click Element    (//*[@class="_3-8w img sp_4zuV_NA72V3 sx_ec9265"])[${totalcarousel}]
-    \    ${elementXNew}    Select_carousel    ${findElement}
-    \    Run Keyword If    39.0 < ${elementXNew} < 233.0    Run Keywords    Log    "Yeah"
+    \    Sleep    2s
+    \    ${element_XBegin}    ${left_limit}    ${right_limit}    Select_carousel    ${Carousel_title}    ${Carousel_button}
+    \    Run Keyword If    ${left_limit} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    5s
+    \    ...    AND    Execute JavaScript    $("//*[@class='_3cne' and contains(.,'${Carousel_title}')]/following-sibling::div//a[contains(.,'${Carousel_button}')]").click();
+    \    ...    AND    Sleep    2s
     \    ...    AND    Exit For Loop
-    \    ${licznik}    Set Variable    ${licznik}+1
+    \    ${looping}    Set Variable    ${looping}+1
+
+Greet_VA_Indo
+    Press Key    ${inputtext_obj}    ${greeting}
+    Sleep    15s
+    Wait Until Page Contains    ${VA_Greet1}    10s    None
+    Wait Until Page Contains    ${VA_Greet2}    10s    None
+    Wait Until Page Contains    ${VA_GreetButton1}    10s    None
+    Wait Until Page Contains    ${VA_GreetButton2}    10s    None
+    Sleep    5s
+
+Click_Yes
+    ${totalYa}    Get Element Count    //*[@class='_3cnp _3cnq' and contains(text(),'Ya')]
+    Click Element    (//*[@class='_3cnp _3cnq' and contains(text(),'Ya')])[${totalYa}]
+    Sleep    5s
+
+Click_No
+    ${totalNo}    Get Element Count    //*[@class='_3cnp _3cnq' and contains(text(),'Tidak')]
+    Click Element    (//*[@class='_3cnp _3cnq' and contains(text(),'Tidak')])[${totalNo}]
+    Sleep    5s
+
+User_input
+    [Arguments]    ${input_text}
+    Press Key    ${inputtext_obj}    ${input_text}
+    Sleep    5s
+    Press Key    ${inputtext_obj}    \\13
+    Sleep    10s

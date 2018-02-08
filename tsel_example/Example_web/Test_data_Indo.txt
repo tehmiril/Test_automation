@@ -1,0 +1,32 @@
+*** Variables ***
+${email}          taacnindonesia01@gmail.com
+${password}       Welcome01!
+${URL}            https://www.facebook.com/
+${URLmessengerTSEL}    https://www.facebook.com/messages/t/telkomsel
+${VA_notunderstand_1}    Maaf, Veronika belum mengerti apa yang Kamu tulis karena masih dalam proses belajar.    # Maaf, Veronika tidak mengerti kata-kata yang Kamu tulis
+${VA_notunderstand_2}    Tolong perjelas yang Kamu maksud ya
+${VA_notunderstand_3}    Saat ini, Veronika belum mengerti permintaan Kamu
+${VA_notunderstand_4}    Mungkin teman dari customer service Telkomsel bisa membantu Kamu. Apakah mau disambungkan?
+${random_question_1}    Mobile Legend itu apa ya?
+${random_question_2}    Main Mobile Legend bagaimana?
+${VA_question_1}    Ada lagi yang bisa Veronika bantu?
+${no_answer}      Tidak
+${yes_answer}     Ya
+${VA_question_2}    untuk terus meningkatkan layanan ini, mohon bantuannya untuk menilai percakapan ini ya.    #Penilaian dalam skala 1-10 (1 sangat tidak puas - 10 sangat puas). Silakan masukan penilaian Kamu
+${VA_question_3}    Menurut Kamu, apa yang harus Veronika tingkatkan?
+${user_rate}      9
+${random_question_3}    Apa itu waktu sholat?
+${VA_closingstatement}    Terima kasih atas penilaiannya Veronika turut senang membantu
+${ask_pulsa}      Sisa pulsa saya berapa?
+${ask_kuota}      Sisa kuota data saya berapa?
+${greeting}       Halo Vero
+${VA_answerPulsa1}    Setelah Veronika cek, sisa pulsa untuk nomor +6281310365118    #adalah sebesar Rp<BALANCE AMOUNT> dan berlaku hingga <EXPIRY DATE>
+${VA_answerPulsa2}    Apakah Kamu juga ingin melakukan pengisian pulsa?
+${VA_validateNumber}    Apakah Kamu bertanya untuk nomor handphone +6281310365118?
+${VA_answerKuota2}    Berikut sisa kuota internet Kamu:
+${VA_answerKuota3}    Apakah Kamu mau membeli paket tambahan?
+${VA_Greet1}      Hai M Testaut, selamat datang di GraPARI Virtual Telkomsel!
+${VA_Greet2}      Apa yang bisa Veronika bantu hari ini?
+${VA_GreetButton1}    Lihat Menu Utama
+${VA_GreetButton2}    Chat in English
+${VA_endGreet}    Sampai jumpa di chat berikutnya dan semoga harimu menyenangkan ya!
