@@ -125,6 +125,9 @@ test_Messenger_askPulsaKuota
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${VA_thanksRate}')]
     #[Teardown]    Close Browser
 
+_chrome_Messenger_askPulsaKuota
+    Open_chrome_messenger
+
 *** Keywords ***
 Login_FB
     [Arguments]    ${webdriver}
@@ -204,3 +207,27 @@ User_input
 Check_VA_response
     [Arguments]    ${response_text}
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${response_text}')]
+
+Open_chrome_messenger
+    [Documentation]    Sample Test For Chrome Headless
+    [Tags]    chrome    headless
+    ${chrome_options}=    Set Chrome Options
+    Create Webdriver    Chrome    chrome_options=${chrome_options}
+    Go To    ${URLmessengerTSEL}
+    Maximize Browser Window
+    Sleep    7s
+    Click Element    ${email_obj}
+    Input Text    ${email_obj}    ${email}
+    Click Element    ${password_obj}
+    Input Password    ${password_obj}    ${password}
+    Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    20s    None
+    Sleep    10s
+    [Teardown]    Close Browser
+
+Set Chrome Options
+    [Documentation]    Set Chrome options for headless mode
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    : FOR    ${option}    IN    @{chrome_arguments}
+    \    Call Method    ${options}    add_argument    ${option}
+    [Return]    ${options}
