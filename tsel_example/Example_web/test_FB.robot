@@ -130,25 +130,44 @@ test_chrome_Messenger_askPulsaKuota
     Open_Web_Messenger    ${webDriver_Chrome}
     Greet_VA_Indo
     User_input    ${ask_pulsa}
-    Sleep    20s
-    ${result}    Run Keyword and Return    Wait Until Page Contains    ${VA_validateNumber}    15s    None
+    Sleep    10s
+    Capture Page Screenshot    first_response_pulsa.png
+    ${result}    Run Keyword and Return Status    Wait Until Page Contains    ${VA_validateNumber}    10s    None
     Run Keyword If    ${result}    Click_Yes
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_answerPulsa1}')]
-    Wait Until Page Contains    ${VA_answerPulsa2}    15s    None
-    Wait Until Page Contains    ${yes_answer}    15s    None
-    Wait Until Page Contains    ${no_answer}    15s    None
+    Capture Page Screenshot    second_response_pulsa.png
+    Wait Until Page Contains    ${VA_answerPulsa2}    10s    None
+    Wait Until Page Contains    ${yes_answer}    5s    None
+    Wait Until Page Contains    ${no_answer}    5s    None
     User_input    ${ask_kuota}
+    Capture Page Screenshot    first_response_kuota.png
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_answerKuota2}')]
-    Wait Until Page Contains    ${VA_answerKuota3}    15s    None
+    Wait Until Page Contains    ${VA_answerKuota3}    10s    None
     Click_No
-    Wait Until Page Contains    ${VA_question_1}    15s    None
+    Sleep    5s
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_question_1}')]
+    Click Element    ${inputtext2_obj}
+    Sleep    5s
     User_input    ${no_answer}
-    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_question_2}')]
+    Sleep    5s
+    #${justcheck}    Get Element Count    //*[@class='_3oh- _58nk' and contains(.,'${VA_question_2}')]
+    #(//*[@class='_3oh- _58nk' and contains(.,'${VA_question_2}')])[12]
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${VA_question_2}')]
     User_input    ${user_rate}
-    Wait Until Page Contains    ${VA_question_3}    15s    None
-    #Validate buttons here!!!!
+    Capture Page Screenshot    user_rate.png
+    Wait Until Page Contains    ${VA_question_3}    10s    None
+    #Validate buttons here???!!!
+    User_input    ${select_Rate}
+    Sleep    2s
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${VA_askRateReason}')]
     User_input    ${no_answer}
-    Wait Until Page Contains    ${VA_endGreet}    15s    None
+    Sleep    2s
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${VA_thanksRate}')]
+    #[Teardown]    Close Browser
+
+test_safari_Messenger_rate
+    Open_Web_Messenger    ${webDriver_safari}
+    Check_rate_location
     #[Teardown]    Close Browser
 
 *** Keywords ***
@@ -201,8 +220,8 @@ Swipe_until_element
     \    ${looping}    Set Variable    ${looping}+1
 
 Greet_VA_Indo
-    Press Key    ${inputtext_obj}    ${greeting}
-    Sleep    15s
+    User_input    ${greeting}
+    Sleep    10s
     Wait Until Page Contains    ${VA_Greet1}    10s    None
     Wait Until Page Contains    ${VA_Greet2}    10s    None
     Wait Until Page Contains    ${VA_GreetButton1}    10s    None
@@ -212,16 +231,20 @@ Greet_VA_Indo
 Click_Yes
     ${totalYa}    Get Element Count    //*[@class='_3cnp _3cnq' and contains(text(),'Ya')]
     Click Element    (//*[@class='_3cnp _3cnq' and contains(text(),'Ya')])[${totalYa}]
-    Sleep    5s
+    #Sleep    5s
 
 Click_No
-    ${totalNo}    Get Element Count    //*[@class='_3cnp _3cnq' and contains(text(),'Tidak')]
-    Click Element    (//*[@class='_3cnp _3cnq' and contains(text(),'Tidak')])[${totalNo}]
-    Sleep    5s
+    ${totalNo}    Get Element Count    //*[@class='_3cnp' and contains(text(),'Tidak')]
+    Click Element    (//*[@class='_3cnp' and contains(text(),'Tidak')])[${totalNo}]
+    #Sleep    5s
 
 User_input
     [Arguments]    ${input_text}
     Press Key    ${inputtext_obj}    ${input_text}
-    Sleep    5s
+    Sleep    2s
     Press Key    ${inputtext_obj}    \\13
+    Capture Page Screenshot    input.png
     Sleep    10s
+
+Check_rate_location
+    #Sleep    5s
