@@ -4,7 +4,7 @@ Resource          Object_repo_Chrome.txt
 Resource          Test_data_Indo.txt
 
 *** Test Cases ***
-simple_test_chrome
+_simple_test_chrome
     [Documentation]    Discontinued due to pop up that cannot be handled after login to facebook.
     Open Browser    ${URL}    ${webDriver_Chrome}
     Sleep    2s
@@ -14,7 +14,8 @@ simple_test_chrome
     Sleep    5s
     #Close Browser
 
-simple_test_ie
+_simple_test_ie
+    [Documentation]    discontinued due to additional setting on IE is required
     Open Browser    ${URL}    ${webDriver_IE}
     Sleep    2s
     Input Text    ${email_obj}    ${email}
@@ -23,7 +24,7 @@ simple_test_ie
     Sleep    5s
     #Close Browser
 
-simple_test_safari
+_simple_test_safari
     Login_FB    ${webDriver_safari}
     Wait Until Page Contains    Beranda    20s    None
     Sleep    5s
@@ -39,57 +40,8 @@ simple_test_safari
     Input Text    ${inputtext_obj}    ${random_question_1}
     Sleep    10s
 
-test_safari_Messenger
-    Open_Web_Messenger    ${webDriver_safari}
-    Sleep    10s
-    Press Key    ${inputtext_obj}    ${random_question_1}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    Wait Until Page Contains    ${VA_notunderstand_1}    10s    None
-    Wait Until Page Contains    ${VA_notunderstand_2}    10s    None
-    Sleep    5s
-    Press Key    ${inputtext_obj}    ${random_question_2}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    Wait Until Page Contains    ${VA_notunderstand_3}    10s    None
-    Wait Until Page Contains    ${VA_notunderstand_4}    10s    None
-    Wait Until Page Contains    Ya    10s    None
-    Click Element    Tidak
-    Wait Until Page Contains    ${VA_question_1}    10s    None
-    Press Key    ${inputtext_obj}    ${no_answer}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    #[Teardown]    Close Browser
-
-test_chrome_Messenger
-    Open_Web_Messenger    ${webDriver_Chrome}
-    Sleep    10s
-    Press Key    ${inputtext_obj}    ${random_question_1}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    Wait Until Page Contains    ${VA_notunderstand_1}    10s    None
-    Wait Until Page Contains    ${VA_notunderstand_2}    10s    None
-    Sleep    5s
-    Press Key    ${inputtext_obj}    ${random_question_2}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    Wait Until Page Contains    ${VA_notunderstand_3}    10s    None
-    Wait Until Page Contains    ${VA_notunderstand_4}    10s    None
-    Wait Until Page Contains    Ya    10s    None
-    Click Element    Tidak
-    Wait Until Page Contains    ${VA_question_1}    10s    None
-    Press Key    ${inputtext_obj}    ${no_answer}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    #[Teardown]    Close Browser
-
-simple_carousel_chrome
+_simple_carousel_chrome
+    [Documentation]    this is created to test carousel on chrome
     Open_Web_Messenger    ${webDriver_Chrome}
     #Click Element    //*[@class='_3cne' and contains(.,'SimPATI Combo')]/following-sibling::div//a[contains(.,'Beli sekarang')]
     #Sleep    2s
@@ -171,11 +123,6 @@ test_Messenger_askPulsaKuota
     User_input    ${no_answer}
     Sleep    2s
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${VA_thanksRate}')]
-    #[Teardown]    Close Browser
-
-test_safari_Messenger_rate
-    Open_Web_Messenger    ${webDriver_safari}
-    Check_rate_location
     #[Teardown]    Close Browser
 
 *** Keywords ***
