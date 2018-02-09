@@ -1,6 +1,6 @@
 *** Variables ***
 ${webDriver_Chrome}    safari    # chrome
-${email}          taacnindonesia01@gmail.com
+${email}          amiril_beautiful@yahoo.com
 ${password}       Welcome01!
 ${URL}            https://www.facebook.com/
 ${URLmessengerTSEL}    https://www.facebook.com/messages/t/telkomsel

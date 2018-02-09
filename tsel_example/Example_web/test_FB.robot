@@ -1,6 +1,5 @@
 *** Settings ***
 Library           Selenium2Library
-Resource          Setting_chrome.txt
 Resource          Object_repo_Chrome.txt
 Resource          Test_data_Indo.txt
 

@@ -1,0 +1,16 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.safari FB parallel                                                     
+==============================================================================
+test_chrome_Messenger_askPulsaKuota :: Here registered user ask fo... | PASS |
+------------------------------------------------------------------------------
+Suites.safari FB parallel                                             | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  /Users/accenture-mac02/Documents/Robot/Test_automation/tsel_example/Example_web/pabot_results/Suites.safari FB parallel/output.xml
