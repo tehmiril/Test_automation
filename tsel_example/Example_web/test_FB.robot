@@ -99,32 +99,41 @@ simple_carousel_chrome
     ...    AND    Sleep    2s
     ...    ELSE    Swipe_until_element    Kartu As Combo    Beli sekarang
 
-test_chrome_Messenger_VAnotUnderstand
+test_Messenger_VAnotUnderstand
+    [Documentation]    Here user ask question which is not in FAQ
     Open_Web_Messenger    ${webDriver_Chrome}
-    Sleep    10s
-    Press Key    ${inputtext_obj}    ${random_question_1}
+    User_input    ${random_question_1}
     Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
-    Wait Until Page Contains    ${VA_answerKuota1}    10s    None
-    Wait Until Page Contains    ${VA_notunderstand_2}    10s    None
+    Check_VA_response    ${VA_notunderstand_1}
+    #Check_VA_response    ${VA_notunderstand_2}
+    Capture Page Screenshot    first_response_NU.png
+    User_input    ${random_question_2}
     Sleep    5s
-    Press Key    ${inputtext_obj}    ${random_question_2}
-    Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
+    #Check_VA_response    ${VA_notunderstand_6}
+    Capture Page Screenshot    second_response_NU.png
+    Click Element    ${inputtext2_obj}
+    User_input    ${cancel_answer}
     Sleep    10s
-    Wait Until Page Contains    ${VA_notunderstand_3}    10s    None
-    Wait Until Page Contains    ${VA_notunderstand_4}    10s    None
-    Wait Until Page Contains    Ya    10s    None
-    Click Element    Tidak
-    Wait Until Page Contains    ${VA_question_1}    10s    None
-    Press Key    ${inputtext_obj}    ${no_answer}
+    Check_VA_response    ${VA_cancel}
+    Check_VA_response    ${VA_question_1}
+    Click Element    ${inputtext2_obj}
+    Sleep    2s
+    User_input    ${no_answer}
     Sleep    5s
-    Press Key    ${inputtext_obj}    \\13
-    Sleep    10s
+    Check_VA_response    ${VA_question_2}
+    User_input    ${user_rate}
+    Capture Page Screenshot    user_rate.png
+    Check_VA_response    ${VA_question_3}
+    #Validate buttons here???!!!
+    User_input    ${select_Rate}
+    Sleep    2s
+    Check_VA_response    ${VA_askRateReason}
+    User_input    ${no_answer}
+    Sleep    2s
+    Check_VA_response    ${VA_thanksRate}
     #[Teardown]    Close Browser
 
-test_chrome_Messenger_askPulsaKuota
+test_Messenger_askPulsaKuota
     [Documentation]    Here registered user ask for both pulsa and kuota, without top-up.
     Open_Web_Messenger    ${webDriver_Chrome}
     Greet_VA_Indo
@@ -146,7 +155,7 @@ test_chrome_Messenger_askPulsaKuota
     Sleep    5s
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_question_1}')]
     Click Element    ${inputtext2_obj}
-    Sleep    5s
+    Sleep    2s
     User_input    ${no_answer}
     Sleep    5s
     #${justcheck}    Get Element Count    //*[@class='_3oh- _58nk' and contains(.,'${VA_question_2}')]
@@ -184,14 +193,14 @@ Open_Web_Messenger
     [Arguments]    ${webdriver}
     Open Browser    ${URLmessengerTSEL}    ${webdriver}
     Maximize Browser Window
-    Sleep    10s
+    Sleep    7s
     Click Element    ${email_obj}
     Input Text    ${email_obj}    ${email}
     Click Element    ${password_obj}
     Input Password    ${password_obj}    ${password}
     Click Element    ${login_obj}
     Wait Until Page Contains    Telkomsel    20s    None
-    Sleep    20s
+    Sleep    10s
 
 Select_Carousel
     [Arguments]    ${Carousel_title}    ${Carousel_button}
@@ -221,8 +230,8 @@ Swipe_until_element
 Greet_VA_Indo
     User_input    ${greeting}
     Sleep    10s
-    Wait Until Page Contains    ${VA_Greet1}    10s    None
-    Wait Until Page Contains    ${VA_Greet2}    10s    None
+    #Wait Until Page Contains    ${VA_Greet1}    10s    None
+    #Wait Until Page Contains    ${VA_Greet2}    10s    None
     Wait Until Page Contains    ${VA_GreetButton1}    10s    None
     Wait Until Page Contains    ${VA_GreetButton2}    10s    None
     Sleep    5s
@@ -243,7 +252,8 @@ User_input
     Sleep    2s
     Press Key    ${inputtext_obj}    \\13
     Capture Page Screenshot    input.png
-    Sleep    10s
+    Sleep    5s
 
-Check_rate_location
-    #Sleep    5s
+Check_VA_response
+    [Arguments]    ${response_text}
+    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(.,'${response_text}')]
