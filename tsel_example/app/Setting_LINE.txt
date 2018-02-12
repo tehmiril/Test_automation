@@ -1,8 +1,0 @@
-*** Variables ***
-${appPackage_LINE}    jp.naver.line.android
-${androidVersion_LINE}    5.1.1
-${deviceName_LINE}    Ami Samsung
-${platformName_LINE}    Android
-${appActivity_LINE}    jp.naver.line.android.activity.SplashActivity    # jp.naver.line.android.activity.main.MainActivity
-${appiumServer_LINE}    http://localhost:4723/wd/hub
-${el}             False

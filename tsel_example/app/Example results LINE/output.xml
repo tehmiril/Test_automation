@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180212 13:45:09.173" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\amiril.r.faradini\Documents\Robot\Test_automation\tsel_example\app\test_app.robot" id="s1" name="Test App">
+<test id="s1-t1" name="LINE_askVAdoesnotunderstand">
+<kw type="setup" name="Open app">
+<kw name="Open Application" library="AppiumLibrary">
+<doc>Opens a new application to given Appium server.</doc>
+<arguments>
+<arg>${appiumServer_LINE}</arg>
+<arg>platformName=${platformName_LINE}</arg>
+<arg>platformVersion=${androidVersion_LINE}</arg>
+<arg>deviceName=${deviceName_LINE}</arg>
+<arg>appPackage=${appPackage_LINE}</arg>
+<arg>appActivity=${appActivity_LINE}</arg>
+<arg>noReset=true</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:45:29.059" starttime="20180212 13:45:09.396"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:45:29.060" starttime="20180212 13:45:09.396"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@content-desc="Chats tab"]</arg>
+<arg>10</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:45:32.193" starttime="20180212 13:45:29.061"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Chats tab"]</arg>
+</arguments>
+<msg timestamp="20180212 13:45:32.197" level="INFO">Clicking element '//*[@content-desc="Chats tab"]'.</msg>
+<status status="PASS" endtime="20180212 13:45:35.612" starttime="20180212 13:45:32.196"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@text="Chats"]</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:45:35.814" starttime="20180212 13:45:35.613"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>id=jp.naver.line.android:id/chatlist_chatname</arg>
+</arguments>
+<msg timestamp="20180212 13:45:35.815" level="INFO">Clicking element 'id=jp.naver.line.android:id/chatlist_chatname'.</msg>
+<status status="PASS" endtime="20180212 13:45:37.271" starttime="20180212 13:45:35.815"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${random_question_1}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:45:37.273" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:45:38.203" starttime="20180212 13:45:37.273"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:45:39.254" starttime="20180212 13:45:38.204"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:45:39.255" level="INFO">Typing text 'Mobile Legend itu apa ya?' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:45:44.793" starttime="20180212 13:45:39.255"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:45:44.795" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:45:45.663" starttime="20180212 13:45:44.794"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:45:50.664" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:45:50.665" starttime="20180212 13:45:45.663"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:45:50.667" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:45:51.008" starttime="20180212 13:45:50.666"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:45:51.009" starttime="20180212 13:45:37.272"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<arguments>
+<arg>first_response_notunderstand.png</arg>
+</arguments>
+<msg timestamp="20180212 13:45:52.591" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="first_response_notunderstand.png"&gt;&lt;img src="first_response_notunderstand.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180212 13:45:52.591" starttime="20180212 13:45:51.010"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${random_question_2}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:45:52.593" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:45:54.035" starttime="20180212 13:45:52.593"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:45:54.989" starttime="20180212 13:45:54.036"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:45:54.992" level="INFO">Typing text 'Cara mainnya gimana?' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:46:01.189" starttime="20180212 13:45:54.991"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:01.191" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:46:02.017" starttime="20180212 13:46:01.191"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:46:07.020" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:46:07.021" starttime="20180212 13:46:02.019"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:07.023" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:07.433" starttime="20180212 13:46:07.022"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:46:07.434" starttime="20180212 13:45:52.592"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${cancel_answer}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:07.439" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:08.337" starttime="20180212 13:46:07.437"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:46:12.821" starttime="20180212 13:46:08.338"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:12.822" level="INFO">Typing text 'Batal' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:46:17.917" starttime="20180212 13:46:12.822"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:17.921" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:46:19.059" starttime="20180212 13:46:17.919"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:46:24.062" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:46:24.063" starttime="20180212 13:46:19.061"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:24.065" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:24.493" starttime="20180212 13:46:24.064"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:46:24.495" starttime="20180212 13:46:07.435"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:46:29.498" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:46:29.498" starttime="20180212 13:46:24.497"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${no_answer}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:29.501" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:29.905" starttime="20180212 13:46:29.501"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:46:30.844" starttime="20180212 13:46:29.907"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:30.846" level="INFO">Typing text 'Tidak' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:46:35.717" starttime="20180212 13:46:30.845"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:35.719" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:46:36.784" starttime="20180212 13:46:35.718"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:46:41.787" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:46:41.788" starttime="20180212 13:46:36.785"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:41.790" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:42.129" starttime="20180212 13:46:41.789"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:46:42.130" starttime="20180212 13:46:29.499"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${user_rate}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:42.132" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:43.025" starttime="20180212 13:46:42.131"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:46:43.922" starttime="20180212 13:46:43.026"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:43.924" level="INFO">Typing text '9' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:46:49.474" starttime="20180212 13:46:43.923"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:49.479" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:46:50.539" starttime="20180212 13:46:49.477"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:46:55.541" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:46:55.542" starttime="20180212 13:46:50.541"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:55.543" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:56.242" starttime="20180212 13:46:55.542"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:46:56.243" starttime="20180212 13:46:42.131"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${select_Rate}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:46:56.245" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:46:57.199" starttime="20180212 13:46:56.244"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:46:58.141" starttime="20180212 13:46:57.200"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:46:58.143" level="INFO">Typing text 'Kecepatan Respon' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:47:02.727" starttime="20180212 13:46:58.142"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:47:02.728" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:47:03.593" starttime="20180212 13:47:02.728"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:47:08.596" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:47:08.597" starttime="20180212 13:47:03.594"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:47:08.601" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:47:09.023" starttime="20180212 13:47:08.599"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:47:09.024" starttime="20180212 13:46:56.243"></status>
+</kw>
+<kw name="User_input">
+<arguments>
+<arg>${no_answer}</arg>
+</arguments>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:47:09.026" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:47:09.943" starttime="20180212 13:47:09.025"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>5</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180212 13:47:10.917" starttime="20180212 13:47:09.944"></status>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${textbox_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180212 13:47:10.919" level="INFO">Typing text 'Tidak' into text field 'class=android.widget.EditText'</msg>
+<status status="PASS" endtime="20180212 13:47:15.711" starttime="20180212 13:47:10.918"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>${sendkey_obj}</arg>
+</arguments>
+<msg timestamp="20180212 13:47:15.712" level="INFO">Clicking element 'id=jp.naver.line.android:id/chathistory_send_button_image'.</msg>
+<status status="PASS" endtime="20180212 13:47:16.681" starttime="20180212 13:47:15.712"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180212 13:47:21.684" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180212 13:47:21.687" starttime="20180212 13:47:16.683"></status>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>//*[@content-desc="Keyboard menu"]</arg>
+</arguments>
+<msg timestamp="20180212 13:47:21.690" level="INFO">Clicking element '//*[@content-desc="Keyboard menu"]'.</msg>
+<status status="PASS" endtime="20180212 13:47:22.993" starttime="20180212 13:47:21.689"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:47:22.995" starttime="20180212 13:47:09.024"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20180212 13:47:33.000" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20180212 13:47:33.001" starttime="20180212 13:47:22.997"></status>
+</kw>
+<kw type="teardown" name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" endtime="20180212 13:47:36.325" starttime="20180212 13:47:33.002"></status>
+</kw>
+<status status="PASS" endtime="20180212 13:47:36.326" critical="yes" starttime="20180212 13:45:09.395"></status>
+</test>
+<status status="PASS" endtime="20180212 13:47:36.327" starttime="20180212 13:45:09.194"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test App" pass="1">Test App</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

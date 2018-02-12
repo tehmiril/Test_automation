@@ -1,0 +1,7 @@
+*** Variables ***
+${textbox_obj}    class=android.widget.EditText
+${sendkey_obj}    id=jp.naver.line.android:id/chathistory_send_button_image
+${messagebubble_obj}    id=jp.naver.line.android:id/message_text
+${Ya_button}      //android.view.View[@text='Ya']
+${Tidak_button}    //android.view.View[@text='Tidak']
+#${bubble_option}    android.view.View

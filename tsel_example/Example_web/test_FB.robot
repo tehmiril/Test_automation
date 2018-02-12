@@ -1,7 +1,7 @@
 *** Settings ***
 Library           Selenium2Library
-Resource          Object_repo_Chrome.txt
 Resource          Test_data_Indo.txt
+Resource          Object_repo_FF.txt
 
 *** Test Cases ***
 _simple_test_chrome
@@ -63,24 +63,24 @@ test_Messenger_VAnotUnderstand
     Sleep    5s
     #Check_VA_response    ${VA_notunderstand_6}
     Capture Page Screenshot    second_response_NU.png
-    Click Element    ${inputtext2_obj}
+    #Click Element    ${inputtext2_obj}
     User_input    ${cancel_answer}
     Sleep    10s
     Check_VA_response    ${VA_cancel}
     Check_VA_response    ${VA_question_1}
-    Click Element    ${inputtext2_obj}
-    Sleep    2s
-    User_input    ${no_answer}
+    #Click Element    ${inputtext2_obj}
+    #Sleep    2s
+    User_input2    ${no_answer}
     Sleep    5s
     Check_VA_response    ${VA_question_2}
-    User_input    ${user_rate}
+    User_input2    ${user_rate}
     Capture Page Screenshot    user_rate.png
     Check_VA_response    ${VA_question_3}
     #Validate buttons here???!!!
-    User_input    ${select_Rate}
+    User_input2    ${select_Rate}
     Sleep    2s
     Check_VA_response    ${VA_askRateReason}
-    User_input    ${no_answer}
+    User_input2    ${no_answer}
     Sleep    2s
     Check_VA_response    ${VA_thanksRate}
     #[Teardown]    Close Browser
@@ -101,12 +101,14 @@ test_Messenger_askPulsaKuota
     Wait Until Page Contains    ${no_answer}    5s    None
     User_input    ${ask_kuota}
     Capture Page Screenshot    first_response_kuota.png
-    Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_answerKuota2}')]
+    Sleep    2s
+    Check_VA_response    ${VA_answerKuota2}
+    #Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_answerKuota2}')]
     Wait Until Page Contains    ${VA_answerKuota3}    10s    None
     Click_No
     Sleep    5s
     Element Should Be Visible    //*[@class='_3oh- _58nk' and contains(text(),'${VA_question_1}')]
-    Click Element    ${inputtext2_obj}
+    #Click Element    ${inputtext2_obj}
     Sleep    2s
     User_input    ${no_answer}
     Sleep    5s
@@ -201,6 +203,14 @@ User_input
     Press Key    ${inputtext_obj}    ${input_text}
     Sleep    2s
     Press Key    ${inputtext_obj}    \\13
+    Capture Page Screenshot    input.png
+    Sleep    5s
+
+User_input2
+    [Arguments]    ${input_text}
+    Press Key    ${inputtext2_obj}    ${input_text}
+    Sleep    2s
+    Press Key    ${inputtext2_obj}    \\13
     Capture Page Screenshot    input.png
     Sleep    5s
 

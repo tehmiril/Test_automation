@@ -1,32 +1,23 @@
 *** Settings ***
 Library           AppiumLibrary
-Resource          Test_data_LINE_Indo.txt
 Library           String
 Library           Collections
-Resource          Object_repo_LINE.txt
+Resource          Test_data_Tel_Indo.txt
+Resource          Object_repo_Tel.txt
 
 *** Test Cases ***
-_test_FB
-    Open Application    ${appiumServer_FB}    platformName=${platformName_FB}    platformVersion=${androidVersion_FB}    deviceName=${deviceName_FB}    appPackage=${appPackage_FB}    appActivity=${appActivity_FB}
-    ...    noReset=true
-    Wait Until Element is Visible    //*[@text="MESSAGES"]    10    None
-    Log Source
-    Click Element    //*[@instance="13"]
-    Wait Until Element is Visible    //*[@content-desc="Telkomsel"]    10    None
-    Input Text    class=android.widget.EditText    Hi
-    Click Element    //*[@content-desc="Send"]
-    Wait Until Element is Visible    //*[@text="MESSAGES"]    10    None
-
-_LINE_askPulsaKuota
+Tel_askPulsaKuota
     [Setup]    Open app
-    Wait Until Element is Visible    //*[@content-desc="Chats tab"]    10    None
-    Click Element    //*[@content-desc="Chats tab"]
-    Wait Until Element is Visible    //*[@text="Chats"]    5    None
-    Click Element    id=jp.naver.line.android:id/chatlist_chatname
-    #Click Element    //*[@content-desc="Keyboard menu"]
+    Wait Until Element is Visible    class=org.telegram.messenger.support.widget.RecyclerView    15    None
+    Click Element    //android.view.View[@index="0"]
+    #Wait Until Element is Visible    class=android.widget.EditText    10    None
+    Sleep    5s
+    ${result}    Run Keyword and Return Status    Wait Until Element is Visible    //android.widget.TextView[@text="START"]    10    None
+    Run Keyword If    ${result}    Click Element    //android.widget.TextView[@text="START"]
+    Sleep    10s
     User_input    ${ask_pulsa}
     Capture Page Screenshot    first_response_pulsa.png
-    ${result}    Run Keyword and Return Status    Check_VA_response    ${VA_validateNumber}
+    ${result}    Run Keyword and Return Status    Check_VA_response_main    ${VA_validateNumber}
     Run Keyword If    ${result}    Click_Yes
     Sleep    10s
     Check_VA_response_main    ${VA_answerPulsa1}
@@ -46,7 +37,7 @@ _LINE_askPulsaKuota
     Check_VA_response_main    ${VA_thanksRate}
     [Teardown]    Close Application
 
-LINE_askVAdonotunderstand
+Tel_askVAdoesnotunderstand
     [Setup]    Open app
     Wait Until Element is Visible    //*[@content-desc="Chats tab"]    10    None
     Click Element    //*[@content-desc="Chats tab"]
@@ -57,18 +48,21 @@ LINE_askVAdonotunderstand
     Capture Page Screenshot    first_response_notunderstand.png
     Check_VA_response_main    ${VA_notunderstand_1}
     User_input    ${random_question_2}
-    Sleep    2s
-    #Check_VA_response_main    ${VA_notunderstand_6}
+    Check_VA_response_main    ${VA_notunderstand_6}
     User_input    ${cancel_answer}
-    Sleep    2s
+    Sleep    5s
     User_input    ${no_answer}
+    #Click Element    //*[@text="CEK INFONYA!"]
     Check_VA_response_main    ${VA_question_2}
     User_input    ${user_rate}
+    #Click Element    //*[@text="CEK INFONYA!"]
     Check_VA_response_main    ${VA_question_3}
     User_input    ${select_Rate}
+    #Click Element    //*[@text="CEK INFONYA!"]
     Check_VA_response_main    ${VA_askRateReason}
-    #User_input    ${no_answer}
-    Sleep    5s
+    User_input    ${no_answer}
+    Sleep    10s
+    #Click Element    //*[@text="CEK INFONYA!"]
     Check_VA_response_main    ${VA_thanksRate}
     [Teardown]    Close Application
 
@@ -117,17 +111,17 @@ Select_carousel
     [Return]    ${finalelementX}
 
 Open app
-    Open Application    ${appiumServer_LINE}    platformName=${platformName_LINE}    platformVersion=${androidVersion_LINE}    deviceName=${deviceName_LINE}    appPackage=${appPackage_LINE}    appActivity=${appActivity_LINE}
+    Open Application    ${appiumServer_Tele}    platformName=${platformName_Tele}    platformVersion=${androidVersion_Tele}    deviceName=${deviceName_Tele}    appPackage=${appPackage_Tele}    appActivity=${appActivity_Tele}
     ...    noReset=true
 
 User_input
     [Arguments]    ${input_text}
-    Click Element    //*[@content-desc="Keyboard menu"]
-    Wait Until Element is Visible    ${textbox_obj}    5    None
+    #Click Element    //*[@content-desc="Keyboard menu"]
+    #Wait Until Element is Visible    ${textbox_obj}    5    None
     Input Text    ${textbox_obj}    ${input_text}
     Click Element    ${sendkey_obj}
     Sleep    5s
-    Click Element    //*[@content-desc="Keyboard menu"]
+    #Click Element    //*[@content-desc="Keyboard menu"]
 
 Check_VA_response
     [Arguments]    ${response_text}
@@ -137,14 +131,14 @@ Check_VA_response
     #Wait Until Page Contains Element    //android.view.View[@text='${response_text}']    2s
 
 Click_Yes
-    ${totalYa}    Get Matching Xpath Count    ${Ya_button}
-    Click Element    ${Ya_button}[${totalYa}]
+    #${totalYa}    Get Matching Xpath Count    ${Ya_button}
+    Click Element    //android.widget.TextView[@text="Ya"]
 
 Click_No
-    ${totalNo}    Get Matching Xpath Count    ${Tidak_button}
-    Click Element    ${Tidak_button}[${totalNo}]
+    #${totalNo}    Get Matching Xpath Count    ${Tidak_button}
+    Click Element    //android.widget.TextView[@text="Tidak"]
 
 Check_VA_response_main
     [Arguments]    ${response_text}
-    Click Element    id=jp.naver.line.android:id/chathistory_main_content_area
-    Element Should Be Visible    //android.widget.TextView[contains(@text,'${response_text}')]
+    #Click Element    id=jp.naver.line.android:id/chathistory_main_content_area
+    Element Should Be Visible    //android.view.View[contains(@text,'${response_text}')]

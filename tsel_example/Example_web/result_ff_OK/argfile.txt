@@ -1,0 +1,10 @@
+--outputdir
+c:\users\amiril~1.far\appdata\local\temp\RIDEv_uwwo.d
+-C
+off
+-W
+107
+--suite
+test FB
+--test
+test FB.test_Messenger_askPulsaKuota

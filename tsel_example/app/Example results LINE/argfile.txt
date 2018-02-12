@@ -1,0 +1,10 @@
+--outputdir
+c:\users\amiril~1.far\appdata\local\temp\RIDEmnuf0v.d
+-C
+off
+-W
+107
+--suite
+Test App
+--test
+Test App.LINE_askVAdoesnotunderstand
