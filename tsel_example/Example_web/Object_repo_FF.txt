@@ -6,3 +6,9 @@ ${messengericon_obj}    id:u_0_c
 ${inputtext_obj}    id:js_c    #//*[@class="_1mf _1mj"]    id:js_e
 ${inputtext2_obj}    //*[@class="_1mf _1mj"]
 ${send_obj}       //a[@id='js_9t']    # \ \ id:js_4b
+${message_bubble_obj}    class='_3oh- _58nk'
+${yabutton_obj}    //*[@class='_3cnp _3cnq' and contains(text(),'Ya')]
+${nobutton_obj}    //*[@class='_3cnp' and contains(text(),'Tidak')]
+${carouselclass_obj}    class='_3cne'
+${tselicon_obj}    //*[@alt="Telkomsel"]
+${carouselforward_obj}    //*[@direction="forward"]
