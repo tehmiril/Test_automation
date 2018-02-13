@@ -1,0 +1,10 @@
+--outputdir
+c:\users\amiril~1.far\appdata\local\temp\RIDEj_spso.d
+-C
+off
+-W
+107
+--suite
+Just A Test
+--test
+Just A Test.test_carousel

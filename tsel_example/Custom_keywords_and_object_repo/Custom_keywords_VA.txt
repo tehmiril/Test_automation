@@ -1,0 +1,133 @@
+*** Keywords ***
+Login_FB
+    [Arguments]    ${webdriver}
+    [Documentation]    This keyword is to open FB page, not relevant.
+    Open Browser    ${URL}    ${webdriver}
+    Maximize Browser Window
+    Sleep    2s
+    Input Text    ${email_obj}    ${email}
+    Input Password    ${password_obj}    ${password}
+    Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    20s    None
+
+Open_Web_Messenger
+    [Arguments]    ${webdriver}
+    [Documentation]    This keyword is to open and login to FB messenger on web.
+    Open Browser    ${URLmessengerTSEL}    ${webdriver}
+    Maximize Browser Window
+    Sleep    5s
+    Click Element    ${email_obj}
+    Input Text    ${email_obj}    ${email}
+    Click Element    ${password_obj}
+    Input Password    ${password_obj}    ${password}
+    Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    20s    None
+    Sleep    7s
+
+Select_Carousel
+    [Arguments]    ${Carousel_title}    ${Carousel_button}
+    [Documentation]    This keyword to get the location of a number of elements for carousel.
+    ${totalicon}    Get Element Count    ${tselicon_obj}
+    ${tsel_icon_locationX}    Get Horizontal Position    (${tselicon_obj})[${totalicon}]
+    ${totalcarousel}    Get Element Count    //a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')]
+    ${element_XBegin}    Get Horizontal Position    (//a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')])[${totalcarousel}]
+    #Just a suggested width, what would be the accepted maximum limit of X location
+    ${right_limit}    Evaluate    ${tsel_icon_locationX}+400
+    [Return]    ${element_XBegin}    ${tsel_icon_locationX}    ${right_limit}
+
+Swipe_until_element
+    [Arguments]    ${Carousel_title}    ${Carousel_button}
+    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
+    Sleep    2s
+    ${totalcarousel}    Get Element Count    ${carouselforward_obj}
+    : FOR    ${looping}    IN RANGE    0    10
+    \    Click Element    (${carouselforward_obj})[${totalcarousel}]
+    \    Sleep    2s
+    \    ${element_XBegin}    ${left_limit}    ${right_limit}    Select_carousel    ${Carousel_title}    ${Carousel_button}
+    \    Run Keyword If    ${left_limit} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    5s
+    \    ...    AND    Click Element    //*[@${carouselclass_obj} and contains(.,'${Carousel_title}')]/following-sibling::div//a[contains(.,'${Carousel_button}')]
+    \    ...    AND    Sleep    5s
+    \    ...    AND    Exit For Loop
+    \    ${looping}    Set Variable    ${looping}+1
+
+Greet_VA_Indo
+    [Documentation]    Can be part of any test case, greet VA
+    User_input    ${greeting}
+    Sleep    10s
+    Wait Until Page Contains    ${VA_GreetButton1}    10s    None
+    Wait Until Page Contains    ${VA_GreetButton2}    10s    None
+    Sleep    5s
+
+Click_Yes
+    [Documentation]    This keyword can be used to click Ya button that is part of the VA response.
+    ${totalYa}    Get Element Count    ${yabutton_obj}
+    Click Element    (${yabutton_obj})[${totalYa}]
+    #Sleep    5s
+
+Click_No
+    [Documentation]    This keyword can be used to click Tidak button that is part of the VA response.
+    ${totalNo}    Get Element Count    ${nobutton_obj}
+    Click Element    (${nobutton_obj})[${totalNo}]
+    #Sleep    5s
+
+User_input
+    [Arguments]    ${input_text}
+    Press Key    ${inputtext_obj}    ${input_text}
+    Sleep    2s
+    Press Key    ${inputtext_obj}    \\13
+    Capture Page Screenshot    input.png
+    Sleep    5s
+
+User_input2
+    [Arguments]    ${input_text}
+    [Documentation]    This was used for chrome; not relevant
+    Press Key    ${inputtext2_obj}    ${input_text}
+    Sleep    2s
+    Press Key    ${inputtext2_obj}    \\13
+    Capture Page Screenshot    input.png
+    Sleep    5s
+
+Check_VA_response
+    [Arguments]    ${response_text}
+    Element Should Be Visible    //*[@${message_bubble_obj} and contains(.,'${response_text}')]
+
+Open_chrome_messenger
+    [Documentation]    Sample Test For Chrome Headless and without notification; not relevant
+    [Tags]    chrome    headless
+    ${chrome_options}=    Set Chrome Options
+    Create Webdriver    Chrome    chrome_options=${chrome_options}
+    Go To    ${URLmessengerTSEL}
+    Maximize Browser Window
+    Sleep    7s
+    Click Element    ${email_obj}
+    Input Text    ${email_obj}    ${email}
+    Click Element    ${password_obj}
+    Input Password    ${password_obj}    ${password}
+    Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    20s    None
+    Sleep    10s
+    [Teardown]    Close Browser
+
+Set Chrome Options
+    [Documentation]    Plan to start chrome without notification; not relevant
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    : FOR    ${option}    IN    @{chrome_arguments}
+    \    Call Method    ${options}    add_argument    ${option}
+    [Return]    ${options}
+
+Closing_session
+    Check_VA_response    ${VA_question_1}
+    User_input    ${no_answer}
+    Sleep    5s
+    Check_VA_response    ${VA_question_2}
+    User_input    ${user_rate}
+    Capture Page Screenshot    user_rate.png
+    Check_VA_response    ${VA_question_3}
+    #Validate buttons here???!!!
+    #only type in at the moment
+    User_input    ${select_Rate}
+    Sleep    2s
+    Check_VA_response    ${VA_askRateReason}
+    User_input    ${no_answer}
+    Sleep    2s
+    Check_VA_response    ${VA_thanksRate}

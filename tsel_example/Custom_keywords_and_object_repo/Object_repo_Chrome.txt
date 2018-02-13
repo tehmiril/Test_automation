@@ -1,0 +1,8 @@
+*** Variables ***
+${email_obj}      id:email
+${password_obj}    id:pass
+${login_obj}      id:loginbutton    # //*[@id="u_0_2"]
+${messengericon_obj}    id:u_0_c
+${inputtext_obj}    id:js_e
+${inputtext2_obj}    //*[@class="_1mf _1mj"]
+${send_obj}       //a[@id='js_9t']    # \ \ id:js_4b
