@@ -15,14 +15,14 @@ Open_Web_Messenger
     [Documentation]    This keyword is to open and login to FB messenger on web.
     Open Browser    ${URLmessengerTSEL}    ${webdriver}
     Maximize Browser Window
-    Sleep    5s
+    Sleep    2s
     Click Element    ${email_obj}
     Input Text    ${email_obj}    ${email}
     Click Element    ${password_obj}
     Input Password    ${password_obj}    ${password}
     Click Element    ${login_obj}
     Wait Until Page Contains    Telkomsel    20s    None
-    Sleep    7s
+    Sleep    10s
 
 Select_Carousel
     [Arguments]    ${Carousel_title}    ${Carousel_button}
@@ -53,10 +53,12 @@ Swipe_until_element
 Greet_VA_Indo
     [Documentation]    Can be part of any test case, greet VA
     User_input    ${greeting}
-    Sleep    10s
-    Wait Until Page Contains    ${VA_GreetButton1}    10s    None
-    Wait Until Page Contains    ${VA_GreetButton2}    10s    None
-    Sleep    5s
+    Check_VA_response_text    1    ${VA_Greet1}
+    Check_VA_response_text    2    Saatnya menukar POIN Kamu dengan promo-promo menarik! Info lebih lanjut klik disini https://www.telkomsel.com/explore/telkomsel-poin
+    Check_VA_response_image    3
+    Check_VA_response_text_with_2buttons    4    ${VA_Greet2}    ${VA_GreetButton1}    ${VA_GreetButton2}
+    Capture Page Screenshot    VA_greet.png
+    Sleep    2s
 
 Click_Yes
     [Documentation]    This keyword can be used to click Ya button that is part of the VA response.
@@ -72,48 +74,17 @@ Click_No
 
 User_input
     [Arguments]    ${input_text}
+    Click Element    ${inputtext_obj}
     Press Key    ${inputtext_obj}    ${input_text}
-    Sleep    2s
+    Sleep    1s
     Press Key    ${inputtext_obj}    \\13
-    Capture Page Screenshot    input.png
     Sleep    5s
-
-User_input2
-    [Arguments]    ${input_text}
-    [Documentation]    This was used for chrome; not relevant
-    Press Key    ${inputtext2_obj}    ${input_text}
-    Sleep    2s
-    Press Key    ${inputtext2_obj}    \\13
-    Capture Page Screenshot    input.png
-    Sleep    5s
+    Set Suite Variable    ${current_user_input}    ${input_text}
+    Run Keyword    Count_message_bubble_user_input    ${current_user_input}
 
 Check_VA_response
     [Arguments]    ${response_text}
     Element Should Be Visible    //*[@${message_bubble_obj} and contains(.,'${response_text}')]
-
-Open_chrome_messenger
-    [Documentation]    Sample Test For Chrome Headless and without notification; not relevant
-    [Tags]    chrome    headless
-    ${chrome_options}=    Set Chrome Options
-    Create Webdriver    Chrome    chrome_options=${chrome_options}
-    Go To    ${URLmessengerTSEL}
-    Maximize Browser Window
-    Sleep    7s
-    Click Element    ${email_obj}
-    Input Text    ${email_obj}    ${email}
-    Click Element    ${password_obj}
-    Input Password    ${password_obj}    ${password}
-    Click Element    ${login_obj}
-    Wait Until Page Contains    Telkomsel    20s    None
-    Sleep    10s
-    [Teardown]    Close Browser
-
-Set Chrome Options
-    [Documentation]    Plan to start chrome without notification; not relevant
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    : FOR    ${option}    IN    @{chrome_arguments}
-    \    Call Method    ${options}    add_argument    ${option}
-    [Return]    ${options}
 
 Closing_session
     Check_VA_response    ${VA_question_1}
@@ -131,3 +102,96 @@ Closing_session
     User_input    ${no_answer}
     Sleep    2s
     Check_VA_response    ${VA_thanksRate}
+
+Count_message_bubble
+    [Documentation]    count total of message bubble, for both user input and VA response
+    ${totalgroupedmessage}    Get Element Count    ${grouped_message_bubble}
+    [Return]    ${totalgroupedmessage}
+
+Count_message_bubble_user_input
+    [Arguments]    ${user_input}
+    [Documentation]    count total number of message bubble for specific input
+    ${totalallmessage}    Get Element Count    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])
+    ${totalgroupedmessage}    Get Element Count    //*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]
+    Set Suite Variable    ${current_total_user_message}    ${totalgroupedmessage}
+    #[Return]    ${totalgroupedmessage}
+
+Get_VA_grouped_response
+    [Arguments]    ${user_input}    ${total_user_input}
+    ${totalgroupedmessage}    Get Element Count    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")]
+    #${classname}    Get Element Attribute    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${totalgroupedmessage}]    class
+    [Return]    ${totalgroupedmessage}
+
+Check_VA_response_text
+    [Arguments]    ${order}    ${expected_text}
+    Wait Until Keyword Succeeds    15s    3s    Element Should Be Visible    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]
+    ${classname}    Get Element Attribute    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]    class
+    Should Be Equal As Strings    ${classname}    ${VA_textcarousel_bubble}
+    Run Keyword    Check_VA_response_text_actual    ${current_user_input}    ${current_total_user_message}    ${order}    ${expected_text}
+
+Check_VA_response_text_actual
+    [Arguments]    ${user_input}    ${total_user_input}    ${order}    ${expected_text}
+    ${textresponse}    Get Element Attribute    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div    body
+    Should Contain    ${textresponse}    ${expected_text}
+
+Check_VA_response_image
+    [Arguments]    ${order}
+    [Documentation]    As the URL shown on web is generated by FB, checking URL might be not possible. Currently only checks the class.
+    Wait Until Keyword Succeeds    15s    3s    Element Should Be Visible    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]
+    ${classname}    Get Element Attribute    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]    class
+    Should Be Equal As Strings    ${classname}    ${VA_image_bubble}
+
+Check_VA_response_carousel_exists
+    [Arguments]    ${order}
+    Wait Until Keyword Succeeds    15s    3s    Element Should Be Visible    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div
+    ${classname}    Get Element Attribute    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div    class
+    Should Be Equal As Strings    ${classname}    ${VA_carousel_maindiv}
+
+Check_VA_response_text_with_2buttons
+    [Arguments]    ${order}    ${expected_text}    ${expected_button1}    ${expected_button2}
+    Check_VA_response_text    ${order}    ${expected_text}
+    Element Should Be Visible    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"${expected_button1}")]
+    Element Should Be Visible    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"${expected_button2}")]
+
+Open_chrome
+    [Documentation]    Opens _Google Chrome_ to a given web page.
+    ...    For more information on what capabilities that _Google Chrome_
+    ...    supports, see [https://sites.google.com/a/chromium.org/chromedriver/capabilities%7Cthis Capabilities & ChromeOptions page].
+    ${chrome_options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys
+    Call Method    ${chrome_options}    add_argument    test-type
+    Call Method    ${chrome_options}    add_argument    --disable-extensions
+    Call Method    ${chrome_options}    add_argument    --disable-notifications
+    Run Keyword If    os.sep == '/'    Create Webdriver    Chrome    my_alias    chrome_options=${chrome_options}    executable_path=/usr/lib/chromium-browser/chromedriver
+    ...    ELSE    Create Webdriver    Chrome    my_alias    chrome_options=${chrome_options}
+    Maximize Browser Window
+    Go To    ${URLmessengerTSEL}
+
+Login_messenger
+    [Arguments]    ${email}    ${password}
+    Click Element    ${email_obj}
+    Input Text    ${email_obj}    ${email}
+    Click Element    ${password_obj}
+    Input Password    ${password_obj}    ${password}
+    Click Element    ${login_obj}
+    Wait Until Page Contains    Telkomsel    15s    None
+    Wait Until Keyword Succeeds    15s    3s    Element Should Be Visible    ${inputtext_obj}
+
+Check_VA_response_carousel_actual
+    [Arguments]    ${user_input}    ${total_user_input}    ${order}
+    ${classname}    Get Element Attribute    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div    class
+    Should Be Equal As Strings    ${classname}    ${VA_carousel_maindiv}
+
+Cancel_and_closing_session
+    User_input    ${cancel_answer}
+    Check_VA_response_text    1    ${VA_cancel}
+    Check_VA_response_text    2    ${VA_question_1}
+    User_input    ${no_answer}
+    Check_VA_response_text    1    ${VA_question_2}
+    User_input    ${user_rate}
+    Capture Page Screenshot    user_rate.png
+    Check_VA_response_text    1    ${VA_question_3}
+    #only type in at the moment
+    User_input    ${select_Rate}
+    Check_VA_response_text    1    ${VA_askRateReason}
+    User_input    ${no_answer}
+    Check_VA_response_text    1    ${VA_closingstatement}
