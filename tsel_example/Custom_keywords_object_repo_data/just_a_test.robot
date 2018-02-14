@@ -10,17 +10,14 @@ test_simple_input_response
     Login_messenger    ${email}    ${password}
     Greet_VA_Indo
     User_input    ${random_question_3}
-    Sleep    5s
     Check_VA_response_text    1    ${VA_gives_FAQ}
     Check_VA_response_carousel_exists    2
     Check_VA_response_text    3    ${VA_question_1}
     Capture Page Screenshot    response_qa.png
     User_input    Lihat semua produk
-    Sleep    5s
     Check_VA_response_text    1    Pilihan yang tepat! Kamu bisa beralih ke produk Telkomsel di bawah ini
     Check_VA_response_carousel_exists    2
     Capture Page Screenshot    response_produk.png
-    Sleep    2s
     Cancel_and_closing_session
     Sleep    2s
     [Teardown]    Close Browser
