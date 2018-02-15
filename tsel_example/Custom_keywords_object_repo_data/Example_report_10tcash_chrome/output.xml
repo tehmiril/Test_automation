@@ -1,0 +1,2222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180215 08:02:44.040" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<suite source="C:\Users\amiril.r.faradini\Documents\Robot\just_a_test.robot" id="s1" name="Just A Test">
+<test id="s1-t1" name="10-TCASH Information">
+<kw type="setup" name="Open_chrome" library="Custom_keywords_VA">
+<doc>Opens _Google Chrome_ to a given web page.</doc>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+</arguments>
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<msg timestamp="20180215 08:02:44.225" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000000043A2B70&gt;</msg>
+<status status="PASS" endtime="20180215 08:02:44.225" starttime="20180215 08:02:44.225"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:02:44.225" starttime="20180215 08:02:44.225"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:02:44.225" starttime="20180215 08:02:44.225"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:02:44.225" starttime="20180215 08:02:44.225"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>os.sep == '/'</arg>
+<arg>Create Webdriver</arg>
+<arg>Chrome</arg>
+<arg>my_alias</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<arg>executable_path=/usr/lib/chromium-browser/chromedriver</arg>
+<arg>ELSE</arg>
+<arg>Create Webdriver</arg>
+<arg>Chrome</arg>
+<arg>my_alias</arg>
+<arg>chrome_options=${chrome_options}</arg>
+</arguments>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>my_alias</arg>
+<arg>chrome_options=${chrome_options}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:44.225" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20180215 08:02:48.174" starttime="20180215 08:02:44.225"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:02:48.174" starttime="20180215 08:02:44.225"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180215 08:02:49.369" starttime="20180215 08:02:48.174"></status>
+</kw>
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${URLmessengerTSEL}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:49.374" level="INFO">Opening url 'https://www.facebook.com/messages/t/telkomsel'</msg>
+<status status="PASS" endtime="20180215 08:02:55.563" starttime="20180215 08:02:49.374"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:02:55.563" starttime="20180215 08:02:44.225"></status>
+</kw>
+<kw name="Login_messenger" library="Custom_keywords_VA">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${email_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:55.571" level="INFO">Clicking element 'id:email'.</msg>
+<status status="PASS" endtime="20180215 08:02:55.696" starttime="20180215 08:02:55.567"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_obj}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:55.696" level="INFO">Typing text 'taacnindonesia01@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" endtime="20180215 08:02:56.049" starttime="20180215 08:02:55.696"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${password_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:56.049" level="INFO">Clicking element 'id:pass'.</msg>
+<status status="PASS" endtime="20180215 08:02:56.173" starttime="20180215 08:02:56.049"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${password_obj}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:56.173" level="INFO">Typing password into text field 'id:pass'.</msg>
+<status status="PASS" endtime="20180215 08:02:56.281" starttime="20180215 08:02:56.173"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${login_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:02:56.281" level="INFO">Clicking element 'id:loginbutton'.</msg>
+<status status="PASS" endtime="20180215 08:03:02.453" starttime="20180215 08:02:56.281"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Telkomsel</arg>
+<arg>15s</arg>
+<arg>None</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:02.521" starttime="20180215 08:03:02.457"></status>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:02.648" level="INFO">Element '//*[@class="notranslate _5rpu"]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:02.648" starttime="20180215 08:03:02.521"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:02.648" starttime="20180215 08:03:02.521"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:02.652" starttime="20180215 08:02:55.567"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>TCASH itu apaan sih?</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:02.652" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:03:02.898" starttime="20180215 08:03:02.652"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:03.230" starttime="20180215 08:03:02.898"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:04.232" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:03:04.232" starttime="20180215 08:03:03.230"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:04.552" starttime="20180215 08:03:04.232"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:09.555" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:03:09.555" starttime="20180215 08:03:04.552"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:09.559" level="INFO">${current_user_input} = TCASH itu apaan sih?</msg>
+<status status="PASS" endtime="20180215 08:03:09.559" starttime="20180215 08:03:09.555"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:09.595" level="INFO">${totalallmessage} = 8</msg>
+<status status="PASS" endtime="20180215 08:03:09.595" starttime="20180215 08:03:09.563"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:09.627" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:09.627" starttime="20180215 08:03:09.595"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:09.631" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:09.631" starttime="20180215 08:03:09.627"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:09.631" starttime="20180215 08:03:09.563"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:09.631" starttime="20180215 08:03:09.559"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:09.631" starttime="20180215 08:03:02.652"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim uang, dan banyak lagi.</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:09.695" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"TCASH itu apaan sih?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:09.695" starttime="20180215 08:03:09.639"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:09.695" starttime="20180215 08:03:09.635"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:09.743" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:03:09.743" starttime="20180215 08:03:09.695"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:09.743" starttime="20180215 08:03:09.743"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:03:10.035" level="INFO">${textresponse} = TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim u...</msg>
+<status status="PASS" endtime="20180215 08:03:10.035" starttime="20180215 08:03:09.747"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:10.039" starttime="20180215 08:03:10.039"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:10.039" starttime="20180215 08:03:09.747"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:10.039" starttime="20180215 08:03:09.747"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:10.039" starttime="20180215 08:03:09.635"></status>
+</kw>
+<kw name="Check_VA_response_carousel_exists" library="Custom_keywords_VA">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+</arguments>
+<msg timestamp="20180215 08:03:10.091" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"TCASH itu apaan sih?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:10.091" starttime="20180215 08:03:10.043"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:10.091" starttime="20180215 08:03:10.043"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:10.127" level="INFO">${classname} = _3058 _15gf</msg>
+<status status="PASS" endtime="20180215 08:03:10.127" starttime="20180215 08:03:10.091"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_carousel_maindiv}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:10.127" starttime="20180215 08:03:10.127"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:10.127" starttime="20180215 08:03:10.039"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>apa sih untungnya pake tcash?</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:10.131" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:03:10.339" starttime="20180215 08:03:10.131"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:10.895" starttime="20180215 08:03:10.339"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:11.896" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:03:11.897" starttime="20180215 08:03:10.895"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:12.133" starttime="20180215 08:03:11.899"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:17.146" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:03:17.148" starttime="20180215 08:03:12.133"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:17.151" level="INFO">${current_user_input} = apa sih untungnya pake tcash?</msg>
+<status status="PASS" endtime="20180215 08:03:17.152" starttime="20180215 08:03:17.149"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:17.196" level="INFO">${totalallmessage} = 9</msg>
+<status status="PASS" endtime="20180215 08:03:17.198" starttime="20180215 08:03:17.155"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:17.241" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:17.241" starttime="20180215 08:03:17.199"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:17.244" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:17.244" starttime="20180215 08:03:17.242"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:17.245" starttime="20180215 08:03:17.154"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:17.245" starttime="20180215 08:03:17.153"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:17.246" starttime="20180215 08:03:10.131"></status>
+</kw>
+<kw name="Check_VA_response_image" library="Custom_keywords_VA">
+<doc>As the URL shown on web is generated by FB, checking URL might be not possible. Currently only checks the class.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 08:03:17.658" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 08:03:17.658" starttime="20180215 08:03:17.288"></status>
+</kw>
+<msg timestamp="20180215 08:03:17.671" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 08:03:17.672" starttime="20180215 08:03:17.250"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 08:03:21.068" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 08:03:21.069" starttime="20180215 08:03:20.726"></status>
+</kw>
+<msg timestamp="20180215 08:03:21.070" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 08:03:21.071" starttime="20180215 08:03:20.677"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:24.167" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:24.168" starttime="20180215 08:03:24.071"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.169" starttime="20180215 08:03:17.249"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:24.245" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _ylc</msg>
+<status status="PASS" endtime="20180215 08:03:24.246" starttime="20180215 08:03:24.170"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_image_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:24.250" starttime="20180215 08:03:24.248"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.252" starttime="20180215 08:03:17.247"></status>
+</kw>
+<kw name="Check_VA_response_text_with_2buttons" library="Custom_keywords_VA">
+<arguments>
+<arg>2</arg>
+<arg>Apa Kamu mau tahu lebih banyak tentang TCASH?</arg>
+<arg>Ya</arg>
+<arg>Tidak</arg>
+</arguments>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:24.354" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:24.355" starttime="20180215 08:03:24.258"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.356" starttime="20180215 08:03:24.256"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:24.440" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:03:24.441" starttime="20180215 08:03:24.357"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:24.445" starttime="20180215 08:03:24.442"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:03:24.534" level="INFO">${textresponse} = Apa Kamu mau tahu lebih banyak tentang TCASH?</msg>
+<status status="PASS" endtime="20180215 08:03:24.534" starttime="20180215 08:03:24.449"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:24.538" starttime="20180215 08:03:24.536"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.539" starttime="20180215 08:03:24.447"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.540" starttime="20180215 08:03:24.446"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.541" starttime="20180215 08:03:24.254"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"${expected_button1}")]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:24.642" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/following-sibling::*[contains(.,"Ya")]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:24.643" starttime="20180215 08:03:24.542"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"${expected_button2}")]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:24.734" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/following-sibling::*[contains(.,"Tidak")]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:24.735" starttime="20180215 08:03:24.644"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:24.736" starttime="20180215 08:03:24.253"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>Apa sih bedanya tcash basic dan full service?</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:24.739" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:03:24.986" starttime="20180215 08:03:24.738"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:25.834" starttime="20180215 08:03:24.987"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:26.838" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:03:26.839" starttime="20180215 08:03:25.834"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:27.210" starttime="20180215 08:03:26.841"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:32.220" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:03:32.220" starttime="20180215 08:03:27.211"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:32.223" level="INFO">${current_user_input} = Apa sih bedanya tcash basic dan full service?</msg>
+<status status="PASS" endtime="20180215 08:03:32.223" starttime="20180215 08:03:32.221"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:32.252" level="INFO">${totalallmessage} = 10</msg>
+<status status="PASS" endtime="20180215 08:03:32.252" starttime="20180215 08:03:32.225"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:32.283" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:32.283" starttime="20180215 08:03:32.253"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:32.285" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:32.285" starttime="20180215 08:03:32.284"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:32.286" starttime="20180215 08:03:32.224"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:32.287" starttime="20180215 08:03:32.224"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:32.288" starttime="20180215 08:03:24.736"></status>
+</kw>
+<kw name="Check_VA_response_image" library="Custom_keywords_VA">
+<doc>As the URL shown on web is generated by FB, checking URL might be not possible. Currently only checks the class.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 08:03:32.604" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 08:03:32.604" starttime="20180215 08:03:32.329"></status>
+</kw>
+<msg timestamp="20180215 08:03:32.605" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 08:03:32.606" starttime="20180215 08:03:32.291"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 08:03:35.953" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 08:03:35.953" starttime="20180215 08:03:35.643"></status>
+</kw>
+<msg timestamp="20180215 08:03:35.953" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 08:03:35.953" starttime="20180215 08:03:35.615"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:39.053" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:39.054" starttime="20180215 08:03:38.960"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:39.055" starttime="20180215 08:03:32.289"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:39.104" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _ylc</msg>
+<status status="PASS" endtime="20180215 08:03:39.106" starttime="20180215 08:03:39.056"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_image_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:39.109" starttime="20180215 08:03:39.107"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:39.109" starttime="20180215 08:03:32.288"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>2</arg>
+<arg>${VA_question_1}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:39.204" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:39.205" starttime="20180215 08:03:39.113"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:39.206" starttime="20180215 08:03:39.112"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:39.281" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:03:39.282" starttime="20180215 08:03:39.207"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:39.285" starttime="20180215 08:03:39.283"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:03:39.374" level="INFO">${textresponse} = Ada lagi yang bisa Veronika bantu?</msg>
+<status status="PASS" endtime="20180215 08:03:39.375" starttime="20180215 08:03:39.289"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:39.377" starttime="20180215 08:03:39.376"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:39.378" starttime="20180215 08:03:39.288"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:39.378" starttime="20180215 08:03:39.286"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:39.379" starttime="20180215 08:03:39.110"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>Tcash ada promo apa aja ya?</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:39.381" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:03:39.582" starttime="20180215 08:03:39.381"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:40.494" starttime="20180215 08:03:39.583"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:41.497" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:03:41.498" starttime="20180215 08:03:40.495"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:41.899" starttime="20180215 08:03:41.499"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:46.903" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:03:46.904" starttime="20180215 08:03:41.900"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:46.906" level="INFO">${current_user_input} = Tcash ada promo apa aja ya?</msg>
+<status status="PASS" endtime="20180215 08:03:46.907" starttime="20180215 08:03:46.905"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:46.936" level="INFO">${totalallmessage} = 11</msg>
+<status status="PASS" endtime="20180215 08:03:46.936" starttime="20180215 08:03:46.911"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:46.980" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:46.981" starttime="20180215 08:03:46.937"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:46.983" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:46.984" starttime="20180215 08:03:46.981"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:46.984" starttime="20180215 08:03:46.909"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:46.985" starttime="20180215 08:03:46.908"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:46.986" starttime="20180215 08:03:39.380"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim uang, dan banyak lagi.</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:47.061" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:47.062" starttime="20180215 08:03:46.989"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:47.063" starttime="20180215 08:03:46.988"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:47.137" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:03:47.138" starttime="20180215 08:03:47.063"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:47.139" starttime="20180215 08:03:47.139"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:03:47.192" level="INFO">${textresponse} = TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim u...</msg>
+<status status="PASS" endtime="20180215 08:03:47.193" starttime="20180215 08:03:47.143"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:47.195" starttime="20180215 08:03:47.194"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:47.195" starttime="20180215 08:03:47.141"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:47.196" starttime="20180215 08:03:47.140"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:47.196" starttime="20180215 08:03:46.987"></status>
+</kw>
+<kw name="Check_VA_response_carousel_exists" library="Custom_keywords_VA">
+<arguments>
+<arg>2</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 08:03:47.690" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 08:03:47.691" starttime="20180215 08:03:47.380"></status>
+</kw>
+<msg timestamp="20180215 08:03:47.693" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' not found.</msg>
+<status status="FAIL" endtime="20180215 08:03:47.693" starttime="20180215 08:03:47.199"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+</arguments>
+<msg timestamp="20180215 08:03:50.777" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:50.778" starttime="20180215 08:03:50.695"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:50.779" starttime="20180215 08:03:47.198"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:50.844" level="INFO">${classname} = _3058 _15gf</msg>
+<status status="PASS" endtime="20180215 08:03:50.845" starttime="20180215 08:03:50.781"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_carousel_maindiv}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:50.848" starttime="20180215 08:03:50.846"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:50.849" starttime="20180215 08:03:47.197"></status>
+</kw>
+<kw name="Cancel_and_closing_session" library="Custom_keywords_VA">
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>${cancel_answer}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:50.855" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:03:51.050" starttime="20180215 08:03:50.854"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:51.158" starttime="20180215 08:03:51.050"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:52.168" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:03:52.169" starttime="20180215 08:03:51.158"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:52.839" starttime="20180215 08:03:52.170"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:57.842" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:03:57.843" starttime="20180215 08:03:52.840"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:57.844" level="INFO">${current_user_input} = Batal</msg>
+<status status="PASS" endtime="20180215 08:03:57.844" starttime="20180215 08:03:57.843"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:57.862" level="INFO">${totalallmessage} = 12</msg>
+<status status="PASS" endtime="20180215 08:03:57.862" starttime="20180215 08:03:57.846"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:03:57.889" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:57.889" starttime="20180215 08:03:57.863"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:57.890" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:03:57.890" starttime="20180215 08:03:57.889"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:57.891" starttime="20180215 08:03:57.845"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:57.891" starttime="20180215 08:03:57.845"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:57.891" starttime="20180215 08:03:50.852"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>${VA_cancel}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:57.952" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Batal")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:57.952" starttime="20180215 08:03:57.893"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:57.953" starttime="20180215 08:03:57.893"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:57.984" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:03:57.984" starttime="20180215 08:03:57.954"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:57.986" starttime="20180215 08:03:57.985"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:03:58.030" level="INFO">${textresponse} = Baiklah, Veronika batalkan.</msg>
+<status status="PASS" endtime="20180215 08:03:58.030" starttime="20180215 08:03:57.988"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:58.031" starttime="20180215 08:03:58.030"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.031" starttime="20180215 08:03:57.987"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.032" starttime="20180215 08:03:57.986"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.032" starttime="20180215 08:03:57.892"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>2</arg>
+<arg>${VA_question_1}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:03:58.081" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Batal")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:03:58.082" starttime="20180215 08:03:58.034"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.082" starttime="20180215 08:03:58.034"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:03:58.139" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:03:58.139" starttime="20180215 08:03:58.083"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:58.140" starttime="20180215 08:03:58.140"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:03:58.232" level="INFO">${textresponse} = Ada lagi yang bisa Veronika bantu?</msg>
+<status status="PASS" endtime="20180215 08:03:58.233" starttime="20180215 08:03:58.143"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:58.236" starttime="20180215 08:03:58.234"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.237" starttime="20180215 08:03:58.142"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.238" starttime="20180215 08:03:58.141"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:03:58.239" starttime="20180215 08:03:58.033"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>${no_answer}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:03:58.242" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:03:58.569" starttime="20180215 08:03:58.241"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:03:58.777" starttime="20180215 08:03:58.571"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:03:59.790" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:03:59.792" starttime="20180215 08:03:58.778"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:00.109" starttime="20180215 08:03:59.793"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:05.111" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:04:05.112" starttime="20180215 08:04:00.110"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:05.116" level="INFO">${current_user_input} = Tidak</msg>
+<status status="PASS" endtime="20180215 08:04:05.117" starttime="20180215 08:04:05.115"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:05.476" level="INFO">${totalallmessage} = 6</msg>
+<status status="PASS" endtime="20180215 08:04:05.476" starttime="20180215 08:04:05.124"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:05.504" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:04:05.504" starttime="20180215 08:04:05.477"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:05.506" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:04:05.507" starttime="20180215 08:04:05.505"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.507" starttime="20180215 08:04:05.121"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.507" starttime="20180215 08:04:05.119"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.507" starttime="20180215 08:03:58.240"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>${VA_question_2}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:04:05.554" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tidak")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:04:05.554" starttime="20180215 08:04:05.509"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.555" starttime="20180215 08:04:05.508"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:04:05.592" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:04:05.592" starttime="20180215 08:04:05.555"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:05.593" starttime="20180215 08:04:05.592"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:04:05.624" level="INFO">${textresponse} = Hai M Testaut, untuk terus meningkatkan layanan ini, mohon bantuannya untuk menilai percakapan ini ya. Penilaian dalam skala 1-10 (1 sangat tidak puas - 10 sangat puas). Silakan masukan penilaian Kamu...</msg>
+<status status="PASS" endtime="20180215 08:04:05.624" starttime="20180215 08:04:05.594"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:05.625" starttime="20180215 08:04:05.624"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.625" starttime="20180215 08:04:05.594"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.625" starttime="20180215 08:04:05.593"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:05.626" starttime="20180215 08:04:05.508"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>${user_rate}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:05.627" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:04:05.766" starttime="20180215 08:04:05.626"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:05.835" starttime="20180215 08:04:05.767"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:06.838" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:04:06.839" starttime="20180215 08:04:05.836"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:07.166" starttime="20180215 08:04:06.841"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:12.173" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:04:12.174" starttime="20180215 08:04:07.167"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:12.179" level="INFO">${current_user_input} = 9</msg>
+<status status="PASS" endtime="20180215 08:04:12.179" starttime="20180215 08:04:12.177"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:12.210" level="INFO">${totalallmessage} = 7</msg>
+<status status="PASS" endtime="20180215 08:04:12.211" starttime="20180215 08:04:12.182"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:12.238" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:04:12.239" starttime="20180215 08:04:12.212"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:12.241" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:04:12.241" starttime="20180215 08:04:12.239"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.242" starttime="20180215 08:04:12.181"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.243" starttime="20180215 08:04:12.180"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.243" starttime="20180215 08:04:05.626"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>user_rate.png</arg>
+</arguments>
+<msg timestamp="20180215 08:04:12.553" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="user_rate.png"&gt;&lt;img src="user_rate.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 08:04:12.554" starttime="20180215 08:04:12.244"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>${VA_question_3}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:04:12.606" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"9")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:04:12.606" starttime="20180215 08:04:12.556"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.607" starttime="20180215 08:04:12.555"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:04:12.669" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:04:12.670" starttime="20180215 08:04:12.607"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:12.672" starttime="20180215 08:04:12.671"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:04:12.746" level="INFO">${textresponse} = Menurut Kamu, apa yang harus Veronika tingkatkan?</msg>
+<status status="PASS" endtime="20180215 08:04:12.747" starttime="20180215 08:04:12.675"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:12.750" starttime="20180215 08:04:12.748"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.751" starttime="20180215 08:04:12.673"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.752" starttime="20180215 08:04:12.673"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:12.753" starttime="20180215 08:04:12.554"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>${select_Rate}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:12.756" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:04:12.899" starttime="20180215 08:04:12.755"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:13.385" starttime="20180215 08:04:12.900"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:14.396" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:04:14.397" starttime="20180215 08:04:13.386"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:14.759" starttime="20180215 08:04:14.398"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:19.773" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:04:19.775" starttime="20180215 08:04:14.759"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:19.777" level="INFO">${current_user_input} = Kecepatan Respon</msg>
+<status status="PASS" endtime="20180215 08:04:19.777" starttime="20180215 08:04:19.775"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:19.809" level="INFO">${totalallmessage} = 8</msg>
+<status status="PASS" endtime="20180215 08:04:19.810" starttime="20180215 08:04:19.780"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:19.849" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 08:04:19.850" starttime="20180215 08:04:19.812"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:19.853" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 08:04:19.854" starttime="20180215 08:04:19.851"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:19.854" starttime="20180215 08:04:19.779"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:19.855" starttime="20180215 08:04:19.778"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:19.855" starttime="20180215 08:04:12.754"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>${VA_askRateReason}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:04:19.938" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Kecepatan Respon")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:04:19.939" starttime="20180215 08:04:19.858"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:19.939" starttime="20180215 08:04:19.857"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:04:19.994" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:04:19.994" starttime="20180215 08:04:19.940"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:19.996" starttime="20180215 08:04:19.995"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:04:20.053" level="INFO">${textresponse} = Tolong tulis alasan Kamu ya, kenapa Kecepatan Respon perlu Veronika tingkatkan?</msg>
+<status status="PASS" endtime="20180215 08:04:20.054" starttime="20180215 08:04:20.000"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:20.056" starttime="20180215 08:04:20.055"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:20.057" starttime="20180215 08:04:19.998"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:20.058" starttime="20180215 08:04:19.997"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:20.058" starttime="20180215 08:04:19.856"></status>
+</kw>
+<kw name="User_input" library="Custom_keywords_VA">
+<arguments>
+<arg>${no_answer}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:20.061" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 08:04:20.246" starttime="20180215 08:04:20.060"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:20.382" starttime="20180215 08:04:20.247"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:21.383" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 08:04:21.384" starttime="20180215 08:04:20.383"></status>
+</kw>
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<arguments>
+<arg>${inputtext_obj}</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:21.628" starttime="20180215 08:04:21.386"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 08:04:26.633" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 08:04:26.634" starttime="20180215 08:04:21.629"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${input_text}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:26.638" level="INFO">${current_user_input} = Tidak</msg>
+<status status="PASS" endtime="20180215 08:04:26.639" starttime="20180215 08:04:26.636"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Count_message_bubble_user_input</arg>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Count_message_bubble_user_input" library="Custom_keywords_VA">
+<doc>count total number of message bubble for specific input</doc>
+<arguments>
+<arg>${current_user_input}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr"])</arg>
+</arguments>
+<assign>
+<var>${totalallmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:26.740" level="INFO">${totalallmessage} = 9</msg>
+<status status="PASS" endtime="20180215 08:04:26.740" starttime="20180215 08:04:26.644"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")]</arg>
+</arguments>
+<assign>
+<var>${totalgroupedmessage}</var>
+</assign>
+<msg timestamp="20180215 08:04:26.761" level="INFO">${totalgroupedmessage} = 2</msg>
+<status status="PASS" endtime="20180215 08:04:26.761" starttime="20180215 08:04:26.741"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_total_user_message}</arg>
+<arg>${totalgroupedmessage}</arg>
+</arguments>
+<msg timestamp="20180215 08:04:26.763" level="INFO">${current_total_user_message} = 2</msg>
+<status status="PASS" endtime="20180215 08:04:26.764" starttime="20180215 08:04:26.762"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.764" starttime="20180215 08:04:26.642"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.765" starttime="20180215 08:04:26.640"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.765" starttime="20180215 08:04:20.059"></status>
+</kw>
+<kw name="Check_VA_response_text" library="Custom_keywords_VA">
+<arguments>
+<arg>1</arg>
+<arg>${VA_closingstatement}</arg>
+</arguments>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<arguments>
+<arg>15s</arg>
+<arg>3s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 08:04:26.813" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tidak")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 08:04:26.814" starttime="20180215 08:04:26.767"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.815" starttime="20180215 08:04:26.766"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+<arg>class</arg>
+</arguments>
+<assign>
+<var>${classname}</var>
+</assign>
+<msg timestamp="20180215 08:04:26.845" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 08:04:26.846" starttime="20180215 08:04:26.815"></status>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${classname}</arg>
+<arg>${VA_textcarousel_bubble}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:26.847" starttime="20180215 08:04:26.846"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Check_VA_response_text_actual</arg>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Check_VA_response_text_actual" library="Custom_keywords_VA">
+<arguments>
+<arg>${current_user_input}</arg>
+<arg>${current_total_user_message}</arg>
+<arg>${order}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${user_input}")])[${total_user_input}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+<arg>body</arg>
+</arguments>
+<assign>
+<var>${textresponse}</var>
+</assign>
+<msg timestamp="20180215 08:04:26.891" level="INFO">${textresponse} = Terima kasih atas penilaiannya :) Veronika turut senang membantu</msg>
+<status status="PASS" endtime="20180215 08:04:26.891" starttime="20180215 08:04:26.849"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${textresponse}</arg>
+<arg>${expected_text}</arg>
+</arguments>
+<status status="PASS" endtime="20180215 08:04:26.892" starttime="20180215 08:04:26.892"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.893" starttime="20180215 08:04:26.848"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.893" starttime="20180215 08:04:26.848"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.894" starttime="20180215 08:04:26.766"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:26.895" starttime="20180215 08:03:50.850"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20180215 08:04:30.050" starttime="20180215 08:04:26.896"></status>
+</kw>
+<status status="PASS" endtime="20180215 08:04:30.051" critical="yes" starttime="20180215 08:02:44.225"></status>
+</test>
+<status status="PASS" endtime="20180215 08:04:30.055" starttime="20180215 08:02:44.060"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Just A Test" pass="1">Just A Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
