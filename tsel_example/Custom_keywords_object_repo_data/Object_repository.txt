@@ -18,3 +18,4 @@ ${VA_image_bubble}    clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _yl
 #${VA_textcarousel_bubble}    //*[@class="clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr"]
 ${VA_textcarousel_bubble}    clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr
 ${VA_carousel_maindiv}    _3058 _15gf
+${carouselbackward_obj}    //*[@direction="backward"]
