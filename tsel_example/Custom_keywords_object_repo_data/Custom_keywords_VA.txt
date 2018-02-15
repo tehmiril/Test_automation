@@ -24,32 +24,6 @@ Open_Web_Messenger
     Wait Until Page Contains    Telkomsel    20s    None
     Sleep    10s
 
-Select_Carousel
-    [Arguments]    ${Carousel_title}    ${Carousel_button}
-    [Documentation]    This keyword to get the location of a number of elements for carousel.
-    ${totalicon}    Get Element Count    ${tselicon_obj}
-    ${tsel_icon_locationX}    Get Horizontal Position    (${tselicon_obj})[${totalicon}]
-    ${totalcarousel}    Get Element Count    //a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')]
-    ${element_XBegin}    Get Horizontal Position    (//a[contains(.,'${Carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${Carousel_title}')])[${totalcarousel}]
-    #Just a suggested width, what would be the accepted maximum limit of X location
-    ${right_limit}    Evaluate    ${tsel_icon_locationX}+400
-    [Return]    ${element_XBegin}    ${tsel_icon_locationX}    ${right_limit}
-
-Swipe_until_element
-    [Arguments]    ${Carousel_title}    ${Carousel_button}
-    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
-    Sleep    2s
-    ${totalcarousel}    Get Element Count    ${carouselforward_obj}
-    : FOR    ${looping}    IN RANGE    0    10
-    \    Click Element    (${carouselforward_obj})[${totalcarousel}]
-    \    Sleep    2s
-    \    ${element_XBegin}    ${left_limit}    ${right_limit}    Select_carousel    ${Carousel_title}    ${Carousel_button}
-    \    Run Keyword If    ${left_limit} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    5s
-    \    ...    AND    Click Element    //*[@${carouselclass_obj} and contains(.,'${Carousel_title}')]/following-sibling::div//a[contains(.,'${Carousel_button}')]
-    \    ...    AND    Sleep    5s
-    \    ...    AND    Exit For Loop
-    \    ${looping}    Set Variable    ${looping}+1
-
 Greet_VA_Indo
     [Documentation]    Can be part of any test case, greet VA
     User_input    ${greeting}
@@ -195,3 +169,39 @@ Cancel_and_closing_session
     Check_VA_response_text    1    ${VA_askRateReason}
     User_input    ${no_answer}
     Check_VA_response_text    1    ${VA_closingstatement}
+
+Click_button_carousel
+    [Arguments]    ${c_title}    ${c_button}
+    Set Suite Variable    ${current_carousel_title}    ${c_title}
+    Set Suite Variable    ${current_carousel_button}    ${c_button}
+    ${totalicon}    Get Element Count    ${tselicon_obj}
+    ${tsel_icon_locationX}    Get Horizontal Position    (${tselicon_obj})[${totalicon}]
+    ${right_limit}    Evaluate    ${tsel_icon_locationX}+400    #Just a suggested width, what would be the accepted maximum limit of X location
+    Set Suite Variable    ${current_tsel_icon_locationX}    ${tsel_icon_locationX}
+    Set Suite Variable    ${current_right_limit}    ${right_limit}
+    ${element_XBegin}    Get_locationX_carousel_item
+    Run Keyword If    ${tsel_icon_locationX} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    2s
+    ...    AND    Capture Page Screenshot    carousel.png
+    ...    AND    Click Element    //*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    ...    AND    Sleep    2s
+    ...    ELSE    Swipe_until_element_and_click
+    ${URLS}    Get Locations
+
+Get_locationX_carousel_item
+    ${totalcarousel}    Get Element Count    //a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')]
+    ${element_XBegin}    Get Horizontal Position    (//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')])[${totalcarousel}]
+    [Return]    ${element_XBegin}
+
+Swipe_until_element_and_click
+    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
+    ${totalcarousel}    Get Element Count    ${carouselforward_obj}
+    : FOR    ${looping}    IN RANGE    0    10
+    \    Click Element    (${carouselforward_obj})[${totalcarousel}]
+    \    Sleep    2s
+    \    Capture Page Screenshot    carousel_${looping}.png
+    \    ${element_XBegin}    Get_locationX_carousel_item
+    \    Run Keyword If    ${current_tsel_icon_locationX} < ${element_XBegin} < ${current_right_limit}    Run Keywords    Sleep    5s
+    \    ...    AND    Click Element    //*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    \    ...    AND    Sleep    5s
+    \    ...    AND    Exit For Loop
+    \    ${looping}    Set Variable    ${looping}+1

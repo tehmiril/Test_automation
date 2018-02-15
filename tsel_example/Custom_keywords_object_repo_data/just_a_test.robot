@@ -37,5 +37,6 @@ test_simple_input_response
     User_input    Tcash ada promo apa aja ya?
     Check_VA_response_text    1    TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim uang, dan banyak lagi.
     Check_VA_response_carousel_exists    2
+    Click_button_carousel    Dapatkan TCASH    Pesan Sticker
     Cancel_and_closing_session
     [Teardown]    Close Browser
