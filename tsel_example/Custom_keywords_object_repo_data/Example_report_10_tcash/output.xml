@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20180215 09:06:23.161" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
+<robot generated="20180215 10:33:51.817" generator="Robot 3.0.2 (Python 2.7.14 on win32)">
 <suite source="C:\Users\amiril.r.faradini\Documents\Robot\just_a_test.robot" id="s1" name="Just A Test">
 <test id="s1-t1" name="10-TCASH Information">
 <kw type="setup" name="Open_chrome" library="Custom_keywords_VA">
@@ -13,8 +13,8 @@
 <assign>
 <var>${chrome_options}</var>
 </assign>
-<msg timestamp="20180215 09:06:23.349" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x00000000044357B8&gt;</msg>
-<status status="PASS" endtime="20180215 09:06:23.349" starttime="20180215 09:06:23.349"></status>
+<msg timestamp="20180215 10:33:52.005" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000000003FF5C18&gt;</msg>
+<status status="PASS" endtime="20180215 10:33:52.005" starttime="20180215 10:33:52.005"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -23,7 +23,7 @@
 <arg>add_argument</arg>
 <arg>test-type</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:23.349" starttime="20180215 09:06:23.349"></status>
+<status status="PASS" endtime="20180215 10:33:52.005" starttime="20180215 10:33:52.005"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -32,7 +32,7 @@
 <arg>add_argument</arg>
 <arg>--disable-extensions</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:23.349" starttime="20180215 09:06:23.349"></status>
+<status status="PASS" endtime="20180215 10:33:52.005" starttime="20180215 10:33:52.005"></status>
 </kw>
 <kw name="Call Method" library="BuiltIn">
 <doc>Calls the named method of the given object with the provided arguments.</doc>
@@ -41,7 +41,7 @@
 <arg>add_argument</arg>
 <arg>--disable-notifications</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:23.349" starttime="20180215 09:06:23.349"></status>
+<status status="PASS" endtime="20180215 10:33:52.005" starttime="20180215 10:33:52.005"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -65,24 +65,24 @@
 <arg>my_alias</arg>
 <arg>chrome_options=${chrome_options}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:23.349" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" endtime="20180215 09:06:27.330" starttime="20180215 09:06:23.349"></status>
+<msg timestamp="20180215 10:33:52.005" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20180215 10:33:55.896" starttime="20180215 10:33:52.005"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:27.330" starttime="20180215 09:06:23.349"></status>
+<status status="PASS" endtime="20180215 10:33:55.896" starttime="20180215 10:33:52.005"></status>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20180215 09:06:28.530" starttime="20180215 09:06:27.330"></status>
+<status status="PASS" endtime="20180215 10:33:57.091" starttime="20180215 10:33:55.896"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
 <arg>${URLmessengerTSEL}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:28.530" level="INFO">Opening url 'https://www.facebook.com/messages/t/telkomsel'</msg>
-<status status="PASS" endtime="20180215 09:06:34.209" starttime="20180215 09:06:28.530"></status>
+<msg timestamp="20180215 10:33:57.091" level="INFO">Opening url 'https://www.facebook.com/messages/t/telkomsel'</msg>
+<status status="PASS" endtime="20180215 10:34:01.673" starttime="20180215 10:33:57.091"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:34.210" starttime="20180215 09:06:23.349"></status>
+<status status="PASS" endtime="20180215 10:34:01.674" starttime="20180215 10:33:52.005"></status>
 </kw>
 <kw name="Login_messenger" library="Custom_keywords_VA">
 <arguments>
@@ -94,8 +94,8 @@
 <arguments>
 <arg>${email_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:34.214" level="INFO">Clicking element 'id:email'.</msg>
-<status status="PASS" endtime="20180215 09:06:34.309" starttime="20180215 09:06:34.213"></status>
+<msg timestamp="20180215 10:34:01.676" level="INFO">Clicking element 'id:email'.</msg>
+<status status="PASS" endtime="20180215 10:34:01.763" starttime="20180215 10:34:01.675"></status>
 </kw>
 <kw name="Input Text" library="Selenium2Library">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -103,16 +103,16 @@
 <arg>${email_obj}</arg>
 <arg>${email}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:34.310" level="INFO">Typing text 'taacnindonesia01@gmail.com' into text field 'id:email'.</msg>
-<status status="PASS" endtime="20180215 09:06:34.502" starttime="20180215 09:06:34.310"></status>
+<msg timestamp="20180215 10:34:01.764" level="INFO">Typing text 'taacnindonesia01@gmail.com' into text field 'id:email'.</msg>
+<status status="PASS" endtime="20180215 10:34:01.946" starttime="20180215 10:34:01.763"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${password_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:34.504" level="INFO">Clicking element 'id:pass'.</msg>
-<status status="PASS" endtime="20180215 09:06:34.569" starttime="20180215 09:06:34.504"></status>
+<msg timestamp="20180215 10:34:01.948" level="INFO">Clicking element 'id:pass'.</msg>
+<status status="PASS" endtime="20180215 10:34:02.011" starttime="20180215 10:34:01.947"></status>
 </kw>
 <kw name="Input Password" library="Selenium2Library">
 <doc>Types the given password into text field identified by ``locator``.</doc>
@@ -120,16 +120,16 @@
 <arg>${password_obj}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:34.570" level="INFO">Typing password into text field 'id:pass'.</msg>
-<status status="PASS" endtime="20180215 09:06:34.673" starttime="20180215 09:06:34.569"></status>
+<msg timestamp="20180215 10:34:02.012" level="INFO">Typing password into text field 'id:pass'.</msg>
+<status status="PASS" endtime="20180215 10:34:02.124" starttime="20180215 10:34:02.012"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
 <arg>${login_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:34.675" level="INFO">Clicking element 'id:loginbutton'.</msg>
-<status status="PASS" endtime="20180215 09:06:40.014" starttime="20180215 09:06:34.674"></status>
+<msg timestamp="20180215 10:34:02.125" level="INFO">Clicking element 'id:loginbutton'.</msg>
+<status status="PASS" endtime="20180215 10:34:15.649" starttime="20180215 10:34:02.124"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="Selenium2Library">
 <doc>Waits until ``text`` appears on current page.</doc>
@@ -138,7 +138,7 @@
 <arg>15s</arg>
 <arg>None</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:40.044" starttime="20180215 09:06:40.015"></status>
+<status status="PASS" endtime="20180215 10:34:15.670" starttime="20180215 10:34:15.649"></status>
 </kw>
 <kw name="Wait Until Keyword Succeeds" library="BuiltIn">
 <doc>Runs the specified keyword and retries if it fails.</doc>
@@ -153,12 +153,12 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:40.087" level="INFO">Element '//*[@class="notranslate _5rpu"]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:06:40.088" starttime="20180215 09:06:40.046"></status>
+<msg timestamp="20180215 10:34:15.724" level="INFO">Element '//*[@class="notranslate _5rpu"]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:15.724" starttime="20180215 10:34:15.671"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:40.088" starttime="20180215 09:06:40.045"></status>
+<status status="PASS" endtime="20180215 10:34:15.724" starttime="20180215 10:34:15.670"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:40.089" starttime="20180215 09:06:34.211"></status>
+<status status="PASS" endtime="20180215 10:34:15.724" starttime="20180215 10:34:01.674"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -169,8 +169,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:40.091" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:06:40.189" starttime="20180215 09:06:40.090"></status>
+<msg timestamp="20180215 10:34:15.724" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:34:15.896" starttime="20180215 10:34:15.724"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -178,15 +178,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:40.569" starttime="20180215 09:06:40.190"></status>
+<status status="PASS" endtime="20180215 10:34:16.354" starttime="20180215 10:34:15.897"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:06:41.573" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:06:41.573" starttime="20180215 09:06:40.570"></status>
+<msg timestamp="20180215 10:34:17.355" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:34:17.356" starttime="20180215 10:34:16.355"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -194,15 +194,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:41.833" starttime="20180215 09:06:41.573"></status>
+<status status="PASS" endtime="20180215 10:34:17.597" starttime="20180215 10:34:17.358"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:06:46.834" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:06:46.834" starttime="20180215 09:06:41.833"></status>
+<msg timestamp="20180215 10:34:22.598" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:34:22.599" starttime="20180215 10:34:17.597"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -210,8 +210,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:46.839" level="INFO">${current_user_input} = TCASH itu apaan sih?</msg>
-<status status="PASS" endtime="20180215 09:06:46.839" starttime="20180215 09:06:46.836"></status>
+<msg timestamp="20180215 10:34:22.603" level="INFO">${current_user_input} = TCASH itu apaan sih?</msg>
+<status status="PASS" endtime="20180215 10:34:22.603" starttime="20180215 10:34:22.599"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -232,8 +232,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:06:47.034" level="INFO">${totalallmessage} = 7</msg>
-<status status="PASS" endtime="20180215 09:06:47.035" starttime="20180215 09:06:46.843"></status>
+<msg timestamp="20180215 10:34:22.722" level="INFO">${totalallmessage} = 8</msg>
+<status status="PASS" endtime="20180215 10:34:22.723" starttime="20180215 10:34:22.606"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -243,8 +243,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:06:47.093" level="INFO">${totalgroupedmessage} = 2</msg>
-<status status="PASS" endtime="20180215 09:06:47.094" starttime="20180215 09:06:47.036"></status>
+<msg timestamp="20180215 10:34:22.750" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 10:34:22.750" starttime="20180215 10:34:22.723"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -252,14 +252,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:47.097" level="INFO">${current_total_user_message} = 2</msg>
-<status status="PASS" endtime="20180215 09:06:47.098" starttime="20180215 09:06:47.094"></status>
+<msg timestamp="20180215 10:34:22.756" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 10:34:22.756" starttime="20180215 10:34:22.751"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.099" starttime="20180215 09:06:46.841"></status>
+<status status="PASS" endtime="20180215 10:34:22.757" starttime="20180215 10:34:22.605"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.099" starttime="20180215 09:06:46.840"></status>
+<status status="PASS" endtime="20180215 10:34:22.758" starttime="20180215 10:34:22.604"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.100" starttime="20180215 09:06:40.089"></status>
+<status status="PASS" endtime="20180215 10:34:22.759" starttime="20180215 10:34:15.724"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -279,10 +279,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:06:47.162" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"TCASH itu apaan sih?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:06:47.163" starttime="20180215 09:06:47.105"></status>
+<msg timestamp="20180215 10:34:22.809" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"TCASH itu apaan sih?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:22.810" starttime="20180215 10:34:22.762"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.163" starttime="20180215 09:06:47.103"></status>
+<status status="PASS" endtime="20180215 10:34:22.810" starttime="20180215 10:34:22.761"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -293,8 +293,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:06:47.209" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:06:47.210" starttime="20180215 09:06:47.164"></status>
+<msg timestamp="20180215 10:34:22.840" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:34:22.841" starttime="20180215 10:34:22.811"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -302,7 +302,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:47.212" starttime="20180215 09:06:47.210"></status>
+<status status="PASS" endtime="20180215 10:34:22.842" starttime="20180215 10:34:22.841"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -329,8 +329,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:06:47.261" level="INFO">${textresponse} = TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim u...</msg>
-<status status="PASS" endtime="20180215 09:06:47.262" starttime="20180215 09:06:47.216"></status>
+<msg timestamp="20180215 10:34:22.870" level="INFO">${textresponse} = TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim u...</msg>
+<status status="PASS" endtime="20180215 10:34:22.870" starttime="20180215 10:34:22.844"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -338,13 +338,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:47.264" starttime="20180215 09:06:47.263"></status>
+<status status="PASS" endtime="20180215 10:34:22.871" starttime="20180215 10:34:22.870"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.266" starttime="20180215 09:06:47.213"></status>
+<status status="PASS" endtime="20180215 10:34:22.871" starttime="20180215 10:34:22.843"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.266" starttime="20180215 09:06:47.212"></status>
+<status status="PASS" endtime="20180215 10:34:22.871" starttime="20180215 10:34:22.842"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.267" starttime="20180215 09:06:47.102"></status>
+<status status="PASS" endtime="20180215 10:34:22.872" starttime="20180215 10:34:22.760"></status>
 </kw>
 <kw name="Check_VA_response_carousel_exists" library="Custom_keywords_VA">
 <arguments>
@@ -363,10 +363,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
 </arguments>
-<msg timestamp="20180215 09:06:47.346" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"TCASH itu apaan sih?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:06:47.347" starttime="20180215 09:06:47.270"></status>
+<msg timestamp="20180215 10:34:22.902" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"TCASH itu apaan sih?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:22.902" starttime="20180215 10:34:22.873"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.348" starttime="20180215 09:06:47.269"></status>
+<status status="PASS" endtime="20180215 10:34:22.903" starttime="20180215 10:34:22.872"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -377,8 +377,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:06:47.401" level="INFO">${classname} = _3058 _15gf</msg>
-<status status="PASS" endtime="20180215 09:06:47.402" starttime="20180215 09:06:47.348"></status>
+<msg timestamp="20180215 10:34:22.926" level="INFO">${classname} = _3058 _15gf</msg>
+<status status="PASS" endtime="20180215 10:34:22.926" starttime="20180215 10:34:22.903"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -386,9 +386,9 @@
 <arg>${classname}</arg>
 <arg>${VA_carousel_maindiv}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:47.404" starttime="20180215 09:06:47.402"></status>
+<status status="PASS" endtime="20180215 10:34:22.927" starttime="20180215 10:34:22.927"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:47.404" starttime="20180215 09:06:47.268"></status>
+<status status="PASS" endtime="20180215 10:34:22.928" starttime="20180215 10:34:22.872"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -399,8 +399,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:47.408" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:06:47.576" starttime="20180215 09:06:47.407"></status>
+<msg timestamp="20180215 10:34:22.930" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:34:23.073" starttime="20180215 10:34:22.929"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -408,15 +408,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:48.028" starttime="20180215 09:06:47.577"></status>
+<status status="PASS" endtime="20180215 10:34:23.600" starttime="20180215 10:34:23.074"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:06:49.030" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:06:49.031" starttime="20180215 09:06:48.029"></status>
+<msg timestamp="20180215 10:34:24.616" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:34:24.617" starttime="20180215 10:34:23.601"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -424,15 +424,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:06:49.211" starttime="20180215 09:06:49.031"></status>
+<status status="PASS" endtime="20180215 10:34:24.818" starttime="20180215 10:34:24.618"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:06:54.225" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:06:54.225" starttime="20180215 09:06:49.211"></status>
+<msg timestamp="20180215 10:34:29.819" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:34:29.820" starttime="20180215 10:34:24.818"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -440,8 +440,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:54.226" level="INFO">${current_user_input} = apa sih untungnya pake tcash?</msg>
-<status status="PASS" endtime="20180215 09:06:54.226" starttime="20180215 09:06:54.226"></status>
+<msg timestamp="20180215 10:34:29.822" level="INFO">${current_user_input} = apa sih untungnya pake tcash?</msg>
+<status status="PASS" endtime="20180215 10:34:29.823" starttime="20180215 10:34:29.821"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -462,8 +462,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:06:54.252" level="INFO">${totalallmessage} = 8</msg>
-<status status="PASS" endtime="20180215 09:06:54.252" starttime="20180215 09:06:54.228"></status>
+<msg timestamp="20180215 10:34:29.868" level="INFO">${totalallmessage} = 9</msg>
+<status status="PASS" endtime="20180215 10:34:29.869" starttime="20180215 10:34:29.826"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -473,8 +473,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:06:54.270" level="INFO">${totalgroupedmessage} = 2</msg>
-<status status="PASS" endtime="20180215 09:06:54.270" starttime="20180215 09:06:54.252"></status>
+<msg timestamp="20180215 10:34:29.913" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 10:34:29.914" starttime="20180215 10:34:29.870"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -482,14 +482,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:06:54.271" level="INFO">${current_total_user_message} = 2</msg>
-<status status="PASS" endtime="20180215 09:06:54.272" starttime="20180215 09:06:54.271"></status>
+<msg timestamp="20180215 10:34:29.916" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 10:34:29.917" starttime="20180215 10:34:29.915"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:54.272" starttime="20180215 09:06:54.227"></status>
+<status status="PASS" endtime="20180215 10:34:29.918" starttime="20180215 10:34:29.825"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:54.272" starttime="20180215 09:06:54.227"></status>
+<status status="PASS" endtime="20180215 10:34:29.919" starttime="20180215 10:34:29.824"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:06:54.273" starttime="20180215 09:06:47.406"></status>
+<status status="PASS" endtime="20180215 10:34:29.920" starttime="20180215 10:34:22.928"></status>
 </kw>
 <kw name="Check_VA_response_image" library="Custom_keywords_VA">
 <doc>As the URL shown on web is generated by FB, checking URL might be not possible. Currently only checks the class.</doc>
@@ -511,34 +511,21 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180215 09:06:54.610" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:06:54.611" starttime="20180215 09:06:54.304"></status>
+<msg timestamp="20180215 10:34:30.277" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:34:30.277" starttime="20180215 10:34:29.990"></status>
 </kw>
-<msg timestamp="20180215 09:06:54.613" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
-<status status="FAIL" endtime="20180215 09:06:54.613" starttime="20180215 09:06:54.274"></status>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180215 09:06:58.083" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:06:58.083" starttime="20180215 09:06:57.639"></status>
-</kw>
-<msg timestamp="20180215 09:06:58.084" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
-<status status="FAIL" endtime="20180215 09:06:58.085" starttime="20180215 09:06:57.614"></status>
+<msg timestamp="20180215 10:34:30.279" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 10:34:30.280" starttime="20180215 10:34:29.924"></status>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:01.180" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:01.181" starttime="20180215 09:07:01.086"></status>
+<msg timestamp="20180215 10:34:33.320" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:33.320" starttime="20180215 10:34:33.280"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.182" starttime="20180215 09:06:54.274"></status>
+<status status="PASS" endtime="20180215 10:34:33.321" starttime="20180215 10:34:29.923"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -549,8 +536,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:01.242" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _ylc</msg>
-<status status="PASS" endtime="20180215 09:07:01.243" starttime="20180215 09:07:01.183"></status>
+<msg timestamp="20180215 10:34:33.351" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _ylc</msg>
+<status status="PASS" endtime="20180215 10:34:33.351" starttime="20180215 10:34:33.321"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -558,9 +545,9 @@
 <arg>${classname}</arg>
 <arg>${VA_image_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:01.247" starttime="20180215 09:07:01.245"></status>
+<status status="PASS" endtime="20180215 10:34:33.352" starttime="20180215 10:34:33.352"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.248" starttime="20180215 09:06:54.273"></status>
+<status status="PASS" endtime="20180215 10:34:33.353" starttime="20180215 10:34:29.921"></status>
 </kw>
 <kw name="Check_VA_response_text_with_2buttons" library="Custom_keywords_VA">
 <arguments>
@@ -587,10 +574,23 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:01.344" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:01.345" starttime="20180215 09:07:01.252"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 10:34:33.711" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:34:33.712" starttime="20180215 10:34:33.380"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.345" starttime="20180215 09:07:01.251"></status>
+<msg timestamp="20180215 10:34:33.714" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' not found.</msg>
+<status status="FAIL" endtime="20180215 10:34:33.715" starttime="20180215 10:34:33.355"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 10:34:36.785" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:36.786" starttime="20180215 10:34:36.720"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:34:36.787" starttime="20180215 10:34:33.354"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -601,8 +601,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:01.368" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:01.368" starttime="20180215 09:07:01.345"></status>
+<msg timestamp="20180215 10:34:36.819" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:34:36.819" starttime="20180215 10:34:36.788"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -610,7 +610,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:01.370" starttime="20180215 09:07:01.369"></status>
+<status status="PASS" endtime="20180215 10:34:36.821" starttime="20180215 10:34:36.820"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -637,8 +637,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:01.415" level="INFO">${textresponse} = Apa Kamu mau tahu lebih banyak tentang TCASH?</msg>
-<status status="PASS" endtime="20180215 09:07:01.415" starttime="20180215 09:07:01.371"></status>
+<msg timestamp="20180215 10:34:36.870" level="INFO">${textresponse} = Apa Kamu mau tahu lebih banyak tentang TCASH?</msg>
+<status status="PASS" endtime="20180215 10:34:36.871" starttime="20180215 10:34:36.824"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -646,31 +646,31 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:01.416" starttime="20180215 09:07:01.415"></status>
+<status status="PASS" endtime="20180215 10:34:36.872" starttime="20180215 10:34:36.871"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.416" starttime="20180215 09:07:01.370"></status>
+<status status="PASS" endtime="20180215 10:34:36.872" starttime="20180215 10:34:36.823"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.416" starttime="20180215 09:07:01.370"></status>
+<status status="PASS" endtime="20180215 10:34:36.873" starttime="20180215 10:34:36.822"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.417" starttime="20180215 09:07:01.250"></status>
+<status status="PASS" endtime="20180215 10:34:36.873" starttime="20180215 10:34:33.354"></status>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"${expected_button1}")]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:01.484" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/following-sibling::*[contains(.,"Ya")]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:01.484" starttime="20180215 09:07:01.417"></status>
+<msg timestamp="20180215 10:34:36.933" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/following-sibling::*[contains(.,"Ya")]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:36.934" starttime="20180215 10:34:36.874"></status>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"${expected_button2}")]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:01.531" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/following-sibling::*[contains(.,"Tidak")]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:01.532" starttime="20180215 09:07:01.485"></status>
+<msg timestamp="20180215 10:34:36.980" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"apa sih untungnya pake tcash?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/following-sibling::*[contains(.,"Tidak")]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:36.981" starttime="20180215 10:34:36.935"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:01.532" starttime="20180215 09:07:01.248"></status>
+<status status="PASS" endtime="20180215 10:34:36.981" starttime="20180215 10:34:33.353"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -681,8 +681,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:01.533" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:01.682" starttime="20180215 09:07:01.533"></status>
+<msg timestamp="20180215 10:34:36.982" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:34:37.127" starttime="20180215 10:34:36.982"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -690,15 +690,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:02.352" starttime="20180215 09:07:01.683"></status>
+<status status="PASS" endtime="20180215 10:34:37.926" starttime="20180215 10:34:37.129"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:03.353" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:07:03.354" starttime="20180215 09:07:02.352"></status>
+<msg timestamp="20180215 10:34:38.927" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:34:38.928" starttime="20180215 10:34:37.927"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -706,15 +706,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:03.568" starttime="20180215 09:07:03.354"></status>
+<status status="PASS" endtime="20180215 10:34:39.187" starttime="20180215 10:34:38.929"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:08.570" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:08.570" starttime="20180215 09:07:03.569"></status>
+<msg timestamp="20180215 10:34:44.201" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:34:44.202" starttime="20180215 10:34:39.188"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -722,8 +722,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:08.571" level="INFO">${current_user_input} = Apa sih bedanya tcash basic dan full service?</msg>
-<status status="PASS" endtime="20180215 09:07:08.571" starttime="20180215 09:07:08.570"></status>
+<msg timestamp="20180215 10:34:44.204" level="INFO">${current_user_input} = Apa sih bedanya tcash basic dan full service?</msg>
+<status status="PASS" endtime="20180215 10:34:44.205" starttime="20180215 10:34:44.203"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -744,8 +744,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:08.602" level="INFO">${totalallmessage} = 9</msg>
-<status status="PASS" endtime="20180215 09:07:08.603" starttime="20180215 09:07:08.574"></status>
+<msg timestamp="20180215 10:34:44.251" level="INFO">${totalallmessage} = 10</msg>
+<status status="PASS" endtime="20180215 10:34:44.252" starttime="20180215 10:34:44.208"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -755,8 +755,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:08.648" level="INFO">${totalgroupedmessage} = 2</msg>
-<status status="PASS" endtime="20180215 09:07:08.648" starttime="20180215 09:07:08.604"></status>
+<msg timestamp="20180215 10:34:44.295" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 10:34:44.296" starttime="20180215 10:34:44.253"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -764,14 +764,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:08.650" level="INFO">${current_total_user_message} = 2</msg>
-<status status="PASS" endtime="20180215 09:07:08.650" starttime="20180215 09:07:08.649"></status>
+<msg timestamp="20180215 10:34:44.297" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 10:34:44.297" starttime="20180215 10:34:44.296"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:08.651" starttime="20180215 09:07:08.572"></status>
+<status status="PASS" endtime="20180215 10:34:44.298" starttime="20180215 10:34:44.207"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:08.651" starttime="20180215 09:07:08.572"></status>
+<status status="PASS" endtime="20180215 10:34:44.298" starttime="20180215 10:34:44.206"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:08.651" starttime="20180215 09:07:01.532"></status>
+<status status="PASS" endtime="20180215 10:34:44.298" starttime="20180215 10:34:36.982"></status>
 </kw>
 <kw name="Check_VA_response_image" library="Custom_keywords_VA">
 <doc>As the URL shown on web is generated by FB, checking URL might be not possible. Currently only checks the class.</doc>
@@ -793,34 +793,21 @@
 </arguments>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180215 09:07:08.998" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:07:08.998" starttime="20180215 09:07:08.695"></status>
+<msg timestamp="20180215 10:34:44.615" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:34:44.615" starttime="20180215 10:34:44.326"></status>
 </kw>
-<msg timestamp="20180215 09:07:08.999" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
-<status status="FAIL" endtime="20180215 09:07:09.000" starttime="20180215 09:07:08.653"></status>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
-</arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180215 09:07:12.354" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:07:12.354" starttime="20180215 09:07:12.030"></status>
-</kw>
-<msg timestamp="20180215 09:07:12.355" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
-<status status="FAIL" endtime="20180215 09:07:12.355" starttime="20180215 09:07:12.000"></status>
+<msg timestamp="20180215 10:34:44.617" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 10:34:44.618" starttime="20180215 10:34:44.300"></status>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:15.424" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:15.425" starttime="20180215 09:07:15.356"></status>
+<msg timestamp="20180215 10:34:47.652" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:47.653" starttime="20180215 10:34:47.618"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:15.425" starttime="20180215 09:07:08.653"></status>
+<status status="PASS" endtime="20180215 10:34:47.653" starttime="20180215 10:34:44.299"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -831,8 +818,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:15.458" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _ylc</msg>
-<status status="PASS" endtime="20180215 09:07:15.459" starttime="20180215 09:07:15.426"></status>
+<msg timestamp="20180215 10:34:47.684" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr _ylc</msg>
+<status status="PASS" endtime="20180215 10:34:47.684" starttime="20180215 10:34:47.654"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -840,9 +827,9 @@
 <arg>${classname}</arg>
 <arg>${VA_image_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:15.461" starttime="20180215 09:07:15.460"></status>
+<status status="PASS" endtime="20180215 10:34:47.686" starttime="20180215 10:34:47.685"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:15.462" starttime="20180215 09:07:08.652"></status>
+<status status="PASS" endtime="20180215 10:34:47.686" starttime="20180215 10:34:44.299"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -862,10 +849,23 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:15.503" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:15.503" starttime="20180215 09:07:15.465"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 10:34:48.035" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:34:48.035" starttime="20180215 10:34:47.733"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:15.504" starttime="20180215 09:07:15.464"></status>
+<msg timestamp="20180215 10:34:48.037" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' not found.</msg>
+<status status="FAIL" endtime="20180215 10:34:48.037" starttime="20180215 10:34:47.689"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 10:34:51.142" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Apa sih bedanya tcash basic dan full service?")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:51.142" starttime="20180215 10:34:51.047"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:34:51.143" starttime="20180215 10:34:47.688"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -876,8 +876,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:15.523" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:15.524" starttime="20180215 09:07:15.504"></status>
+<msg timestamp="20180215 10:34:51.189" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:34:51.189" starttime="20180215 10:34:51.143"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -885,7 +885,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:15.525" starttime="20180215 09:07:15.524"></status>
+<status status="PASS" endtime="20180215 10:34:51.190" starttime="20180215 10:34:51.190"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -912,8 +912,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:15.550" level="INFO">${textresponse} = Ada lagi yang bisa Veronika bantu?</msg>
-<status status="PASS" endtime="20180215 09:07:15.551" starttime="20180215 09:07:15.526"></status>
+<msg timestamp="20180215 10:34:51.239" level="INFO">${textresponse} = Ada lagi yang bisa Veronika bantu?</msg>
+<status status="PASS" endtime="20180215 10:34:51.239" starttime="20180215 10:34:51.192"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -921,13 +921,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:15.552" starttime="20180215 09:07:15.551"></status>
+<status status="PASS" endtime="20180215 10:34:51.241" starttime="20180215 10:34:51.240"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:15.552" starttime="20180215 09:07:15.525"></status>
+<status status="PASS" endtime="20180215 10:34:51.241" starttime="20180215 10:34:51.191"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:15.552" starttime="20180215 09:07:15.525"></status>
+<status status="PASS" endtime="20180215 10:34:51.241" starttime="20180215 10:34:51.191"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:15.552" starttime="20180215 09:07:15.463"></status>
+<status status="PASS" endtime="20180215 10:34:51.241" starttime="20180215 10:34:47.687"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -938,8 +938,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:15.554" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:15.741" starttime="20180215 09:07:15.553"></status>
+<msg timestamp="20180215 10:34:51.243" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:34:51.375" starttime="20180215 10:34:51.242"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -947,15 +947,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:16.115" starttime="20180215 09:07:15.742"></status>
+<status status="PASS" endtime="20180215 10:34:51.797" starttime="20180215 10:34:51.376"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:17.122" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:07:17.124" starttime="20180215 09:07:16.116"></status>
+<msg timestamp="20180215 10:34:52.799" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:34:52.801" starttime="20180215 10:34:51.798"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -963,15 +963,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:17.331" starttime="20180215 09:07:17.125"></status>
+<status status="PASS" endtime="20180215 10:34:53.078" starttime="20180215 10:34:52.802"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:22.346" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:22.347" starttime="20180215 09:07:17.331"></status>
+<msg timestamp="20180215 10:34:58.079" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:34:58.079" starttime="20180215 10:34:53.078"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -979,8 +979,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:22.350" level="INFO">${current_user_input} = Tcash ada promo apa aja ya?</msg>
-<status status="PASS" endtime="20180215 09:07:22.350" starttime="20180215 09:07:22.348"></status>
+<msg timestamp="20180215 10:34:58.081" level="INFO">${current_user_input} = Tcash ada promo apa aja ya?</msg>
+<status status="PASS" endtime="20180215 10:34:58.082" starttime="20180215 10:34:58.080"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1001,8 +1001,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:22.378" level="INFO">${totalallmessage} = 10</msg>
-<status status="PASS" endtime="20180215 09:07:22.378" starttime="20180215 09:07:22.355"></status>
+<msg timestamp="20180215 10:34:58.101" level="INFO">${totalallmessage} = 11</msg>
+<status status="PASS" endtime="20180215 10:34:58.102" starttime="20180215 10:34:58.084"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -1012,8 +1012,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:22.424" level="INFO">${totalgroupedmessage} = 2</msg>
-<status status="PASS" endtime="20180215 09:07:22.424" starttime="20180215 09:07:22.379"></status>
+<msg timestamp="20180215 10:34:58.126" level="INFO">${totalgroupedmessage} = 2</msg>
+<status status="PASS" endtime="20180215 10:34:58.127" starttime="20180215 10:34:58.102"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1021,14 +1021,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:22.426" level="INFO">${current_total_user_message} = 2</msg>
-<status status="PASS" endtime="20180215 09:07:22.427" starttime="20180215 09:07:22.425"></status>
+<msg timestamp="20180215 10:34:58.128" level="INFO">${current_total_user_message} = 2</msg>
+<status status="PASS" endtime="20180215 10:34:58.129" starttime="20180215 10:34:58.127"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:22.427" starttime="20180215 09:07:22.353"></status>
+<status status="PASS" endtime="20180215 10:34:58.130" starttime="20180215 10:34:58.083"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:22.428" starttime="20180215 09:07:22.352"></status>
+<status status="PASS" endtime="20180215 10:34:58.131" starttime="20180215 10:34:58.082"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:22.428" starttime="20180215 09:07:15.553"></status>
+<status status="PASS" endtime="20180215 10:34:58.132" starttime="20180215 10:34:51.242"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -1048,23 +1048,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20180215 09:07:22.769" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:07:22.769" starttime="20180215 09:07:22.471"></status>
+<msg timestamp="20180215 10:34:58.170" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:34:58.171" starttime="20180215 10:34:58.134"></status>
 </kw>
-<msg timestamp="20180215 09:07:22.770" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
-<status status="FAIL" endtime="20180215 09:07:22.771" starttime="20180215 09:07:22.431"></status>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<arguments>
-<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
-</arguments>
-<msg timestamp="20180215 09:07:25.841" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:25.841" starttime="20180215 09:07:25.771"></status>
-</kw>
-<status status="PASS" endtime="20180215 09:07:25.842" starttime="20180215 09:07:22.430"></status>
+<status status="PASS" endtime="20180215 10:34:58.171" starttime="20180215 10:34:58.133"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -1075,8 +1062,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:25.882" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:25.882" starttime="20180215 09:07:25.842"></status>
+<msg timestamp="20180215 10:34:58.194" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:34:58.195" starttime="20180215 10:34:58.172"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1084,7 +1071,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:25.884" starttime="20180215 09:07:25.883"></status>
+<status status="PASS" endtime="20180215 10:34:58.196" starttime="20180215 10:34:58.195"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1111,8 +1098,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:25.916" level="INFO">${textresponse} = TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim u...</msg>
-<status status="PASS" endtime="20180215 09:07:25.916" starttime="20180215 09:07:25.886"></status>
+<msg timestamp="20180215 10:34:58.233" level="INFO">${textresponse} = TCASH adalah layanan uang elektronik dari Telkomsel yang telah mendapatkan izin dari Bank Indonesia. Berbeda dengan pulsa, TCASH dapat digunakan untuk bayar tagihan, bayar merchant, isi pulsa, kirim u...</msg>
+<status status="PASS" endtime="20180215 10:34:58.233" starttime="20180215 10:34:58.198"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -1120,13 +1107,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:25.917" starttime="20180215 09:07:25.917"></status>
+<status status="PASS" endtime="20180215 10:34:58.234" starttime="20180215 10:34:58.233"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:25.917" starttime="20180215 09:07:25.885"></status>
+<status status="PASS" endtime="20180215 10:34:58.234" starttime="20180215 10:34:58.197"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:25.918" starttime="20180215 09:07:25.885"></status>
+<status status="PASS" endtime="20180215 10:34:58.235" starttime="20180215 10:34:58.196"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:25.918" starttime="20180215 09:07:22.429"></status>
+<status status="PASS" endtime="20180215 10:34:58.235" starttime="20180215 10:34:58.132"></status>
 </kw>
 <kw name="Check_VA_response_carousel_exists" library="Custom_keywords_VA">
 <arguments>
@@ -1145,10 +1132,23 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
 </arguments>
-<msg timestamp="20180215 09:07:25.955" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:25.955" starttime="20180215 09:07:25.919"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 10:34:58.718" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:34:58.718" starttime="20180215 10:34:58.257"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:25.955" starttime="20180215 09:07:25.919"></status>
+<msg timestamp="20180215 10:34:58.719" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' not found.</msg>
+<status status="FAIL" endtime="20180215 10:34:58.720" starttime="20180215 10:34:58.237"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div</arg>
+</arguments>
+<msg timestamp="20180215 10:35:01.793" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:35:01.794" starttime="20180215 10:35:01.730"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:01.794" starttime="20180215 10:34:58.236"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -1159,8 +1159,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:26.017" level="INFO">${classname} = _3058 _15gf</msg>
-<status status="PASS" endtime="20180215 09:07:26.017" starttime="20180215 09:07:25.956"></status>
+<msg timestamp="20180215 10:35:01.856" level="INFO">${classname} = _3058 _15gf</msg>
+<status status="PASS" endtime="20180215 10:35:01.856" starttime="20180215 10:35:01.794"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1168,12 +1168,13 @@
 <arg>${classname}</arg>
 <arg>${VA_carousel_maindiv}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:26.019" starttime="20180215 09:07:26.018"></status>
+<status status="PASS" endtime="20180215 10:35:01.857" starttime="20180215 10:35:01.856"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:26.020" starttime="20180215 09:07:25.918"></status>
+<status status="PASS" endtime="20180215 10:35:01.858" starttime="20180215 10:34:58.236"></status>
 </kw>
 <kw name="Click_button_carousel" library="Custom_keywords_VA">
 <arguments>
+<arg>2</arg>
 <arg>Dapatkan TCASH</arg>
 <arg>Pesan Sticker</arg>
 </arguments>
@@ -1183,8 +1184,8 @@
 <arg>${current_carousel_title}</arg>
 <arg>${c_title}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:26.026" level="INFO">${current_carousel_title} = Dapatkan TCASH</msg>
-<status status="PASS" endtime="20180215 09:07:26.026" starttime="20180215 09:07:26.022"></status>
+<msg timestamp="20180215 10:35:01.860" level="INFO">${current_carousel_title} = Dapatkan TCASH</msg>
+<status status="PASS" endtime="20180215 10:35:01.861" starttime="20180215 10:35:01.859"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1192,8 +1193,8 @@
 <arg>${current_carousel_button}</arg>
 <arg>${c_button}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:26.031" level="INFO">${current_carousel_button} = Pesan Sticker</msg>
-<status status="PASS" endtime="20180215 09:07:26.032" starttime="20180215 09:07:26.027"></status>
+<msg timestamp="20180215 10:35:01.863" level="INFO">${current_carousel_button} = Pesan Sticker</msg>
+<status status="PASS" endtime="20180215 10:35:01.863" starttime="20180215 10:35:01.861"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -1203,8 +1204,8 @@
 <assign>
 <var>${totalicon}</var>
 </assign>
-<msg timestamp="20180215 09:07:26.078" level="INFO">${totalicon} = 11</msg>
-<status status="PASS" endtime="20180215 09:07:26.078" starttime="20180215 09:07:26.032"></status>
+<msg timestamp="20180215 10:35:01.887" level="INFO">${totalicon} = 11</msg>
+<status status="PASS" endtime="20180215 10:35:01.887" starttime="20180215 10:35:01.863"></status>
 </kw>
 <kw name="Get Horizontal Position" library="Selenium2Library">
 <doc>Returns horizontal position of element identified by ``locator``.</doc>
@@ -1214,8 +1215,8 @@
 <assign>
 <var>${tsel_icon_locationX}</var>
 </assign>
-<msg timestamp="20180215 09:07:26.137" level="INFO">${tsel_icon_locationX} = 350.0</msg>
-<status status="PASS" endtime="20180215 09:07:26.137" starttime="20180215 09:07:26.079"></status>
+<msg timestamp="20180215 10:35:01.948" level="INFO">${tsel_icon_locationX} = 350.0</msg>
+<status status="PASS" endtime="20180215 10:35:01.949" starttime="20180215 10:35:01.887"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -1225,8 +1226,8 @@
 <assign>
 <var>${right_limit}</var>
 </assign>
-<msg timestamp="20180215 09:07:26.138" level="INFO">${right_limit} = 750.0</msg>
-<status status="PASS" endtime="20180215 09:07:26.138" starttime="20180215 09:07:26.137"></status>
+<msg timestamp="20180215 10:35:01.950" level="INFO">${right_limit} = 750.0</msg>
+<status status="PASS" endtime="20180215 10:35:01.950" starttime="20180215 10:35:01.949"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1234,8 +1235,8 @@
 <arg>${current_tsel_icon_locationX}</arg>
 <arg>${tsel_icon_locationX}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:26.140" level="INFO">${current_tsel_icon_locationX} = 350.0</msg>
-<status status="PASS" endtime="20180215 09:07:26.140" starttime="20180215 09:07:26.139"></status>
+<msg timestamp="20180215 10:35:01.952" level="INFO">${current_tsel_icon_locationX} = 350.0</msg>
+<status status="PASS" endtime="20180215 10:35:01.953" starttime="20180215 10:35:01.951"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1243,8 +1244,8 @@
 <arg>${current_right_limit}</arg>
 <arg>${right_limit}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:26.142" level="INFO">${current_right_limit} = 750.0</msg>
-<status status="PASS" endtime="20180215 09:07:26.143" starttime="20180215 09:07:26.141"></status>
+<msg timestamp="20180215 10:35:01.955" level="INFO">${current_right_limit} = 750.0</msg>
+<status status="PASS" endtime="20180215 10:35:01.955" starttime="20180215 10:35:01.953"></status>
 </kw>
 <kw name="Get_locationX_carousel_item" library="Custom_keywords_VA">
 <assign>
@@ -1258,8 +1259,17 @@
 <assign>
 <var>${totalcarousel}</var>
 </assign>
-<msg timestamp="20180215 09:07:26.168" level="INFO">${totalcarousel} = 8</msg>
-<status status="PASS" endtime="20180215 09:07:26.169" starttime="20180215 09:07:26.144"></status>
+<msg timestamp="20180215 10:35:01.986" level="INFO">${totalcarousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:01.986" starttime="20180215 10:35:01.956"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${total_item_carousel}</arg>
+<arg>${totalcarousel}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:01.990" level="INFO">${total_item_carousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:01.990" starttime="20180215 10:35:01.987"></status>
 </kw>
 <kw name="Get Horizontal Position" library="Selenium2Library">
 <doc>Returns horizontal position of element identified by ``locator``.</doc>
@@ -1269,11 +1279,11 @@
 <assign>
 <var>${element_XBegin}</var>
 </assign>
-<msg timestamp="20180215 09:07:26.231" level="INFO">${element_XBegin} = 399.0</msg>
-<status status="PASS" endtime="20180215 09:07:26.231" starttime="20180215 09:07:26.169"></status>
+<msg timestamp="20180215 10:35:02.024" level="INFO">${element_XBegin} = 399.0</msg>
+<status status="PASS" endtime="20180215 10:35:02.024" starttime="20180215 10:35:01.991"></status>
 </kw>
-<msg timestamp="20180215 09:07:26.232" level="INFO">${element_XBegin} = 399.0</msg>
-<status status="PASS" endtime="20180215 09:07:26.232" starttime="20180215 09:07:26.143"></status>
+<msg timestamp="20180215 10:35:02.025" level="INFO">${element_XBegin} = 399.0</msg>
+<status status="PASS" endtime="20180215 10:35:02.025" starttime="20180215 10:35:01.956"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -1287,12 +1297,13 @@
 <arg>carousel.png</arg>
 <arg>AND</arg>
 <arg>Click Element</arg>
-<arg>//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
 <arg>AND</arg>
 <arg>Sleep</arg>
 <arg>2s</arg>
 <arg>ELSE</arg>
 <arg>Swipe_until_element_and_click</arg>
+<arg>${order}</arg>
 </arguments>
 <kw name="Run Keywords" library="BuiltIn">
 <doc>Executes all the given keywords in a sequence.</doc>
@@ -1304,7 +1315,7 @@
 <arg>carousel.png</arg>
 <arg>AND</arg>
 <arg>Click Element</arg>
-<arg>//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
 <arg>AND</arg>
 <arg>Sleep</arg>
 <arg>2s</arg>
@@ -1314,49 +1325,440 @@
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:28.234" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:28.234" starttime="20180215 09:07:26.234"></status>
+<msg timestamp="20180215 10:35:04.036" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:04.036" starttime="20180215 10:35:02.027"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>carousel.png</arg>
 </arguments>
-<msg timestamp="20180215 09:07:28.551" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="carousel.png"&gt;&lt;img src="carousel.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:07:28.551" starttime="20180215 09:07:28.235"></status>
+<msg timestamp="20180215 10:35:04.327" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="carousel.png"&gt;&lt;img src="carousel.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:35:04.328" starttime="20180215 10:35:04.037"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:28.552" level="INFO">Clicking element '//*[@class='_3cne' and contains(.,'Dapatkan TCASH')]/following-sibling::div//a[contains(.,'Pesan Sticker')]'.</msg>
-<status status="PASS" endtime="20180215 09:07:28.824" starttime="20180215 09:07:28.551"></status>
+<msg timestamp="20180215 10:35:04.329" level="INFO">Clicking element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/descendant::*[@class='_3cne' and contains(.,"Dapatkan TCASH")]/following-sibling::div//a[contains(.,"Pesan Sticker")]'.</msg>
+<status status="PASS" endtime="20180215 10:35:04.605" starttime="20180215 10:35:04.328"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>2s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:30.826" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:30.827" starttime="20180215 09:07:28.825"></status>
+<msg timestamp="20180215 10:35:06.606" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:06.607" starttime="20180215 10:35:04.605"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:30.828" starttime="20180215 09:07:26.233"></status>
+<status status="PASS" endtime="20180215 10:35:06.608" starttime="20180215 10:35:02.026"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:30.828" starttime="20180215 09:07:26.232"></status>
+<status status="PASS" endtime="20180215 10:35:06.610" starttime="20180215 10:35:02.025"></status>
 </kw>
 <kw name="Get Locations" library="Selenium2Library">
 <doc>Returns and logs URLs of all known browser windows.</doc>
 <assign>
 <var>${URLS}</var>
 </assign>
-<msg timestamp="20180215 09:07:32.105" level="INFO">Altogether 2 items.
+<msg timestamp="20180215 10:35:07.841" level="INFO">Altogether 2 items.
+1: https://www.facebook.com/messages/t/telkomsel
+2: https://l.facebook.com/l.php?u=https%3A%2F%2Fdigitalpayment.telkomsel.com%2Fpesanstiker&amp;h=ATMtafMt1bl5KvPcnQruZ4MsjMM6Q5ABTSDXUllW7bdMrzhhRK8CR-QkQFxOFFw0cBwGpYxWLXoOJTzfg4Jt06AnsVqFUcnPEr3ff8aqC10fQ7k4y6nujSIzxLeVVHGr</msg>
+<msg timestamp="20180215 10:35:07.842" level="INFO">${URLS} = [u'https://www.facebook.com/messages/t/telkomsel', u'https://l.facebook.com/l.php?u=https%3A%2F%2Fdigitalpayment.telkomsel.com%2Fpesanstiker&amp;h=ATMtafMt1bl5KvPcnQruZ4MsjMM6Q5ABTSDXUllW7bdMrzhhRK8CR-QkQ...</msg>
+<status status="PASS" endtime="20180215 10:35:07.843" starttime="20180215 10:35:06.612"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:07.844" starttime="20180215 10:35:01.858"></status>
+</kw>
+<kw name="Click_button_carousel" library="Custom_keywords_VA">
+<arguments>
+<arg>2</arg>
+<arg>Info</arg>
+<arg>TCASH FAQ</arg>
+</arguments>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_carousel_title}</arg>
+<arg>${c_title}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:07.847" level="INFO">${current_carousel_title} = Info</msg>
+<status status="PASS" endtime="20180215 10:35:07.848" starttime="20180215 10:35:07.846"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_carousel_button}</arg>
+<arg>${c_button}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:07.850" level="INFO">${current_carousel_button} = TCASH FAQ</msg>
+<status status="PASS" endtime="20180215 10:35:07.851" starttime="20180215 10:35:07.849"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${tselicon_obj}</arg>
+</arguments>
+<assign>
+<var>${totalicon}</var>
+</assign>
+<msg timestamp="20180215 10:35:07.873" level="INFO">${totalicon} = 11</msg>
+<status status="PASS" endtime="20180215 10:35:07.873" starttime="20180215 10:35:07.851"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns horizontal position of element identified by ``locator``.</doc>
+<arguments>
+<arg>(${tselicon_obj})[${totalicon}]</arg>
+</arguments>
+<assign>
+<var>${tsel_icon_locationX}</var>
+</assign>
+<msg timestamp="20180215 10:35:07.906" level="INFO">${tsel_icon_locationX} = 350.0</msg>
+<status status="PASS" endtime="20180215 10:35:07.907" starttime="20180215 10:35:07.876"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${tsel_icon_locationX}+400</arg>
+</arguments>
+<assign>
+<var>${right_limit}</var>
+</assign>
+<msg timestamp="20180215 10:35:07.908" level="INFO">${right_limit} = 750.0</msg>
+<status status="PASS" endtime="20180215 10:35:07.908" starttime="20180215 10:35:07.907"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_tsel_icon_locationX}</arg>
+<arg>${tsel_icon_locationX}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:07.911" level="INFO">${current_tsel_icon_locationX} = 350.0</msg>
+<status status="PASS" endtime="20180215 10:35:07.912" starttime="20180215 10:35:07.910"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${current_right_limit}</arg>
+<arg>${right_limit}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:07.913" level="INFO">${current_right_limit} = 750.0</msg>
+<status status="PASS" endtime="20180215 10:35:07.913" starttime="20180215 10:35:07.912"></status>
+</kw>
+<kw name="Get_locationX_carousel_item" library="Custom_keywords_VA">
+<assign>
+<var>${element_XBegin}</var>
+</assign>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')]</arg>
+</arguments>
+<assign>
+<var>${totalcarousel}</var>
+</assign>
+<msg timestamp="20180215 10:35:07.932" level="INFO">${totalcarousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:07.932" starttime="20180215 10:35:07.914"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${total_item_carousel}</arg>
+<arg>${totalcarousel}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:07.933" level="INFO">${total_item_carousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:07.933" starttime="20180215 10:35:07.932"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns horizontal position of element identified by ``locator``.</doc>
+<arguments>
+<arg>(//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')])[${totalcarousel}]</arg>
+</arguments>
+<assign>
+<var>${element_XBegin}</var>
+</assign>
+<msg timestamp="20180215 10:35:07.962" level="INFO">${element_XBegin} = 1419.0</msg>
+<status status="PASS" endtime="20180215 10:35:07.962" starttime="20180215 10:35:07.933"></status>
+</kw>
+<msg timestamp="20180215 10:35:07.962" level="INFO">${element_XBegin} = 1419.0</msg>
+<status status="PASS" endtime="20180215 10:35:07.963" starttime="20180215 10:35:07.913"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${tsel_icon_locationX} &lt; ${element_XBegin} &lt; ${right_limit}</arg>
+<arg>Run Keywords</arg>
+<arg>Sleep</arg>
+<arg>2s</arg>
+<arg>AND</arg>
+<arg>Capture Page Screenshot</arg>
+<arg>carousel.png</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>2s</arg>
+<arg>ELSE</arg>
+<arg>Swipe_until_element_and_click</arg>
+<arg>${order}</arg>
+</arguments>
+<kw name="Swipe_until_element_and_click" library="Custom_keywords_VA">
+<doc>When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.</doc>
+<arguments>
+<arg>${order}</arg>
+</arguments>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${carouselforward_obj}</arg>
+</arguments>
+<assign>
+<var>${totalcarousel}</var>
+</assign>
+<msg timestamp="20180215 10:35:07.981" level="INFO">${totalcarousel} = 4</msg>
+<status status="PASS" endtime="20180215 10:35:07.981" starttime="20180215 10:35:07.964"></status>
+</kw>
+<kw type="for" name="${looping} IN RANGE [ 0 | 10 ]">
+<kw type="foritem" name="${looping} = 0">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>(${carouselforward_obj})[${totalcarousel}]</arg>
+</arguments>
+<msg timestamp="20180215 10:35:07.983" level="INFO">Clicking element '(//*[@direction="forward"])[4]'.</msg>
+<status status="PASS" endtime="20180215 10:35:08.112" starttime="20180215 10:35:07.982"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180215 10:35:10.113" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:10.114" starttime="20180215 10:35:08.113"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>carousel_${looping}.png</arg>
+</arguments>
+<msg timestamp="20180215 10:35:10.410" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="carousel_0.png"&gt;&lt;img src="carousel_0.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:35:10.411" starttime="20180215 10:35:10.116"></status>
+</kw>
+<kw name="Get_locationX_carousel_item" library="Custom_keywords_VA">
+<assign>
+<var>${element_XBegin}</var>
+</assign>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')]</arg>
+</arguments>
+<assign>
+<var>${totalcarousel}</var>
+</assign>
+<msg timestamp="20180215 10:35:10.424" level="INFO">${totalcarousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:10.425" starttime="20180215 10:35:10.412"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${total_item_carousel}</arg>
+<arg>${totalcarousel}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:10.426" level="INFO">${total_item_carousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:10.426" starttime="20180215 10:35:10.425"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns horizontal position of element identified by ``locator``.</doc>
+<arguments>
+<arg>(//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')])[${totalcarousel}]</arg>
+</arguments>
+<assign>
+<var>${element_XBegin}</var>
+</assign>
+<msg timestamp="20180215 10:35:10.449" level="INFO">${element_XBegin} = 909.0</msg>
+<status status="PASS" endtime="20180215 10:35:10.449" starttime="20180215 10:35:10.427"></status>
+</kw>
+<msg timestamp="20180215 10:35:10.450" level="INFO">${element_XBegin} = 909.0</msg>
+<status status="PASS" endtime="20180215 10:35:10.450" starttime="20180215 10:35:10.411"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${current_tsel_icon_locationX} &lt; ${element_XBegin} &lt; ${current_right_limit}</arg>
+<arg>Run Keywords</arg>
+<arg>Sleep</arg>
+<arg>5s</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>5s</arg>
+<arg>AND</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<status status="PASS" endtime="20180215 10:35:10.451" starttime="20180215 10:35:10.450"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${looping}+1</arg>
+</arguments>
+<assign>
+<var>${looping}</var>
+</assign>
+<msg timestamp="20180215 10:35:10.452" level="INFO">${looping} = 0+1</msg>
+<status status="PASS" endtime="20180215 10:35:10.452" starttime="20180215 10:35:10.451"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:10.452" starttime="20180215 10:35:07.982"></status>
+</kw>
+<kw type="foritem" name="${looping} = 1">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>(${carouselforward_obj})[${totalcarousel}]</arg>
+</arguments>
+<msg timestamp="20180215 10:35:10.453" level="INFO">Clicking element '(//*[@direction="forward"])[4]'.</msg>
+<status status="PASS" endtime="20180215 10:35:10.564" starttime="20180215 10:35:10.453"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20180215 10:35:12.567" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:12.568" starttime="20180215 10:35:10.565"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<arguments>
+<arg>carousel_${looping}.png</arg>
+</arguments>
+<msg timestamp="20180215 10:35:12.886" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="carousel_1.png"&gt;&lt;img src="carousel_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:35:12.886" starttime="20180215 10:35:12.570"></status>
+</kw>
+<kw name="Get_locationX_carousel_item" library="Custom_keywords_VA">
+<assign>
+<var>${element_XBegin}</var>
+</assign>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')]</arg>
+</arguments>
+<assign>
+<var>${totalcarousel}</var>
+</assign>
+<msg timestamp="20180215 10:35:12.918" level="INFO">${totalcarousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:12.918" starttime="20180215 10:35:12.886"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${total_item_carousel}</arg>
+<arg>${totalcarousel}</arg>
+</arguments>
+<msg timestamp="20180215 10:35:12.918" level="INFO">${total_item_carousel} = 6</msg>
+<status status="PASS" endtime="20180215 10:35:12.918" starttime="20180215 10:35:12.918"></status>
+</kw>
+<kw name="Get Horizontal Position" library="Selenium2Library">
+<doc>Returns horizontal position of element identified by ``locator``.</doc>
+<arguments>
+<arg>(//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')])[${totalcarousel}]</arg>
+</arguments>
+<assign>
+<var>${element_XBegin}</var>
+</assign>
+<msg timestamp="20180215 10:35:12.986" level="INFO">${element_XBegin} = 484.0</msg>
+<status status="PASS" endtime="20180215 10:35:12.988" starttime="20180215 10:35:12.918"></status>
+</kw>
+<msg timestamp="20180215 10:35:12.989" level="INFO">${element_XBegin} = 484.0</msg>
+<status status="PASS" endtime="20180215 10:35:12.989" starttime="20180215 10:35:12.886"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${current_tsel_icon_locationX} &lt; ${element_XBegin} &lt; ${current_right_limit}</arg>
+<arg>Run Keywords</arg>
+<arg>Sleep</arg>
+<arg>5s</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>5s</arg>
+<arg>AND</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Sleep</arg>
+<arg>5s</arg>
+<arg>AND</arg>
+<arg>Click Element</arg>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
+<arg>AND</arg>
+<arg>Sleep</arg>
+<arg>5s</arg>
+<arg>AND</arg>
+<arg>Exit For Loop</arg>
+</arguments>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 10:35:18.006" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:18.006" starttime="20180215 10:35:12.993"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]</arg>
+</arguments>
+<msg timestamp="20180215 10:35:18.006" level="INFO">Clicking element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tcash ada promo apa aja ya?")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]/div/descendant::*[@class='_3cne' and contains(.,"Info")]/following-sibling::div//a[contains(.,"TCASH FAQ")]'.</msg>
+<status status="PASS" endtime="20180215 10:35:18.295" starttime="20180215 10:35:18.006"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20180215 10:35:23.296" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:23.296" starttime="20180215 10:35:18.295"></status>
+</kw>
+<kw name="Exit For Loop" library="BuiltIn">
+<doc>Stops executing the enclosing for loop.</doc>
+<msg timestamp="20180215 10:35:23.298" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" endtime="20180215 10:35:23.298" starttime="20180215 10:35:23.297"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:23.299" starttime="20180215 10:35:12.991"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:23.300" starttime="20180215 10:35:12.990"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:23.300" starttime="20180215 10:35:10.452"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:23.301" starttime="20180215 10:35:07.982"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:23.301" starttime="20180215 10:35:07.964"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:23.302" starttime="20180215 10:35:07.963"></status>
+</kw>
+<kw name="Get Locations" library="Selenium2Library">
+<doc>Returns and logs URLs of all known browser windows.</doc>
+<assign>
+<var>${URLS}</var>
+</assign>
+<msg timestamp="20180215 10:35:23.458" level="INFO">Altogether 2 items.
 1: https://www.facebook.com/messages/t/telkomsel
 2: https://digitalpayment.telkomsel.com/pesanstiker</msg>
-<msg timestamp="20180215 09:07:32.105" level="INFO">${URLS} = [u'https://www.facebook.com/messages/t/telkomsel', u'https://digitalpayment.telkomsel.com/pesanstiker']</msg>
-<status status="PASS" endtime="20180215 09:07:32.106" starttime="20180215 09:07:30.829"></status>
+<msg timestamp="20180215 10:35:23.459" level="INFO">${URLS} = [u'https://www.facebook.com/messages/t/telkomsel', u'https://digitalpayment.telkomsel.com/pesanstiker']</msg>
+<status status="PASS" endtime="20180215 10:35:23.459" starttime="20180215 10:35:23.302"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:32.107" starttime="20180215 09:07:26.021"></status>
+<status status="PASS" endtime="20180215 10:35:23.460" starttime="20180215 10:35:07.845"></status>
 </kw>
 <kw name="Cancel_and_closing_session" library="Custom_keywords_VA">
 <kw name="User_input" library="Custom_keywords_VA">
@@ -1368,8 +1770,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:32.112" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:32.208" starttime="20180215 09:07:32.110"></status>
+<msg timestamp="20180215 10:35:23.464" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:35:23.733" starttime="20180215 10:35:23.463"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -1377,15 +1779,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:32.339" starttime="20180215 09:07:32.209"></status>
+<status status="PASS" endtime="20180215 10:35:23.904" starttime="20180215 10:35:23.734"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:33.340" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:07:33.343" starttime="20180215 09:07:32.339"></status>
+<msg timestamp="20180215 10:35:24.905" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:35:24.905" starttime="20180215 10:35:23.904"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -1393,15 +1795,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:33.548" starttime="20180215 09:07:33.344"></status>
+<status status="PASS" endtime="20180215 10:35:25.104" starttime="20180215 10:35:24.905"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:38.550" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:38.550" starttime="20180215 09:07:33.548"></status>
+<msg timestamp="20180215 10:35:30.117" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:30.118" starttime="20180215 10:35:25.104"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1409,8 +1811,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:38.554" level="INFO">${current_user_input} = Batal</msg>
-<status status="PASS" endtime="20180215 09:07:38.555" starttime="20180215 09:07:38.551"></status>
+<msg timestamp="20180215 10:35:30.120" level="INFO">${current_user_input} = Batal</msg>
+<status status="PASS" endtime="20180215 10:35:30.121" starttime="20180215 10:35:30.119"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1431,8 +1833,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:38.732" level="INFO">${totalallmessage} = 11</msg>
-<status status="PASS" endtime="20180215 09:07:38.732" starttime="20180215 09:07:38.561"></status>
+<msg timestamp="20180215 10:35:30.147" level="INFO">${totalallmessage} = 13</msg>
+<status status="PASS" endtime="20180215 10:35:30.147" starttime="20180215 10:35:30.123"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -1442,8 +1844,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:38.766" level="INFO">${totalgroupedmessage} = 1</msg>
-<status status="PASS" endtime="20180215 09:07:38.767" starttime="20180215 09:07:38.733"></status>
+<msg timestamp="20180215 10:35:30.172" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 10:35:30.172" starttime="20180215 10:35:30.148"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1451,14 +1853,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:38.768" level="INFO">${current_total_user_message} = 1</msg>
-<status status="PASS" endtime="20180215 09:07:38.769" starttime="20180215 09:07:38.767"></status>
+<msg timestamp="20180215 10:35:30.174" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 10:35:30.174" starttime="20180215 10:35:30.173"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.770" starttime="20180215 09:07:38.557"></status>
+<status status="PASS" endtime="20180215 10:35:30.175" starttime="20180215 10:35:30.123"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.770" starttime="20180215 09:07:38.556"></status>
+<status status="PASS" endtime="20180215 10:35:30.175" starttime="20180215 10:35:30.122"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.771" starttime="20180215 09:07:32.109"></status>
+<status status="PASS" endtime="20180215 10:35:30.176" starttime="20180215 10:35:23.462"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -1478,10 +1880,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:38.822" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Batal")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:38.822" starttime="20180215 09:07:38.773"></status>
+<msg timestamp="20180215 10:35:30.237" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Batal")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:35:30.238" starttime="20180215 10:35:30.179"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.823" starttime="20180215 09:07:38.772"></status>
+<status status="PASS" endtime="20180215 10:35:30.239" starttime="20180215 10:35:30.177"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -1492,8 +1894,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:38.852" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:38.852" starttime="20180215 09:07:38.823"></status>
+<msg timestamp="20180215 10:35:30.265" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:35:30.266" starttime="20180215 10:35:30.240"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1501,7 +1903,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:38.854" starttime="20180215 09:07:38.853"></status>
+<status status="PASS" endtime="20180215 10:35:30.267" starttime="20180215 10:35:30.266"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1528,8 +1930,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:38.883" level="INFO">${textresponse} = Baiklah, Veronika batalkan.</msg>
-<status status="PASS" endtime="20180215 09:07:38.883" starttime="20180215 09:07:38.855"></status>
+<msg timestamp="20180215 10:35:30.304" level="INFO">${textresponse} = Baiklah, Veronika batalkan.</msg>
+<status status="PASS" endtime="20180215 10:35:30.305" starttime="20180215 10:35:30.270"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -1537,13 +1939,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:38.885" starttime="20180215 09:07:38.884"></status>
+<status status="PASS" endtime="20180215 10:35:30.306" starttime="20180215 10:35:30.305"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.885" starttime="20180215 09:07:38.854"></status>
+<status status="PASS" endtime="20180215 10:35:30.306" starttime="20180215 10:35:30.269"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.885" starttime="20180215 09:07:38.854"></status>
+<status status="PASS" endtime="20180215 10:35:30.307" starttime="20180215 10:35:30.268"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.886" starttime="20180215 09:07:38.771"></status>
+<status status="PASS" endtime="20180215 10:35:30.307" starttime="20180215 10:35:30.176"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -1563,10 +1965,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:38.941" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Batal")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:38.942" starttime="20180215 09:07:38.887"></status>
+<msg timestamp="20180215 10:35:30.359" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Batal")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][2]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:35:30.359" starttime="20180215 10:35:30.308"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:38.942" starttime="20180215 09:07:38.886"></status>
+<status status="PASS" endtime="20180215 10:35:30.359" starttime="20180215 10:35:30.308"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -1577,8 +1979,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:38.992" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:38.992" starttime="20180215 09:07:38.943"></status>
+<msg timestamp="20180215 10:35:30.381" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:35:30.381" starttime="20180215 10:35:30.360"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1586,7 +1988,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:38.994" starttime="20180215 09:07:38.993"></status>
+<status status="PASS" endtime="20180215 10:35:30.382" starttime="20180215 10:35:30.381"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1613,8 +2015,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:39.019" level="INFO">${textresponse} = Ada lagi yang bisa Veronika bantu?</msg>
-<status status="PASS" endtime="20180215 09:07:39.020" starttime="20180215 09:07:38.996"></status>
+<msg timestamp="20180215 10:35:30.411" level="INFO">${textresponse} = Ada lagi yang bisa Veronika bantu?</msg>
+<status status="PASS" endtime="20180215 10:35:30.411" starttime="20180215 10:35:30.385"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -1622,13 +2024,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:39.020" starttime="20180215 09:07:39.020"></status>
+<status status="PASS" endtime="20180215 10:35:30.412" starttime="20180215 10:35:30.412"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:39.021" starttime="20180215 09:07:38.995"></status>
+<status status="PASS" endtime="20180215 10:35:30.413" starttime="20180215 10:35:30.383"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:39.021" starttime="20180215 09:07:38.995"></status>
+<status status="PASS" endtime="20180215 10:35:30.413" starttime="20180215 10:35:30.383"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:39.021" starttime="20180215 09:07:38.886"></status>
+<status status="PASS" endtime="20180215 10:35:30.413" starttime="20180215 10:35:30.307"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -1639,8 +2041,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:39.022" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:39.203" starttime="20180215 09:07:39.022"></status>
+<msg timestamp="20180215 10:35:30.415" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:35:30.577" starttime="20180215 10:35:30.414"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -1648,15 +2050,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:39.302" starttime="20180215 09:07:39.204"></status>
+<status status="PASS" endtime="20180215 10:35:30.695" starttime="20180215 10:35:30.577"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:40.304" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:07:40.304" starttime="20180215 09:07:39.303"></status>
+<msg timestamp="20180215 10:35:31.711" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:35:31.712" starttime="20180215 10:35:30.695"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -1664,15 +2066,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:40.511" starttime="20180215 09:07:40.305"></status>
+<status status="PASS" endtime="20180215 10:35:32.001" starttime="20180215 10:35:31.713"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:45.513" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:45.514" starttime="20180215 09:07:40.511"></status>
+<msg timestamp="20180215 10:35:37.002" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:37.004" starttime="20180215 10:35:32.001"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1680,8 +2082,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:45.515" level="INFO">${current_user_input} = Tidak</msg>
-<status status="PASS" endtime="20180215 09:07:45.515" starttime="20180215 09:07:45.514"></status>
+<msg timestamp="20180215 10:35:37.007" level="INFO">${current_user_input} = Tidak</msg>
+<status status="PASS" endtime="20180215 10:35:37.008" starttime="20180215 10:35:37.006"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1702,8 +2104,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:45.531" level="INFO">${totalallmessage} = 12</msg>
-<status status="PASS" endtime="20180215 09:07:45.531" starttime="20180215 09:07:45.517"></status>
+<msg timestamp="20180215 10:35:37.050" level="INFO">${totalallmessage} = 14</msg>
+<status status="PASS" endtime="20180215 10:35:37.051" starttime="20180215 10:35:37.011"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -1713,8 +2115,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:45.565" level="INFO">${totalgroupedmessage} = 1</msg>
-<status status="PASS" endtime="20180215 09:07:45.566" starttime="20180215 09:07:45.532"></status>
+<msg timestamp="20180215 10:35:37.112" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 10:35:37.112" starttime="20180215 10:35:37.052"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1722,14 +2124,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:45.567" level="INFO">${current_total_user_message} = 1</msg>
-<status status="PASS" endtime="20180215 09:07:45.567" starttime="20180215 09:07:45.566"></status>
+<msg timestamp="20180215 10:35:37.115" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 10:35:37.116" starttime="20180215 10:35:37.114"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.568" starttime="20180215 09:07:45.516"></status>
+<status status="PASS" endtime="20180215 10:35:37.117" starttime="20180215 10:35:37.009"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.568" starttime="20180215 09:07:45.516"></status>
+<status status="PASS" endtime="20180215 10:35:37.117" starttime="20180215 10:35:37.008"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.568" starttime="20180215 09:07:39.022"></status>
+<status status="PASS" endtime="20180215 10:35:37.118" starttime="20180215 10:35:30.414"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -1749,10 +2151,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:45.637" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tidak")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:45.637" starttime="20180215 09:07:45.570"></status>
+<msg timestamp="20180215 10:35:37.188" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tidak")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:35:37.188" starttime="20180215 10:35:37.120"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.638" starttime="20180215 09:07:45.569"></status>
+<status status="PASS" endtime="20180215 10:35:37.189" starttime="20180215 10:35:37.119"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -1763,8 +2165,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:45.715" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:45.715" starttime="20180215 09:07:45.638"></status>
+<msg timestamp="20180215 10:35:37.243" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:35:37.244" starttime="20180215 10:35:37.189"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1772,7 +2174,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:45.717" starttime="20180215 09:07:45.716"></status>
+<status status="PASS" endtime="20180215 10:35:37.245" starttime="20180215 10:35:37.244"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1799,8 +2201,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:45.777" level="INFO">${textresponse} = Hai M Testaut, untuk terus meningkatkan layanan ini, mohon bantuannya untuk menilai percakapan ini ya. Penilaian dalam skala 1-10 (1 sangat tidak puas - 10 sangat puas). Silakan masukan penilaian Kamu...</msg>
-<status status="PASS" endtime="20180215 09:07:45.777" starttime="20180215 09:07:45.721"></status>
+<msg timestamp="20180215 10:35:37.306" level="INFO">${textresponse} = Hai M Testaut, untuk terus meningkatkan layanan ini, mohon bantuannya untuk menilai percakapan ini ya. Penilaian dalam skala 1-10 (1 sangat tidak puas - 10 sangat puas). Silakan masukan penilaian Kamu...</msg>
+<status status="PASS" endtime="20180215 10:35:37.307" starttime="20180215 10:35:37.246"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -1808,13 +2210,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:45.779" starttime="20180215 09:07:45.778"></status>
+<status status="PASS" endtime="20180215 10:35:37.308" starttime="20180215 10:35:37.307"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.779" starttime="20180215 09:07:45.720"></status>
+<status status="PASS" endtime="20180215 10:35:37.308" starttime="20180215 10:35:37.245"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.780" starttime="20180215 09:07:45.718"></status>
+<status status="PASS" endtime="20180215 10:35:37.308" starttime="20180215 10:35:37.245"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:45.780" starttime="20180215 09:07:45.569"></status>
+<status status="PASS" endtime="20180215 10:35:37.309" starttime="20180215 10:35:37.118"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -1825,8 +2227,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:45.782" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:45.905" starttime="20180215 09:07:45.781"></status>
+<msg timestamp="20180215 10:35:37.310" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:35:37.451" starttime="20180215 10:35:37.310"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -1834,15 +2236,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:45.958" starttime="20180215 09:07:45.905"></status>
+<status status="PASS" endtime="20180215 10:35:37.499" starttime="20180215 10:35:37.452"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:46.961" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:07:46.962" starttime="20180215 09:07:45.959"></status>
+<msg timestamp="20180215 10:35:38.500" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:35:38.501" starttime="20180215 10:35:37.499"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -1850,15 +2252,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:47.183" starttime="20180215 09:07:46.962"></status>
+<status status="PASS" endtime="20180215 10:35:38.797" starttime="20180215 10:35:38.502"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:52.184" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:52.184" starttime="20180215 09:07:47.183"></status>
+<msg timestamp="20180215 10:35:43.798" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:43.798" starttime="20180215 10:35:38.798"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1866,8 +2268,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:52.186" level="INFO">${current_user_input} = 9</msg>
-<status status="PASS" endtime="20180215 09:07:52.187" starttime="20180215 09:07:52.185"></status>
+<msg timestamp="20180215 10:35:43.800" level="INFO">${current_user_input} = 9</msg>
+<status status="PASS" endtime="20180215 10:35:43.800" starttime="20180215 10:35:43.799"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1888,8 +2290,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:52.206" level="INFO">${totalallmessage} = 13</msg>
-<status status="PASS" endtime="20180215 09:07:52.207" starttime="20180215 09:07:52.189"></status>
+<msg timestamp="20180215 10:35:43.821" level="INFO">${totalallmessage} = 15</msg>
+<status status="PASS" endtime="20180215 10:35:43.821" starttime="20180215 10:35:43.802"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -1899,8 +2301,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:52.228" level="INFO">${totalgroupedmessage} = 1</msg>
-<status status="PASS" endtime="20180215 09:07:52.228" starttime="20180215 09:07:52.208"></status>
+<msg timestamp="20180215 10:35:43.846" level="INFO">${totalgroupedmessage} = 2</msg>
+<status status="PASS" endtime="20180215 10:35:43.846" starttime="20180215 10:35:43.822"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -1908,22 +2310,22 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:52.230" level="INFO">${current_total_user_message} = 1</msg>
-<status status="PASS" endtime="20180215 09:07:52.230" starttime="20180215 09:07:52.229"></status>
+<msg timestamp="20180215 10:35:43.847" level="INFO">${current_total_user_message} = 2</msg>
+<status status="PASS" endtime="20180215 10:35:43.847" starttime="20180215 10:35:43.846"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.230" starttime="20180215 09:07:52.188"></status>
+<status status="PASS" endtime="20180215 10:35:43.848" starttime="20180215 10:35:43.801"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.231" starttime="20180215 09:07:52.188"></status>
+<status status="PASS" endtime="20180215 10:35:43.848" starttime="20180215 10:35:43.800"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.231" starttime="20180215 09:07:45.781"></status>
+<status status="PASS" endtime="20180215 10:35:43.848" starttime="20180215 10:35:37.309"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
 <arguments>
 <arg>user_rate.png</arg>
 </arguments>
-<msg timestamp="20180215 09:07:52.500" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="user_rate.png"&gt;&lt;img src="user_rate.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20180215 09:07:52.500" starttime="20180215 09:07:52.232"></status>
+<msg timestamp="20180215 10:35:44.137" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="user_rate.png"&gt;&lt;img src="user_rate.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:35:44.137" starttime="20180215 10:35:43.849"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -1943,10 +2345,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:52.538" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"9")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:52.538" starttime="20180215 09:07:52.501"></status>
+<msg timestamp="20180215 10:35:44.192" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"9")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:35:44.193" starttime="20180215 10:35:44.138"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.538" starttime="20180215 09:07:52.501"></status>
+<status status="PASS" endtime="20180215 10:35:44.193" starttime="20180215 10:35:44.138"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -1957,8 +2359,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:52.566" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:52.566" starttime="20180215 09:07:52.539"></status>
+<msg timestamp="20180215 10:35:44.232" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:35:44.232" starttime="20180215 10:35:44.194"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -1966,7 +2368,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:52.567" starttime="20180215 09:07:52.566"></status>
+<status status="PASS" endtime="20180215 10:35:44.234" starttime="20180215 10:35:44.233"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -1993,8 +2395,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:52.601" level="INFO">${textresponse} = Menurut Kamu, apa yang harus Veronika tingkatkan?</msg>
-<status status="PASS" endtime="20180215 09:07:52.601" starttime="20180215 09:07:52.571"></status>
+<msg timestamp="20180215 10:35:44.291" level="INFO">${textresponse} = Menurut Kamu, apa yang harus Veronika tingkatkan?</msg>
+<status status="PASS" endtime="20180215 10:35:44.291" starttime="20180215 10:35:44.236"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -2002,13 +2404,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:52.602" starttime="20180215 09:07:52.601"></status>
+<status status="PASS" endtime="20180215 10:35:44.293" starttime="20180215 10:35:44.292"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.602" starttime="20180215 09:07:52.569"></status>
+<status status="PASS" endtime="20180215 10:35:44.293" starttime="20180215 10:35:44.235"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.602" starttime="20180215 09:07:52.567"></status>
+<status status="PASS" endtime="20180215 10:35:44.293" starttime="20180215 10:35:44.234"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:52.603" starttime="20180215 09:07:52.500"></status>
+<status status="PASS" endtime="20180215 10:35:44.294" starttime="20180215 10:35:44.137"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -2019,8 +2421,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:52.604" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:52.693" starttime="20180215 09:07:52.603"></status>
+<msg timestamp="20180215 10:35:44.295" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:35:44.714" starttime="20180215 10:35:44.295"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -2028,15 +2430,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:52.948" starttime="20180215 09:07:52.694"></status>
+<status status="PASS" endtime="20180215 10:35:45.469" starttime="20180215 10:35:44.714"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:53.954" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:07:53.955" starttime="20180215 09:07:52.948"></status>
+<msg timestamp="20180215 10:35:46.474" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:35:46.476" starttime="20180215 10:35:45.469"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -2044,15 +2446,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:54.235" starttime="20180215 09:07:53.956"></status>
+<status status="PASS" endtime="20180215 10:35:46.721" starttime="20180215 10:35:46.477"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:07:59.237" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:07:59.238" starttime="20180215 09:07:54.235"></status>
+<msg timestamp="20180215 10:35:51.732" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:35:51.733" starttime="20180215 10:35:46.722"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -2060,8 +2462,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:59.240" level="INFO">${current_user_input} = Kecepatan Respon</msg>
-<status status="PASS" endtime="20180215 09:07:59.240" starttime="20180215 09:07:59.239"></status>
+<msg timestamp="20180215 10:35:51.734" level="INFO">${current_user_input} = Kecepatan Respon</msg>
+<status status="PASS" endtime="20180215 10:35:51.735" starttime="20180215 10:35:51.734"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -2082,8 +2484,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:59.323" level="INFO">${totalallmessage} = 14</msg>
-<status status="PASS" endtime="20180215 09:07:59.323" starttime="20180215 09:07:59.244"></status>
+<msg timestamp="20180215 10:35:51.752" level="INFO">${totalallmessage} = 8</msg>
+<status status="PASS" endtime="20180215 10:35:51.752" starttime="20180215 10:35:51.736"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -2093,8 +2495,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:07:59.350" level="INFO">${totalgroupedmessage} = 2</msg>
-<status status="PASS" endtime="20180215 09:07:59.350" starttime="20180215 09:07:59.324"></status>
+<msg timestamp="20180215 10:35:51.787" level="INFO">${totalgroupedmessage} = 1</msg>
+<status status="PASS" endtime="20180215 10:35:51.788" starttime="20180215 10:35:51.753"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -2102,14 +2504,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:59.352" level="INFO">${current_total_user_message} = 2</msg>
-<status status="PASS" endtime="20180215 09:07:59.352" starttime="20180215 09:07:59.351"></status>
+<msg timestamp="20180215 10:35:51.789" level="INFO">${current_total_user_message} = 1</msg>
+<status status="PASS" endtime="20180215 10:35:51.790" starttime="20180215 10:35:51.788"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.353" starttime="20180215 09:07:59.242"></status>
+<status status="PASS" endtime="20180215 10:35:51.790" starttime="20180215 10:35:51.736"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.353" starttime="20180215 09:07:59.241"></status>
+<status status="PASS" endtime="20180215 10:35:51.790" starttime="20180215 10:35:51.735"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.353" starttime="20180215 09:07:52.603"></status>
+<status status="PASS" endtime="20180215 10:35:51.790" starttime="20180215 10:35:44.294"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -2129,10 +2531,23 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:07:59.404" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Kecepatan Respon")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:07:59.405" starttime="20180215 09:07:59.356"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20180215 10:35:52.152" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20180215 10:35:52.152" starttime="20180215 10:35:51.878"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.405" starttime="20180215 09:07:59.355"></status>
+<msg timestamp="20180215 10:35:52.153" level="FAIL">Element with locator '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Kecepatan Respon")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' not found.</msg>
+<status status="FAIL" endtime="20180215 10:35:52.154" starttime="20180215 10:35:51.792"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
+</arguments>
+<msg timestamp="20180215 10:35:55.202" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Kecepatan Respon")])[1]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:35:55.202" starttime="20180215 10:35:55.154"></status>
+</kw>
+<status status="PASS" endtime="20180215 10:35:55.203" starttime="20180215 10:35:51.791"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -2143,8 +2558,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:07:59.432" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:07:59.432" starttime="20180215 09:07:59.406"></status>
+<msg timestamp="20180215 10:35:55.239" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:35:55.239" starttime="20180215 10:35:55.203"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -2152,7 +2567,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:59.433" starttime="20180215 09:07:59.433"></status>
+<status status="PASS" endtime="20180215 10:35:55.240" starttime="20180215 10:35:55.240"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -2179,8 +2594,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:07:59.471" level="INFO">${textresponse} = Tolong tulis alasan Kamu ya, kenapa Kecepatan Respon perlu Veronika tingkatkan?</msg>
-<status status="PASS" endtime="20180215 09:07:59.471" starttime="20180215 09:07:59.435"></status>
+<msg timestamp="20180215 10:35:55.268" level="INFO">${textresponse} = Tolong tulis alasan Kamu ya, kenapa Kecepatan Respon perlu Veronika tingkatkan?</msg>
+<status status="PASS" endtime="20180215 10:35:55.268" starttime="20180215 10:35:55.242"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -2188,13 +2603,13 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:59.474" starttime="20180215 09:07:59.472"></status>
+<status status="PASS" endtime="20180215 10:35:55.269" starttime="20180215 10:35:55.269"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.475" starttime="20180215 09:07:59.434"></status>
+<status status="PASS" endtime="20180215 10:35:55.270" starttime="20180215 10:35:55.241"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.475" starttime="20180215 09:07:59.434"></status>
+<status status="PASS" endtime="20180215 10:35:55.270" starttime="20180215 10:35:55.241"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:07:59.475" starttime="20180215 09:07:59.354"></status>
+<status status="PASS" endtime="20180215 10:35:55.270" starttime="20180215 10:35:51.791"></status>
 </kw>
 <kw name="User_input" library="Custom_keywords_VA">
 <arguments>
@@ -2205,8 +2620,8 @@
 <arguments>
 <arg>${inputtext_obj}</arg>
 </arguments>
-<msg timestamp="20180215 09:07:59.478" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
-<status status="PASS" endtime="20180215 09:07:59.572" starttime="20180215 09:07:59.477"></status>
+<msg timestamp="20180215 10:35:55.271" level="INFO">Clicking element '//*[@class="notranslate _5rpu"]'.</msg>
+<status status="PASS" endtime="20180215 10:35:55.414" starttime="20180215 10:35:55.271"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -2214,15 +2629,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:07:59.672" starttime="20180215 09:07:59.572"></status>
+<status status="PASS" endtime="20180215 10:35:55.510" starttime="20180215 10:35:55.415"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>1s</arg>
 </arguments>
-<msg timestamp="20180215 09:08:00.677" level="INFO">Slept 1 second</msg>
-<status status="PASS" endtime="20180215 09:08:00.679" starttime="20180215 09:07:59.673"></status>
+<msg timestamp="20180215 10:35:56.511" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20180215 10:35:56.512" starttime="20180215 10:35:55.510"></status>
 </kw>
 <kw name="Press Key" library="Selenium2Library">
 <doc>Simulates user pressing key on element identified by ``locator``.</doc>
@@ -2230,15 +2645,15 @@
 <arg>${inputtext_obj}</arg>
 <arg>\\13</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:08:00.974" starttime="20180215 09:08:00.680"></status>
+<status status="PASS" endtime="20180215 10:35:56.694" starttime="20180215 10:35:56.513"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
 <arg>5s</arg>
 </arguments>
-<msg timestamp="20180215 09:08:05.975" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" endtime="20180215 09:08:05.975" starttime="20180215 09:08:00.975"></status>
+<msg timestamp="20180215 10:36:01.696" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20180215 10:36:01.697" starttime="20180215 10:35:56.695"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -2246,8 +2661,8 @@
 <arg>${current_user_input}</arg>
 <arg>${input_text}</arg>
 </arguments>
-<msg timestamp="20180215 09:08:05.976" level="INFO">${current_user_input} = Tidak</msg>
-<status status="PASS" endtime="20180215 09:08:05.976" starttime="20180215 09:08:05.975"></status>
+<msg timestamp="20180215 10:36:01.698" level="INFO">${current_user_input} = Tidak</msg>
+<status status="PASS" endtime="20180215 10:36:01.698" starttime="20180215 10:36:01.697"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -2268,8 +2683,8 @@
 <assign>
 <var>${totalallmessage}</var>
 </assign>
-<msg timestamp="20180215 09:08:05.992" level="INFO">${totalallmessage} = 15</msg>
-<status status="PASS" endtime="20180215 09:08:05.992" starttime="20180215 09:08:05.978"></status>
+<msg timestamp="20180215 10:36:01.792" level="INFO">${totalallmessage} = 9</msg>
+<status status="PASS" endtime="20180215 10:36:01.793" starttime="20180215 10:36:01.700"></status>
 </kw>
 <kw name="Get Element Count" library="Selenium2Library">
 <doc>Returns number of elements matching ``locator``.</doc>
@@ -2279,8 +2694,8 @@
 <assign>
 <var>${totalgroupedmessage}</var>
 </assign>
-<msg timestamp="20180215 09:08:06.012" level="INFO">${totalgroupedmessage} = 2</msg>
-<status status="PASS" endtime="20180215 09:08:06.012" starttime="20180215 09:08:05.993"></status>
+<msg timestamp="20180215 10:36:01.813" level="INFO">${totalgroupedmessage} = 2</msg>
+<status status="PASS" endtime="20180215 10:36:01.813" starttime="20180215 10:36:01.793"></status>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
@@ -2288,14 +2703,14 @@
 <arg>${current_total_user_message}</arg>
 <arg>${totalgroupedmessage}</arg>
 </arguments>
-<msg timestamp="20180215 09:08:06.013" level="INFO">${current_total_user_message} = 2</msg>
-<status status="PASS" endtime="20180215 09:08:06.014" starttime="20180215 09:08:06.013"></status>
+<msg timestamp="20180215 10:36:01.815" level="INFO">${current_total_user_message} = 2</msg>
+<status status="PASS" endtime="20180215 10:36:01.815" starttime="20180215 10:36:01.814"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.015" starttime="20180215 09:08:05.977"></status>
+<status status="PASS" endtime="20180215 10:36:01.816" starttime="20180215 10:36:01.699"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.015" starttime="20180215 09:08:05.977"></status>
+<status status="PASS" endtime="20180215 10:36:01.816" starttime="20180215 10:36:01.699"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.016" starttime="20180215 09:07:59.476"></status>
+<status status="PASS" endtime="20180215 10:36:01.816" starttime="20180215 10:35:55.271"></status>
 </kw>
 <kw name="Check_VA_response_text" library="Custom_keywords_VA">
 <arguments>
@@ -2315,10 +2730,10 @@
 <arguments>
 <arg>(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]</arg>
 </arguments>
-<msg timestamp="20180215 09:08:06.060" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tidak")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
-<status status="PASS" endtime="20180215 09:08:06.060" starttime="20180215 09:08:06.018"></status>
+<msg timestamp="20180215 10:36:01.856" level="INFO">Element '(//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"Tidak")])[2]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][1]' is displayed.</msg>
+<status status="PASS" endtime="20180215 10:36:01.857" starttime="20180215 10:36:01.819"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.061" starttime="20180215 09:08:06.017"></status>
+<status status="PASS" endtime="20180215 10:36:01.857" starttime="20180215 10:36:01.818"></status>
 </kw>
 <kw name="Get Element Attribute" library="Selenium2Library">
 <doc>Returns value of ``attribute`` from element ``locator``.</doc>
@@ -2329,8 +2744,8 @@
 <assign>
 <var>${classname}</var>
 </assign>
-<msg timestamp="20180215 09:08:06.084" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
-<status status="PASS" endtime="20180215 09:08:06.085" starttime="20180215 09:08:06.061"></status>
+<msg timestamp="20180215 10:36:01.888" level="INFO">${classname} = clearfix _o46 _3erg _29_7 direction_ltr text_align_ltr</msg>
+<status status="PASS" endtime="20180215 10:36:01.888" starttime="20180215 10:36:01.858"></status>
 </kw>
 <kw name="Should Be Equal As Strings" library="BuiltIn">
 <doc>Fails if objects are unequal after converting them to strings.</doc>
@@ -2338,7 +2753,7 @@
 <arg>${classname}</arg>
 <arg>${VA_textcarousel_bubble}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:08:06.086" starttime="20180215 09:08:06.085"></status>
+<status status="PASS" endtime="20180215 10:36:01.889" starttime="20180215 10:36:01.889"></status>
 </kw>
 <kw name="Run Keyword" library="BuiltIn">
 <doc>Executes the given keyword with the given arguments.</doc>
@@ -2365,8 +2780,8 @@
 <assign>
 <var>${textresponse}</var>
 </assign>
-<msg timestamp="20180215 09:08:06.114" level="INFO">${textresponse} = Terima kasih atas penilaiannya :) Jangan lupa untuk chat Veronika lagi ya</msg>
-<status status="PASS" endtime="20180215 09:08:06.114" starttime="20180215 09:08:06.089"></status>
+<msg timestamp="20180215 10:36:01.919" level="INFO">${textresponse} = Terima kasih atas penilaiannya :) Sampai jumpa di chat berikutnya dan semoga harimu menyenangkan ya</msg>
+<status status="PASS" endtime="20180215 10:36:01.919" starttime="20180215 10:36:01.891"></status>
 </kw>
 <kw name="Should Contain" library="BuiltIn">
 <doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
@@ -2374,23 +2789,23 @@
 <arg>${textresponse}</arg>
 <arg>${expected_text}</arg>
 </arguments>
-<status status="PASS" endtime="20180215 09:08:06.115" starttime="20180215 09:08:06.115"></status>
+<status status="PASS" endtime="20180215 10:36:01.920" starttime="20180215 10:36:01.920"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.116" starttime="20180215 09:08:06.087"></status>
+<status status="PASS" endtime="20180215 10:36:01.921" starttime="20180215 10:36:01.890"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.117" starttime="20180215 09:08:06.086"></status>
+<status status="PASS" endtime="20180215 10:36:01.921" starttime="20180215 10:36:01.890"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.117" starttime="20180215 09:08:06.016"></status>
+<status status="PASS" endtime="20180215 10:36:01.922" starttime="20180215 10:36:01.817"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:06.118" starttime="20180215 09:07:32.108"></status>
+<status status="PASS" endtime="20180215 10:36:01.922" starttime="20180215 10:35:23.461"></status>
 </kw>
 <kw type="teardown" name="Close Browser" library="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20180215 09:08:09.258" starttime="20180215 09:08:06.118"></status>
+<status status="PASS" endtime="20180215 10:36:05.067" starttime="20180215 10:36:01.923"></status>
 </kw>
-<status status="PASS" endtime="20180215 09:08:09.258" critical="yes" starttime="20180215 09:06:23.349"></status>
+<status status="PASS" endtime="20180215 10:36:05.068" critical="yes" starttime="20180215 10:33:52.005"></status>
 </test>
-<status status="PASS" endtime="20180215 09:08:09.259" starttime="20180215 09:06:23.177"></status>
+<status status="PASS" endtime="20180215 10:36:05.072" starttime="20180215 10:33:51.833"></status>
 </suite>
 <statistics>
 <total>
