@@ -12,7 +12,7 @@ test_askPulsaKuota
     Greet_VA_Indo
     User_input    ${ask_pulsa}
     Sleep    2s
-    ${result}    Run Keyword and Return Status    Check_VA_response    ${VA_validateNumber}
+    ${result}    Run Keyword and Return Status    Check_VA_response_text    1    ${VA_validateNumber}
     Run Keyword If    ${result}    Click_Yes
     Check_VA_response_text    1    ${VA_answerPulsa1}
     Check_VA_response_text_with_2buttons    2    ${VA_answerPulsa2}    Ya    Tidak
@@ -21,6 +21,22 @@ test_askPulsaKuota
     Check_VA_response_text    1    ${VA_answerKuota2}
     Check_additional_text_2buttons    1    ${VA_answerKuota3}    Ya    Tidak
     Click_additional_No
+    Check_VA_response_text    1    ${VA_question_1}
+    Closing_session
+    [Teardown]    Close Browser
+
+test_askPulsa
+    [Documentation]    Here registered user ask for pulsa, without top-up.
+    [Setup]    Open_chrome
+    Login_messenger    ${email}    ${password}
+    Greet_VA_Indo
+    User_input    ${ask_pulsa}
+    Sleep    2s
+    ${result}    Run Keyword and Return Status    Check_VA_response_text    1    ${VA_validateNumber}
+    Run Keyword If    ${result}    Click_Yes
+    Check_VA_response_text    1    ${VA_answerPulsa1}
+    Check_VA_response_text_with_2buttons    2    ${VA_answerPulsa2}    Ya    Tidak
+    Click_No    2
     Check_VA_response_text    1    ${VA_question_1}
     Closing_session
     [Teardown]    Close Browser

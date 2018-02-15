@@ -35,18 +35,16 @@ Greet_VA_Indo
     Sleep    2s
 
 Click_Yes
+    [Arguments]    ${order}
     [Documentation]    This keyword can be used to click Ya button that is part of the VA response.
-    #${totalYa}    Get Element Count    ${yabutton_obj}
     Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"Ya")]    #(${yabutton_obj})[${totalYa}]
     Set Suite Variable    ${current_user_input}    Ya
-    #Sleep    5s
 
 Click_No
+    [Arguments]    ${order}
     [Documentation]    This keyword can be used to click Tidak button that is part of the VA response.
-    #${totalNo}    Get Element Count    #${nobutton_obj}
     Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/following-sibling::*[contains(.,"Tidak")]    #(${nobutton_obj})[${totalNo}]
     Set Suite Variable    ${current_user_input}    Tidak
-    #Sleep    5s
 
 User_input
     [Arguments]    ${input_text}
@@ -264,3 +262,4 @@ Click_additional_Yes
     ${totalYa}    Get Element Count    ${yabutton_obj}
     Click Element    (${yabutton_obj})[${totalYa}]
     Set Suite Variable    ${current_user_input}    Ya
+    Run Keyword    Count_message_bubble_user_input    ${current_user_input}
