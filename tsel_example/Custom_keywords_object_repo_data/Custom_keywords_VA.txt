@@ -191,11 +191,11 @@ Click_button_carousel
     Set Suite Variable    ${current_tsel_icon_locationX}    ${tsel_icon_locationX}
     Set Suite Variable    ${current_right_limit}    ${right_limit}
     ${element_XBegin}    Get_locationX_carousel_item
-    Run Keyword If    ${tsel_icon_locationX} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    2s
+    Run Keyword If    ${tsel_icon_locationX} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    1s
     ...    AND    Capture Page Screenshot    carousel.png
-    ...    AND    Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]
-    ...    ELSE IF    ${element_XBegin} < ${tsel_icon_locationX}    Run Keyword    Swipe_until_element_and_click    ${order}
-    ...    ELSE IF    ${element_XBegin} > ${right_limit}    Run Keyword    Swipe_backwards_element_and_click    ${order}    #//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    ...    ELSE IF    ${element_XBegin} < ${tsel_icon_locationX}    Run Keyword    Swipe_forward_until_element    ${order}
+    ...    ELSE IF    ${element_XBegin} > ${right_limit}    Run Keyword    Swipe_backward_until_element    ${order}    #//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]
     ${URLS}    Get Locations
 
 Get_locationX_carousel_item
@@ -234,12 +234,10 @@ Swipe_backwards_element_and_click
     \    ...    AND    Exit For Loop    #(//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')])[${total_item_carousel}]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
     \    ${looping}    Set Variable    ${looping}+1
 
-Check_carousel_item
-    [Arguments]    ${order}    ${c_title}    ${c_subtitle}    ${c_button}
-    Wait Until Keyword Succeeds    15s    3s    Element Should Be Visible    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@class='_3cng' and contains(.,"${c_title}")]/following-sibling::*[@class='_3cnl' and contains(.,"${c_subtitle}")]/parent::*/parent::div/following-sibling::*/descendant::*[@class='_3cnp' and contains(.,"${button}")]
-
 Check_additional_text_2buttons
     [Arguments]    ${order}    ${expected_text}    ${expected_button1}    ${expected_button2}
+    [Documentation]    User input becomes the baseline in finding/validating VA responses.
+    ...    This keyword is created to find (second) VA response which is not part of the same bubble as the first response. The last user input cannot be used as a baseline.
     ${totalgroupedmessage}    Get Element Count    ${grouped_message_bubble}
     Wait Until Keyword Succeeds    15s    3s    Element Should Be Visible    (//*[@class="_1t_p clearfix"])[${totalgroupedmessage}]/descendant::*[contains(@class,"clearfix _o46")][${order}]
     ${classname}    Get Element Attribute    (//*[@class="_1t_p clearfix"])[${totalgroupedmessage}]/descendant::*[contains(@class,"clearfix _o46")][${order}]    class
@@ -263,3 +261,45 @@ Click_additional_Yes
     Click Element    (${yabutton_obj})[${totalYa}]
     Set Suite Variable    ${current_user_input}    Ya
     Run Keyword    Count_message_bubble_user_input    ${current_user_input}
+
+Check_carousel_item
+    [Arguments]    ${order}    ${c_title}    ${c_subtitle}    ${c_button}
+    Set Suite Variable    ${current_carousel_title}    ${c_title}
+    Set Suite Variable    ${current_carousel_button}    ${c_button}
+    Wait Until Keyword Succeeds    15s    3s    Wait Until Page Contains Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@class='_3cng' and contains(.,"${current_carousel_title}")]/following-sibling::*[@class='_3cnl' and contains(.,"${c_subtitle}")]/parent::*/parent::div/following-sibling::*/descendant::*[@class='_3cnp' and contains(.,"${current_carousel_button}")]
+    ${totalicon}    Get Element Count    ${tselicon_obj}
+    ${tsel_icon_locationX}    Get Horizontal Position    (${tselicon_obj})[${totalicon}]
+    ${right_limit}    Evaluate    ${tsel_icon_locationX}+400    #Just a suggested width, what would be the accepted maximum limit of X location
+    Set Suite Variable    ${current_tsel_icon_locationX}    ${tsel_icon_locationX}
+    Set Suite Variable    ${current_right_limit}    ${right_limit}
+    ${element_XBegin}    Get_locationX_carousel_item
+    Run Keyword If    ${tsel_icon_locationX} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    1s
+    ...    AND    Capture Page Screenshot    carousel.png
+    ...    ELSE IF    ${element_XBegin} < ${tsel_icon_locationX}    Run Keyword    Swipe_backward_until_element    ${order}
+    ...    ELSE IF    ${element_XBegin} > ${right_limit}    Run Keyword    Swipe_forward_until_element    ${order}    #//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+
+Swipe_forward_until_element
+    [Arguments]    ${order}
+    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
+    ${totalcarousel}    Get Element Count    ${carouselforward_obj}
+    : FOR    ${looping}    IN RANGE    0    10
+    \    Click Element    (${carouselforward_obj})[${totalcarousel}]
+    \    Sleep    2s
+    \    Capture Page Screenshot    carousel_${looping}.png
+    \    ${element_XBegin}    Get_locationX_carousel_item
+    \    Run Keyword If    ${current_tsel_icon_locationX} < ${element_XBegin} < ${current_right_limit}    Run Keywords    Sleep    1s
+    \    ...    AND    Exit For Loop    #(//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')])[${total_item_carousel}]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    \    ${looping}    Set Variable    ${looping}+1
+
+Swipe_backward_until_element
+    [Arguments]    ${order}
+    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
+    ${totalcarousel}    Get Element Count    ${carouselbackward_obj}
+    : FOR    ${looping}    IN RANGE    0    10
+    \    Click Element    (${carouselbackward_obj})[${totalcarousel}]
+    \    Sleep    2s
+    \    Capture Page Screenshot    carousel_${looping}.png
+    \    ${element_XBegin}    Get_locationX_carousel_item
+    \    Run Keyword If    ${current_tsel_icon_locationX} < ${element_XBegin} < ${current_right_limit}    Run Keywords    Sleep    1s
+    \    ...    AND    Exit For Loop    #(//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')])[${total_item_carousel}]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    \    ${looping}    Set Variable    ${looping}+1
