@@ -23,7 +23,7 @@ ${VA_question_2}    untuk terus meningkatkan layanan ini, mohon bantuannya untuk
 ${VA_question_3}    Menurut Kamu, apa yang harus Veronika tingkatkan?
 ${user_rate}      9
 ${random_question_3}    Apa itu waktu sholat?
-${VA_closingstatement}    Terima kasih atas penilaiannya Veronika turut senang membantu
+${VA_closingstatement}    Terima kasih     #atas penilaiannya Veronika turut senang membantu
 ${ask_pulsa}      Sisa pulsa saya berapa?
 ${ask_kuota}      Sisa kuota data saya berapa?
 ${greeting}       Halo Vero

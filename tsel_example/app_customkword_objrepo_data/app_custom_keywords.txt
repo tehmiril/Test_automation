@@ -28,15 +28,20 @@ User_input
     Wait Until Element is Visible    ${textbox_obj}    5    None
     Input Text    ${textbox_obj}    ${input_text}
     Click Element    ${sendkey_obj}
-    Sleep    5s
+    Sleep    2s
     Click Element    //*[@content-desc="Keyboard menu"]
 
-Check_VA_response
+Check_VA_response_text
     [Arguments]    ${response_text}
-    Click Element    id=jp.naver.line.android:id/chathistory_main_content_area
-    Element Should Be Visible    //android.view.View[contains(@text,'${response_text}')]
-    #Text Should Be Visible    ${response_text}    False
-    #Wait Until Page Contains Element    //android.view.View[@text='${response_text}']    2s
+    #Click Element    id=jp.naver.line.android:id/chatlog
+    Wait Until Keyword Succeeds    15s    3s    Page Should Contain Element    //android.widget.TextView[contains(@text,'${response_text}')]
+
+Check_VA_response_text_2buttons
+    [Arguments]    ${response_text}    ${button1}    ${button2}
+    #Click Element    id=jp.naver.line.android:id/chatlog
+    Wait Until Keyword Succeeds    15s    3s    Page Should Contain Element    //android.view.View[contains(@text,'${response_text}')]
+    Wait Until Keyword Succeeds    10s    2s    Page Should Contain Element    //android.view.View[contains(@text,'${button1}')]
+    Wait Until Keyword Succeeds    10s    2s    Page Should Contain Element    //android.view.View[contains(@text,'${button2}')]
 
 Click_Yes
     ${totalYa}    Get Matching Xpath Count    ${Ya_button}
@@ -50,3 +55,30 @@ Check_VA_response_main
     [Arguments]    ${response_text}
     Click Element    id=jp.naver.line.android:id/chathistory_main_content_area
     Element Should Be Visible    //android.widget.TextView[contains(@text,'${response_text}')]
+
+Cancel_and_closing_session
+    User_input    ${cancel_answer}
+    Check_VA_response_text    ${VA_cancel}
+    Check_VA_response_text    ${VA_question_1}
+    User_input    ${no_answer}
+    Check_VA_response_text    ${VA_question_2}
+    User_input    ${user_rate}
+    Capture Page Screenshot    user_rate.png
+    Check_VA_response_text    ${VA_question_3}
+    #only type in at the moment
+    User_input    ${select_Rate}
+    Check_VA_response_text    ${VA_askRateReason}
+    User_input    ${no_answer}
+    Check_VA_response_text    ${VA_closingstatement}
+
+Closing_session
+    User_input    ${no_answer}
+    Check_VA_response_text    ${VA_question_2}
+    User_input    ${user_rate}
+    Capture Page Screenshot    user_rate.png
+    Check_VA_response_text    ${VA_question_3}
+    #only type in at the moment
+    User_input    ${select_Rate}
+    Check_VA_response_text    ${VA_askRateReason}
+    User_input    ${no_answer}
+    Check_VA_response_text    ${VA_closingstatement}
