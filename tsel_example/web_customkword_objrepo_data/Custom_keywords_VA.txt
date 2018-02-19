@@ -193,8 +193,8 @@ Click_button_carousel
     ${element_XBegin}    Get_locationX_carousel_item
     Run Keyword If    ${tsel_icon_locationX} < ${element_XBegin} < ${right_limit}    Run Keywords    Sleep    1s
     ...    AND    Capture Page Screenshot    carousel.png
-    ...    ELSE IF    ${element_XBegin} < ${tsel_icon_locationX}    Run Keyword    Swipe_forward_until_element    ${order}
-    ...    ELSE IF    ${element_XBegin} > ${right_limit}    Run Keyword    Swipe_backward_until_element    ${order}    #//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
+    ...    ELSE IF    ${element_XBegin} < ${tsel_icon_locationX}    Run Keyword    Swipe_backward_until_element    ${order}
+    ...    ELSE IF    ${element_XBegin} > ${right_limit}    Run Keyword    Swipe_forward_until_element    ${order}    #//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
     Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]
     ${URLS}    Get Locations
 
@@ -203,36 +203,6 @@ Get_locationX_carousel_item
     Set Suite Variable    ${total_item_carousel}    ${totalcarousel}
     ${element_XBegin}    Get Horizontal Position    (//a[contains(.,'${current_carousel_button}')]/preceding::*[@class='_3cni' and contains(text(),'${current_carousel_title}')])[${totalcarousel}]
     [Return]    ${element_XBegin}
-
-Swipe_until_element_and_click
-    [Arguments]    ${order}
-    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
-    ${totalcarousel}    Get Element Count    ${carouselforward_obj}
-    : FOR    ${looping}    IN RANGE    0    10
-    \    Click Element    (${carouselforward_obj})[${totalcarousel}]
-    \    Sleep    2s
-    \    Capture Page Screenshot    carousel_${looping}.png
-    \    ${element_XBegin}    Get_locationX_carousel_item
-    \    Run Keyword If    ${current_tsel_icon_locationX} < ${element_XBegin} < ${current_right_limit}    Run Keywords    Sleep    5s
-    \    ...    AND    Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]
-    \    ...    AND    Sleep    5s
-    \    ...    AND    Exit For Loop    #(//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')])[${total_item_carousel}]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
-    \    ${looping}    Set Variable    ${looping}+1
-
-Swipe_backwards_element_and_click
-    [Arguments]    ${order}
-    [Documentation]    When the VA response has carousel (with picture, header and buttons), this keyword is expected to interact with it.
-    ${totalcarousel}    Get Element Count    ${carouselbackward_obj}
-    : FOR    ${looping}    IN RANGE    0    10
-    \    Click Element    (${carouselbackward_obj})[${totalcarousel}]
-    \    Sleep    2s
-    \    Capture Page Screenshot    carousel_${looping}.png
-    \    ${element_XBegin}    Get_locationX_carousel_item
-    \    Run Keyword If    ${current_tsel_icon_locationX} < ${element_XBegin} < ${current_right_limit}    Run Keywords    Sleep    5s
-    \    ...    AND    Click Element    (//*[@class="clearfix _o46 _3erg _3i_m _nd_ direction_ltr text_align_ltr" and contains (.,"${current_user_input}")])[${current_total_user_message}]/ancestor::*[@class="_1t_p clearfix"]/parent::*/following-sibling::*/descendant::*[contains(@class,"clearfix _o46")][${order}]/div/descendant::*[@${carouselclass_obj} and contains(.,"${current_carousel_title}")]/following-sibling::div//a[contains(.,"${current_carousel_button}")]
-    \    ...    AND    Sleep    5s
-    \    ...    AND    Exit For Loop    #(//*[@${carouselclass_obj} and contains(.,'${current_carousel_title}')])[${total_item_carousel}]/following-sibling::div//a[contains(.,'${current_carousel_button}')]
-    \    ${looping}    Set Variable    ${looping}+1
 
 Check_additional_text_2buttons
     [Arguments]    ${order}    ${expected_text}    ${expected_button1}    ${expected_button2}

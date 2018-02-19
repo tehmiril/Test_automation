@@ -78,6 +78,7 @@ test_simple_input_response
     Check_carousel_item    2    Dapatkan TCASH    Dapatkan TCASH di GraPARI atau dikirimkan ke rumah Kamu    Dapatkan di GraPARI
     Click_button_carousel    2    Dapatkan TCASH    Pesan Sticker
     ${URLS}    Get Locations
-    Click_button_carousel    2    Info    TCASH FAQ
+    #Click_button_carousel    2    Info    TCASH FAQ
+    Sleep    3s
     Cancel_and_closing_session
     [Teardown]    Close Browser

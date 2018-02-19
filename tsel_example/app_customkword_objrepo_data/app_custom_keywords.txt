@@ -1,0 +1,52 @@
+*** Keywords ***
+Swipe_until_element
+    [Arguments]    ${findElement}
+    : FOR    ${licznik}    IN RANGE    0    10
+    \    Swipe    600    600    100    600
+    \    ${elementXNew}    Select_carousel    ${findElement}
+    \    Run Keyword If    39.0 < ${elementXNew} < 233.0    Run Keywords    Log    "Yeah"
+    \    ...    AND    Exit For Loop
+    \    ${licznik}    Set Variable    ${licznik}+1
+
+Select_carousel
+    [Arguments]    ${findElement}
+    ${bound}    Get Element Location    //android.view.View[@text="${findElement}"]
+    ${boundString}    Convert To String    ${bound}
+    ${elementsXY}    Split String    ${boundString}    ${SPACE}
+    #location format, e.g. ${elementsXY} = [u"{'y':", u'702.0,', u"'x':", u'718.0}']
+    ${elementX}    Get From List    ${elementsXY}    3
+    ${finalelementX}    Strip String    ${elementX}    characters=}
+    [Return]    ${finalelementX}
+
+Open app
+    Open Application    ${appiumServer_LINE}    platformName=${platformName_LINE}    platformVersion=${androidVersion_LINE}    deviceName=${deviceName_LINE}    appPackage=${appPackage_LINE}    appActivity=${appActivity_LINE}
+    ...    noReset=true
+
+User_input
+    [Arguments]    ${input_text}
+    Click Element    //*[@content-desc="Keyboard menu"]
+    Wait Until Element is Visible    ${textbox_obj}    5    None
+    Input Text    ${textbox_obj}    ${input_text}
+    Click Element    ${sendkey_obj}
+    Sleep    5s
+    Click Element    //*[@content-desc="Keyboard menu"]
+
+Check_VA_response
+    [Arguments]    ${response_text}
+    Click Element    id=jp.naver.line.android:id/chathistory_main_content_area
+    Element Should Be Visible    //android.view.View[contains(@text,'${response_text}')]
+    #Text Should Be Visible    ${response_text}    False
+    #Wait Until Page Contains Element    //android.view.View[@text='${response_text}']    2s
+
+Click_Yes
+    ${totalYa}    Get Matching Xpath Count    ${Ya_button}
+    Click Element    ${Ya_button}[${totalYa}]
+
+Click_No
+    ${totalNo}    Get Matching Xpath Count    ${Tidak_button}
+    Click Element    ${Tidak_button}[${totalNo}]
+
+Check_VA_response_main
+    [Arguments]    ${response_text}
+    Click Element    id=jp.naver.line.android:id/chathistory_main_content_area
+    Element Should Be Visible    //android.widget.TextView[contains(@text,'${response_text}')]
