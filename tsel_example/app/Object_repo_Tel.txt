@@ -1,8 +1,0 @@
-*** Variables ***
-${textbox_obj}    class=android.widget.EditText
-${sendkey_obj}    ${EMPTY}
-${messagebubble_obj}    ${EMPTY}
-${Ya_button}      //android.view.View[@text='Ya']
-${Tidak_button}    //android.view.View[@text='Tidak']
-#${bubble_option}    android.view.View
-${textbox_obj}    class=android.widget.EditText

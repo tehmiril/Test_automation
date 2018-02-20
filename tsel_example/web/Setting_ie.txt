@@ -1,5 +1,0 @@
-*** Variables ***
-${webDriver_IE}    ie
-${email}          taacnindonesia01@gmail.com
-${password}       Welcome01!
-${URL}            https://www.facebook.com/

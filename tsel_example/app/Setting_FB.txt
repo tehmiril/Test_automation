@@ -1,7 +1,0 @@
-*** Variables ***
-${appPackage_FB}    com.facebook.orca
-${androidVersion_FB}    5.1.1
-${deviceName_FB}    Ami Samsung
-${platformName_FB}    Android
-${appActivity_FB}    .auth.StartScreenActivity    # com.facebook.messenger.neue.MainActivity
-${appiumServer_FB}    http://localhost:4723/wd/hub
