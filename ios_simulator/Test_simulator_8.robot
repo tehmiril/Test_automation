@@ -467,5 +467,5 @@ Byte activity
 
 Open simulator
     ${iosdriver}    Open Application    ${appiumServer}    platformName=${platformName}    platformVersion=${iOSVersion_Simulator}    deviceName=${deviceName_Simulator}    bundleId=${appPackage_Simulator}
-    ...    newCommandTimeout=10000    app=${appLocation_Simulator}    automationName=${automationName_Simulator}    udid=${udid_Simulator}
+    ...    newCommandTimeout=10000    automationName=${automationName_Simulator}    udid=${udid_Simulator}
     Set Suite Variable    ${iosdriver}
