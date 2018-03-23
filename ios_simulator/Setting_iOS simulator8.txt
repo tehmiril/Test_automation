@@ -4,8 +4,8 @@ ${deviceName_Simulator}    iPhone Simulator
 ${appPackage_Simulator}    com.newBundle
 ${appLocation_Simulator}    /Users/accenture-mac02/Library/Developer/Xcode/DerivedData/MyLife-daqztljvxgqgihghahixvrnlbqew/Build/Products/Debug-iphonesimulator/MyLife.app
 ${automationName_Simulator}    XCUITest
-${udid_Simulator}    5282E379-A98C-4444-AB49-03198D6CC356
-#${udid_Simulator}    F983AB5E-5519-4946-AB49-08C301FA0519
+#${udid_Simulator}    5282E379-A98C-4444-AB49-03198D6CC356
+${udid_Simulator}    F983AB5E-5519-4946-AB49-08C301FA0519
 ${platformName}    iOS
 ${appiumServer}    http://localhost:4723/wd/hub
 ${admName}        auto
